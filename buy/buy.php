@@ -6,6 +6,8 @@
 //クラス:IH-12A-905
 //*************************
 
+require_once '../config/config.php';
+require_once '../func/func.php';
 
 
-require_once './tpl/index.php';
+require_once '../tpl/buy.php';

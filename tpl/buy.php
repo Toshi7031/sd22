@@ -20,7 +20,7 @@
 <meta name="twitter:site" content="">
 <meta name="twitter:image" content="">
 <link rel="canonical" href="">
-<link rel="stylesheet" href="./css/main.css">
+<link rel="stylesheet" href="../css/main.css">
 <link rel="icon" type="image/png" href=""><!--ファビコン-->
 <link rel="apple-touch-icon" href="">
 <!--[if lt IE 9]>
@@ -38,10 +38,10 @@
     <form action="" method="get">
       <table>
         <tr>
-          <td>いんでっくす</td>
+          <td>かう</td>
         </tr>
       </table>
-      <button type="submit"></button>
+      <button type="submit" name="top">トップ</button>
     </form>
   </div>
 </body>

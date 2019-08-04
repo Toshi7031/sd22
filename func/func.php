@@ -31,6 +31,7 @@ function random_string(int $length) {
 }
 
 
+// 概要  ：引数がメールアドレスかどうかチェックする。
 function mach_email(string $address) {
   if(filter_var($address, FILTER_VALIDATE_EMAIL)) {
 		return true;
