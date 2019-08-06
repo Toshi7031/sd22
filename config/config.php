@@ -11,4 +11,4 @@
 
 
   //funcのPATH
-  define('_FUNC_FILE', __DIR__ . '/../func/func.php');
+  define('_FUNC_FILE', __DIR__ . '/../model/func/func.php');
