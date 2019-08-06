@@ -10,7 +10,6 @@
   );
 
   //$nameの種類判別
-  // $name_category = 
   //sql組み立て
   $sql = "SELECT * FROM sample_user";
 
