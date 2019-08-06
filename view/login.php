@@ -37,11 +37,11 @@
       <h1>ログイン</h1>
       <ul id="name">
         <li>ニックネーム又はメールアドレス又は電話番号</li>
-        <li><input type="text" name="name"></li>
+        <li><input type="text" name="name"><br><span id="error_msg_name"></span></li>
       </ul>
       <ul id="password">
         <li>パスワード</li>
-        <li><input type="password" name="password"></li>
+        <li><input type="password" name="password"><br><span id="error_msg_pass"></span></li>
       </ul>
       <button id="login">ログインする</button>
     </div>
