@@ -6,6 +6,7 @@
 //クラス:IH-12A-905
 //*************************
 
+session_start();
 require_once './config/config.php';
 require_once _FUNC_FILE;
 
@@ -17,7 +18,4 @@ echo '<pre>';
 var_dump($result);
 echo '</pre>';
 
-echo '<pre>';
-var_dump(_INDEX_PATH);
-echo '</pre>';
-require_once './tpl/index.php';
+require_once './view/index.php';

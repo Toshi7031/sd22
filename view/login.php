@@ -16,11 +16,9 @@
 <meta property="og:title" content="">
 <meta property="og:description" content="">
 <meta property="og:url" content="">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="">
-<meta name="twitter:image" content="">
 <link rel="canonical" href="">
-<link rel="stylesheet" href="./css/main.css">
+<link rel="stylesheet" href="../css/login.css">
+<script src="../js/jquery-3.4.1.min.js"></script>
 <link rel="icon" type="image/png" href=""><!--ファビコン-->
 <link rel="apple-touch-icon" href="">
 <!--[if lt IE 9]>
@@ -35,14 +33,19 @@
 </head>
 <body>
   <div id="wrapper">
-    <form action="" method="get">
-      <table>
-        <tr>
-          <td>いんでっくす</td>
-        </tr>
-      </table>
-      <button type="submit"></button>
-    </form>
+    <div id="login_form">
+      <h1>ログイン</h1>
+      <ul id="name">
+        <li>ニックネーム又はメールアドレス又は電話番号</li>
+        <li><input type="text" name="name"></li>
+      </ul>
+      <ul id="password">
+        <li>パスワード</li>
+        <li><input type="password" name="password"></li>
+      </ul>
+      <button id="login">ログインする</button>
+    </div>
   </div>
+  <script src="../js/login.js"></script>
 </body>
 </html>
