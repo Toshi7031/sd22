@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* CSS Document */
+
+// 変数宣言
+$headerColor : #3cb371;
+
+// 関数
+@import './mixin';
+
+/*----------------------------------------
+				reset
+----------------------------------------*/
+@import './reset';
+
+/*----------------------------------------
+				body
+----------------------------------------*/
+#wrapper {
+	width: 100vw;
+}
+#global_nav {
+	width: 100%;
+	background-color: $headerColor;
+	display: flex;
+	justify-content: space-around;
+	#global_nav_in {
+		width: 30%;
+		min-width: 300px;
+	}
+}
