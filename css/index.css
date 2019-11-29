@@ -1,0 +1,64 @@
+/* CSS Document */
+/*----------------------------------------
+				reset
+----------------------------------------*/
+header, footer, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  quotes: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  vertical-align: top;
+  font-size: 0;
+  line-height: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*----------------------------------------
+				body
+----------------------------------------*/
+#wrapper {
+  width: 100vw;
+}
+
+#global_nav {
+  width: 100%;
+  background-color: #3cb371;
+  display: flex;
+  justify-content: space-around;
+}
+
+#global_nav #global_nav_in {
+  width: 30%;
+  min-width: 300px;
+}
