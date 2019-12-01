@@ -2,7 +2,8 @@
 /* CSS Document */
 
 // 変数宣言
-
+$headerColor : #3cb371;
+$productBgColor : #D8D8D8;
 // 関数
 @import './mixin';
 
@@ -11,4 +12,61 @@
 ----------------------------------------*/
 #wrapper {
 	width: 100vw;
+}
+#branding {
+	width: 75%;
+	height: 250px;
+	border: solid #000000 1px;
+	margin: 10px auto 10px;
+	text-align: center;
+}
+#contents_area {
+	width: 100%;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.products {
+	width: 32%;
+	min-width: 300px;
+	height: 180px;
+	margin-bottom: 20px;
+	background-color: $productBgColor;
+	ul {
+		overflow: hidden;
+		position: relative;
+	}
+	li {
+		float: left;
+	}
+}
+li.product_img {
+	height: 100%;
+	margin-right: 10px;
+}
+li.product_name {
+	width: 50%;
+	height: 60px;
+	min-width: 100px;
+	margin: 15px 0 30px;
+	border: solid #000000 1px;
+}
+li.product_price {
+	width: 40%;
+	height: 60px;
+	min-width: 80px;
+	border: solid #000000 1px;
+}
+li.favorite {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+footer {
+	width: 100%;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	background-color: $headerColor;
 }
