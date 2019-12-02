@@ -23,9 +23,11 @@ $productBgColor : #D8D8D8;
 #contents_area {
 	width: 100%;
 	padding: 20px;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+	> ul {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
 }
 .products {
 	width: 32%;
