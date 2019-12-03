@@ -75,13 +75,14 @@ button {
 ----------------------------------------*/
 h1 {
   width: 200px;
-  height: 100%;
+  height: 56px;
   margin-left: 20px;
   margin-right: 10%;
 }
 
 h1 img {
-  height: 100%;
+  width: auto;
+  height: 56px;
 }
 
 #global_nav {
@@ -181,4 +182,24 @@ nav button {
   height: 100%;
   border-radius: 10px;
   background-color: #FACC2E;
+}
+
+/*----------------------------------------
+				footer
+----------------------------------------*/
+footer {
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  background-color: #3cb371;
+}
+
+footer p:last-child {
+  width: 50px;
+  height: 50px;
+  border: solid #000000 1px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }

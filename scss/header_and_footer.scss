@@ -3,6 +3,7 @@
 
 // 変数宣言
 $headerColor : #3cb371;
+$globalNavHeight : 70px;
 $navColor : #81F781;
 $buttonColor : #FACC2E;
 // $buttonColor : #F4FA58;
@@ -21,18 +22,18 @@ $nav_height : 40px;
 ----------------------------------------*/
 h1 {
 	width: 200px;
-	height: 100%;
+	height: $globalNavHeight * 0.8;
 	margin-left: 20px;
 	margin-right: 10%;
 	// background-color: #fff;
 	img {
-		// width: 100%;
-		height: 100%;
+		width: auto;
+		height: $globalNavHeight * 0.8;
 	}
 }
 #global_nav {
 	width: 100%;
-	height: 70px;
+	height: $globalNavHeight;
 	background-color: $headerColor;
 	display: flex;
 	flex-wrap: wrap;
@@ -114,8 +115,25 @@ nav {
 	button {
 		width: 100%;
 		height: 100%;
-		// margin-right: 5%;
 		border-radius: 10px;
 		background-color: $buttonColor;
+	}
+}
+/*----------------------------------------
+				footer
+----------------------------------------*/
+footer {
+	width: 100%;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	background-color: $headerColor;
+	p:last-child {
+		width: 50px;
+		height: 50px;
+		border: solid #000000 1px;
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
 	}
 }
