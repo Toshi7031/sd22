@@ -1,0 +1,139 @@
+@charset "UTF-8";
+/* CSS Document */
+
+// 変数宣言
+$headerColor : #3cb371;
+$globalNavHeight : 70px;
+$navColor : #81F781;
+$buttonColor : #FACC2E;
+// $buttonColor : #F4FA58;
+$nav_height : 40px;
+
+// 関数
+@import './mixin';
+
+/*----------------------------------------
+				reset
+----------------------------------------*/
+@import './reset';
+
+/*----------------------------------------
+				header
+----------------------------------------*/
+h1 {
+	width: 200px;
+	height: $globalNavHeight * 0.8;
+	margin-left: 20px;
+	margin-right: 10%;
+	// background-color: #fff;
+	img {
+		width: auto;
+		height: $globalNavHeight * 0.8;
+	}
+}
+#global_nav {
+	width: 100%;
+	height: $globalNavHeight;
+	background-color: $headerColor;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+#header_search_area {
+	width: 40%;
+	min-width: 300px;
+	height: 50px;
+	position: relative;
+	input {
+		width: 80%;
+		height: 50px;
+		padding-left: 10px;
+		margin-right: 0;
+		background-color: #E6E6E6;
+		outline: 0;
+	}
+	button {
+		width: 20%;
+		height: 50px;
+		background-color: $buttonColor;
+		border: none;
+		border-radius: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+#header_login_area {
+	width: 30%;
+	button{
+		width: 150px;
+		height: 30px;
+		font-size: 1em;
+		margin-right: 15px;
+		background-color: $buttonColor;
+		// border: solid #DBA901 1px;
+		border-radius: 8px;
+		box-shadow: 3px 3px rgba(0,0,0,0.3);
+	}
+}
+/*----------------------------------------
+				navi
+----------------------------------------*/
+nav {
+	width: 100%;
+	height: $nav_height;
+	margin-bottom: 20px;
+	text-align: center;
+	background-color: $navColor;
+	display: flex;
+	justify-content: space-between;
+	ul {
+		width: 100%;
+		height: $nav_height;
+		padding: 0 20px 0 20px;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	li {
+		width: 15%;
+		height: $nav_height * 0.8;
+		background-color: #fff;
+	}
+	li:last-child {
+		background-color: $navColor;
+	}
+	a {
+		width: 100%;
+		height: 100%;
+		color: #000000;
+		line-height: $nav_height * 0.8;
+		text-decoration: none;
+		display: block;
+	}
+	button {
+		width: 100%;
+		height: 100%;
+		border-radius: 10px;
+		background-color: $buttonColor;
+	}
+}
+/*----------------------------------------
+				footer
+----------------------------------------*/
+footer {
+	width: 100%;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	background-color: $headerColor;
+	p:last-child {
+		width: 50px;
+		height: 50px;
+		border: solid #000000 1px;
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+	}
+}
