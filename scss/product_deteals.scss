@@ -8,6 +8,9 @@ $productBgColor : #D8D8D8;
 $divMargin : 0 auto 30px;
 $trHeight : 60px;
 $h2Height : 60px;
+$fixedButtonHeight : 80px;
+$footerHeight : 80px;
+
 // 関数
 @import './mixin';
 
@@ -105,9 +108,25 @@ footer {
 .exhibitor {
 	ul {
 		width: 100%;
-		height: 80px;
+		height: 100px;
+		font-size: 1.2em;
 		border: solid #000000 1px;
 		display: flex;
+	}
+	li {
+		line-height: 100px;
+	}
+	img {
+		height: 90px;	/* 画像サイズを仮に設定 */
+		width: 90px;	
+		margin-top: 5px;
+		border: solid #000000 1px;
+		border-radius: 50%;
+		display: block;
+	}
+	li:first-child {
+		height: 100%;
+		margin: 0 20px 0 20px;
 	}
 }
 .comment {
@@ -155,6 +174,36 @@ footer {
 		img {
 			width: 200px;
 			height: auto;
+		}
+	}
+}
+.fixed_area {
+	width: 100vw;
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	bottom: $footerHeight + 20px;
+	left: 0;
+	p,button {
+		width: $fixedButtonHeight * 2.5;
+		height: $fixedButtonHeight;
+		font-size: 1.8em;
+		border: solid $headerColor 2px;
+		text-align: center;
+		border-radius: 20px;
+	}
+	p {
+		line-height: $fixedButtonHeight;
+		margin-left: 10%;
+	}
+	p:first-child {
+		margin-left: 5%;
+	}
+	p:last-child {
+		margin-right: 5%;
+		a {
+			color: #000;
+			display: block;
 		}
 	}
 }

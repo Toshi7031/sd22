@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* CSS Document */
 /*----------------------------------------
 				body
@@ -107,9 +108,29 @@ footer {
 
 .exhibitor ul {
   width: 100%;
-  height: 80px;
+  height: 100px;
+  font-size: 1.2em;
   border: solid #000000 1px;
   display: flex;
+}
+
+.exhibitor li {
+  line-height: 100px;
+}
+
+.exhibitor img {
+  height: 90px;
+  /* 画像サイズを仮に設定 */
+  width: 90px;
+  margin-top: 5px;
+  border: solid #000000 1px;
+  border-radius: 50%;
+  display: block;
+}
+
+.exhibitor li:first-child {
+  height: 100%;
+  margin: 0 20px 0 20px;
 }
 
 .comment button {
@@ -161,6 +182,42 @@ footer {
 .related_goods .goods img {
   width: 200px;
   height: auto;
+}
+
+.fixed_area {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 100px;
+  left: 0;
+}
+
+.fixed_area p, .fixed_area button {
+  width: 200px;
+  height: 80px;
+  font-size: 1.8em;
+  border: solid #3cb371 2px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.fixed_area p {
+  line-height: 80px;
+  margin-left: 10%;
+}
+
+.fixed_area p:first-child {
+  margin-left: 5%;
+}
+
+.fixed_area p:last-child {
+  margin-right: 5%;
+}
+
+.fixed_area p:last-child a {
+  color: #000;
+  display: block;
 }
 
 #main_area {
