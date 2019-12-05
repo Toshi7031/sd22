@@ -1,0 +1,115 @@
+/* CSS Document */
+/*----------------------------------------
+				reset
+----------------------------------------*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, address, code, del, em,
+img, ins, dl, dt, dd, ol, ul, li, form, label,
+table, caption, tbody, tfoot, tfoot, thead, tr, th, td,
+article, aside, canvas, header, menu, nav, section
+, summary, time, mark, audio, video {
+  margin: 0px;
+  padding: 0px;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+header, footer, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  quotes: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  vertical-align: top;
+  font-size: 0;
+  line-height: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+input {
+  border: none;
+}
+
+button {
+  outline: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*----------------------------------------
+				body
+----------------------------------------*/
+#wrapp {
+  width: 100vw;
+  height: 100vh;
+  background-color: #9FF781;
+}
+
+#topic_list {
+  width: 95%;
+  margin: 0 auto;
+}
+
+#topic_list > p {
+  margin-bottom: 30px;
+  font-size: 1.5em;
+  color: #fff;
+  text-align: center;
+}
+
+#topic_list ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#topic_list li {
+  width: 18%;
+  height: 70px;
+  line-height: 70px;
+  margin-bottom: 20px;
+  font-size: 1.3em;
+  text-align: center;
+  background-color: #D8F6CE;
+}
+
+#topic_list li:nth-child(9) {
+  font-size: 1.1em;
+}
