@@ -17,8 +17,6 @@
 #contents_area {
   width: 100%;
   padding: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
 }
 
 #contents_area h2 {
@@ -27,6 +25,8 @@
 }
 
 #contents_area > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -86,7 +86,8 @@ li.favorite {
   position: fixed;
   bottom: 80px;
   right: 85px;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 #link_to_bbs img {

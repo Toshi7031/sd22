@@ -1,5 +1,7 @@
 /* CSS Document */
-/*	----------reset---------- */
+/*----------------------------------------
+				reset
+----------------------------------------*/
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, address, code, del, em,
 img, ins, dl, dt, dd, ol, ul, li, form, label,
@@ -8,7 +10,6 @@ article, aside, canvas, header, menu, nav, section
 , summary, time, mark, audio, video {
   margin: 0px;
   padding: 0px;
-  border: 0;
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
@@ -37,6 +38,7 @@ a {
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
+  text-decoration: none;
 }
 
 table {
@@ -68,57 +70,7 @@ button {
   box-sizing: border-box;
 }
 
-/*	----------body----------	*/
-body {
-  margin-top: 100px;
-  width: 100vw;
-}
-
-.wrapper {
-  width: 100vw;
-}
-
-.bbs_top {
-  height: 80px;
-  width: 100%;
-  position: fixed;
-  top: 0px;
-  background-color: #3cb371;
-  border: solid 1px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.bbs_top ul {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.title {
-  height: 50px;
-}
-
-.talk_image {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  border: solid 1px;
-}
-
-li.you {
-  width: 40%;
-}
-
-li.you .talk {
-  border: solid 1px;
-  background-color: red;
-}
+/*----------------------------------------
+				header
+----------------------------------------*/
 /*# sourceMappingURL=bbs.css.map */

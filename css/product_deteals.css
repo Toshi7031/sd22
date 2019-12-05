@@ -40,10 +40,14 @@ table {
 }
 
 .reaction {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .reaction ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-right: 40px;
 }
@@ -103,6 +107,8 @@ table {
   height: 100px;
   font-size: 1.2em;
   border: solid #000000 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -139,9 +145,14 @@ table {
 .related_goods > ul {
   padding: 5px;
   border: solid #000000 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .related_goods .goods {
@@ -179,8 +190,13 @@ table {
 .fixed_area {
   width: 100%;
   margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: -webkit-sticky;
   position: sticky;
   bottom: 80px;
   left: 0;
@@ -205,3 +221,4 @@ table {
   width: 80%;
   margin: 0 auto;
 }
+/*# sourceMappingURL=product_deteals.css.map */
