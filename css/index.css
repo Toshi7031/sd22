@@ -47,6 +47,10 @@
   float: left;
 }
 
+.products a {
+  color: #000000;
+}
+
 li.product_img {
   height: 100%;
   margin-right: 10px;
@@ -56,15 +60,13 @@ li.product_name {
   width: 50%;
   height: 60px;
   min-width: 100px;
-  margin: 15px 0 30px;
-  border: solid #000000 1px;
+  margin: 15px 0 50px;
 }
 
 li.product_price {
   width: 40%;
   height: 60px;
   min-width: 80px;
-  border: solid #000000 1px;
 }
 
 li.favorite {

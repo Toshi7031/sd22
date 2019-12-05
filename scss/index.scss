@@ -45,6 +45,9 @@ $productBgColor : #D8D8D8;
 	li {
 		float: left;
 	}
+	a {
+		color: #000000;
+	}
 }
 li.product_img {
 	height: 100%;
@@ -54,14 +57,14 @@ li.product_name {
 	width: 50%;
 	height: 60px;
 	min-width: 100px;
-	margin: 15px 0 30px;
-	border: solid #000000 1px;
+	margin: 15px 0 50px;
+	// border: solid #000000 1px;
 }
 li.product_price {
 	width: 40%;
 	height: 60px;
 	min-width: 80px;
-	border: solid #000000 1px;
+	// border: solid #000000 1px;
 }
 li.favorite {
 	position: absolute;
