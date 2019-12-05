@@ -10,7 +10,6 @@ article, aside, canvas, header, menu, nav, section
 , summary, time, mark, audio, video {
   margin: 0px;
   padding: 0px;
-  border: 0;
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
@@ -39,6 +38,7 @@ a {
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
+  text-decoration: none;
 }
 
 table {
@@ -66,59 +66,11 @@ button {
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 /*----------------------------------------
-				body
+				header
 ----------------------------------------*/
-body {
-  margin-top: 100px;
-  width: 100vw;
-}
-
-.bbs_top {
-  height: 100px;
-  width: 100%;
-  position: fixed;
-  top: 0px;
-  background-color: #3CB371;
-  border: solid 1px;
-}
-
-.bbs_top ul {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.title {
-  width: 150px;
-  height: 80px;
-  border: solid 1px;
-}
-
-.talk_image {
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  border: solid 1px;
-}
-
-#wrapper {
-  width: 100vw;
-}
-
-#global_nav {
-  width: 100%;
-  background-color: #3cb371;
-  display: flex;
-  justify-content: space-around;
-}
-
-#global_nav #global_nav_in {
-  width: 30%;
-  min-width: 300px;
-}
+/*# sourceMappingURL=bbs.css.map */

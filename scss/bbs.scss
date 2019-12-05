@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/* CSS Document */
+
+// 変数宣言
+$headerColor : #3cb371;
+$globalNavHeight : 70px;
+$navColor : #81F781;
+$buttonColor : #FACC2E;
+// $buttonColor : #F4FA58;
+$nav_height : 50px;
+
+// 関数
+@import './mixin';
+
+/*----------------------------------------
+				reset
+----------------------------------------*/
+@import './reset';
+
+/*----------------------------------------
+				header
+----------------------------------------*/
