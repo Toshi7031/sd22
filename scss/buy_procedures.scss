@@ -4,7 +4,7 @@
 // 変数宣言
 $headerColor : #3cb371;
 $navColor : #81F781;
-$productBgColor : #D8D8D8;
+$borderColor : #A4A4A4;
 $divMargin : 0 auto 30px;
 $trHeight : 60px;
 $h2Height : 60px;
@@ -15,8 +15,174 @@ $footerHeight : 80px;
 @import './mixin';
 
 /*----------------------------------------
+				reset
+----------------------------------------*/
+@import './reset';
+
+/*----------------------------------------
 				body
 ----------------------------------------*/
-#wrapper {
+#wrapp {
 	width: 100vw;
+	background-color: #BDBDBD;
+	> p {
+		width: 60%;
+		margin: 0 auto 30px;
+		text-align: center;
+		font-size: 1.5em;
+		color: #FA5858;
+	}
+	button {
+		width: 70%;
+		height: 70px;
+		font-size: 1.4em;
+		color: #fff;
+		border: none;
+		background-color: #FA5858;
+		border-radius: 20px;
+		outline: 0;
+		box-shadow: none;
+	}
+}
+#procedures_header {
+	width: 100%;
+	height: 60px;
+	margin-bottom: 40px;
+	color: $borderColor;
+	background-color: #fff;
+	border: solid $borderColor 1px;
+	display: flex;
+	align-items: center;
+	p:first-child {
+		margin-left: 20px;
+		margin-right: 5%;
+	}
+	img {
+		width: 49px;
+		height: 50px;
+	}
+}
+#about_of_product {
+	width: 60%;
+	height: 250px;
+	margin: 0 auto 30px;
+	background-color: #fff;
+	border: solid #000000 1px;
+	position: relative;
+	.image {
+		width: 200px;
+		height: 200px;
+		border: solid #000000 1px;
+		position: absolute;
+		top: 25px;
+		left: 15px;
+	}
+	.name {
+		font-size: 1.3em;
+		position: absolute;
+		top: 40px;
+		left: 250px;
+	}
+	.carriage {
+		padding: 8px;
+		color: #fff;
+		background-color: #FA5858;
+		font-size: 1.6em;
+		position: absolute;
+		bottom: 10px;
+		right: 160px;
+	}
+	.value {
+		font-size: 1.6em;
+		position: absolute;
+		bottom: 16px;
+		right: 20px;
+	}
+}
+#use_cash,#payment {
+	width: 60%;
+	height: 200px;
+	margin: 0 auto 30px;
+	background-color: #fff;
+	border: solid #000000 1px;
+}
+#use_cash {
+	.use_proceeds {
+		height: 50%;
+		margin: 0 20px 0 20px;
+		border-bottom: solid $borderColor 1px;
+		position: relative;
+		p:first-child {
+			font-size: 1.8em;
+			padding: 20px 0 15px;
+		}
+		p:last-child {
+			padding: 5px 15px 5px 15px;
+			border: solid #FA5858 1px;
+			border-radius: 4px;
+			font-size: 1.5em;
+			position: absolute;
+			top: 34px;
+			right: 10px;
+		}
+		a {
+			color: #FA5858;
+		}
+	}
+	.use_point {
+		margin: 0 20px 0 20px;
+		position: relative;
+		p:first-child {
+			font-size: 1.8em;
+			padding: 20px 0 15px;
+		}
+		p:last-child {
+			padding: 5px 15px 5px 15px;
+			border-radius: 4px;
+			font-size: 1.5em;
+			position: absolute;
+			top: 34px;
+			right: 10px;
+		}	
+	}
+}
+#payment {
+	.terms_of_payment,.payment_amount {
+		height: 50%;
+		margin: 0 20px 0 20px;
+		font-size: 1.8em;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+	}
+	.terms_of_payment {
+		border-bottom: solid $borderColor 1px;
+	}
+	select {
+		width: 400px;
+		height: 50px;
+		padding-left: 15px;
+		font-size: 0.7em;
+		border: solid #FA5858 1px;
+		border-radius: 50px;
+		background-color: #fff;
+	}
+	option {
+		width: 100%;
+	}
+}
+#delivery_destination {
+	width: 60%;
+	height: 100px;
+	margin: 0 auto 30px;
+	background-color: #fff;
+	border: solid #000000 1px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	p {
+		font-size: 1.8em;
+		padding: 0 20px 0 20px;
+	}
 }
