@@ -4,6 +4,8 @@
 // 変数宣言
 $headerColor : #3cb371;
 $productBgColor : #D8D8D8;
+$buttonColor : #FACC2E;
+
 // 関数
 @import './mixin';
 
@@ -13,20 +15,14 @@ $productBgColor : #D8D8D8;
 #wrapper {
 	width: 100vw;
 }
-#branding {
-	width: 75%;
-	height: 250px;
-	border: solid #000000 1px;
-	margin: 10px auto 40px;
-	text-align: center;
-}
 #contents_area {
 	width: 100%;
 	padding: 20px;
 	h2 {
 		font-size: 1.5em;
 		margin-bottom: 20px;
-	}	> ul {
+	}
+	> ul {
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
@@ -45,9 +41,6 @@ $productBgColor : #D8D8D8;
 	li {
 		float: left;
 	}
-	a {
-		color: #000000;
-	}
 }
 li.product_img {
 	height: 100%;
@@ -57,28 +50,50 @@ li.product_name {
 	width: 50%;
 	height: 60px;
 	min-width: 100px;
-	margin: 15px 0 50px;
-	// border: solid #000000 1px;
+	margin: 15px 0 30px;
+	border: solid #000000 1px;
 }
 li.product_price {
 	width: 40%;
 	height: 60px;
 	min-width: 80px;
-	// border: solid #000000 1px;
+	border: solid #000000 1px;
 }
 li.favorite {
 	position: absolute;
 	bottom: 10px;
 	right: 10px;
 }
-#link_to_bbs {
-	width: 50px;
-	height: 50px;
-	position: fixed;
-	bottom: 80px;
-	right: 85px;
-	transform: translate(-50%, -50%);
-	img {
-		border-radius: 50%;
+.pager {
+	width: 100%;
+	margin-bottom: 40px;
+	display: flex;
+	justify-content: center;
+	li {
+		width: 40px;
+		height: 40px;
+		line-height: 29px;
+		text-align: center;
+		padding: 5px;
+		border-radius: 3px;
+		box-shadow: 3px 3px rgba(0,0,0,0.3);
+	}
+	.page_number {
+		width: 28%;
+		margin: 0 50px 0 50px;
+		display: flex;
+		justify-content: space-between;
+		li {
+			font-size: 1.4em;
+			background-color: $buttonColor;
+		}
+	}
+	.move_page {
+		width: 8%;
+		display: flex;
+		justify-content: space-between;
+		li {
+			background-color: $productBgColor;
+		}
 	}
 }

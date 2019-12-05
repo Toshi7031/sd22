@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/* CSS Document */
+
+// 変数宣言
+$headerColor : #3cb371;
+$navColor : #81F781;
+$productBgColor : #D8D8D8;
+$divMargin : 0 auto 30px;
+$trHeight : 60px;
+$h2Height : 60px;
+$fixedButtonHeight : 80px;
+$footerHeight : 80px;
+
+// 関数
+@import './mixin';
+
+/*----------------------------------------
+				body
+----------------------------------------*/
+#wrapper {
+	width: 100vw;
+}
