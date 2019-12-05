@@ -74,6 +74,10 @@ body {
   width: 100vw;
 }
 
+.wrapper {
+  width: 100vw;
+}
+
 .bbs_top {
   height: 80px;
   width: 100%;
@@ -99,9 +103,7 @@ body {
 }
 
 .title {
-  width: 150px;
-  height: 80px;
-  border: solid 1px;
+  height: 50px;
 }
 
 .talk_image {
@@ -109,10 +111,6 @@ body {
   height: 50px;
   border-radius: 100%;
   border: solid 1px;
-}
-
-.wrapper {
-  width: 100vw;
 }
 
 li.you {
