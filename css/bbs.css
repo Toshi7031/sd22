@@ -1,7 +1,5 @@
 /* CSS Document */
-/*----------------------------------------
-				reset
-----------------------------------------*/
+/*	----------reset---------- */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, address, code, del, em,
 img, ins, dl, dt, dd, ol, ul, li, form, label,
@@ -64,40 +62,40 @@ button {
   outline: 0;
 }
 
-
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/*----------------------------------------
-				body
-----------------------------------------*/
+/*	----------body----------	*/
 body {
   margin-top: 100px;
   width: 100vw;
 }
-.talk_image{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: solid 1px;
-}
+
 .bbs_top {
-  height: 100px;
+  height: 80px;
   width: 100%;
   position: fixed;
   top: 0px;
-  background-color: #3CB371;
+  background-color: #3cb371;
   border: solid 1px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .bbs_top ul {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .title {
@@ -113,18 +111,16 @@ body {
   border: solid 1px;
 }
 
-#wrapper {
+.wrapper {
   width: 100vw;
 }
 
-#global_nav {
-  width: 100%;
-  background-color: #3cb371;
-  display: flex;
-  justify-content: space-around;
+li.you {
+  width: 40%;
 }
 
-#global_nav #global_nav_in {
-  width: 30%;
-  min-width: 300px;
+li.you .talk {
+  border: solid 1px;
+  background-color: red;
 }
+/*# sourceMappingURL=bbs.css.map */

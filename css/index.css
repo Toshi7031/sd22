@@ -17,9 +17,14 @@
 #contents_area {
   width: 100%;
   padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .products {
@@ -72,3 +77,4 @@ footer {
   line-height: 80px;
   background-color: #3cb371;
 }
+/*# sourceMappingURL=index.css.map */
