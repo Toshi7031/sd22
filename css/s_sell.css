@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+*{
+    margin: 0 auto;
+    padding: 0px;
+}
+body{
+  background-color: #E4E4E4;
+  margin-bottom: 50px;
+}
+a{
+  text-decoration: none;
+  display: block;
+}
+
+li {
+    list-style-type: none;
+    list-style-position: outside;
+}
+.top{
+  display: flex;
+  height: 40px;
+  background-color: white;
+  border-bottom: solid gray 1px;
+}
+.top p:nth-of-type(1){
+  width: 70px;
+}
+.top p:nth-last-of-type(1){
+  width: 95%;
+  padding-top: 10px;
+  color: gray;
+}
+
+.pictures ul{
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.pictures img{
+  position: absolute;
+  top: 125px;
+  left: 65px;
+}
+.pictures li{
+  width: 200px;
+  height: 200px;
+  background-color: white;
+}
+.pictures span{
+  padding: 10px 15px;
+  position: relative;
+  top: 10px;
+  background-color: lightgray;
+}
+
+.ten{
+  background-color: #33AB53;
+  height: 30px;
+  width: 150px;
+  padding-top: 5px;
+  text-align: center;
+  border-radius: 20px;
+  position: absolute;
+  right: 20px;
+  top: 275px;
+}
+.ten a{
+  color: white;
+}
+
+.green{
+  font-size: 20px;
+  color: #3CB371;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.area{
+  padding: 20px;
+  margin-bottom: 50px;
+  background-color: white;
+}
+.area p{
+  display: flex;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+.area span{
+  width: 80%;
+  padding-top: 5px;
+}
+.area a{
+  width: 20%;
+  color: gray;
+  padding: 5px;
+  text-align: right;
+}
+input{
+  width: 100%;
+  border-bottom: solid gray 1px;
+}
+.one{
+  margin-bottom: 50px;
+}
+
+.mny{
+  background-color: white;
+  margin-bottom: 50px;
+  display: flex;
+}
+.mny input{
+  height: 50px;
+  position: relative;
+  left: 580px;
+  text-align: right;
+}
+
+.area:nth-last-of-type(1) span{
+  width: 5%;
+  text-align: right;
+  position: absolute;
+  right: 10px;
+  padding-right: 20px;
+}
+.area:nth-last-of-type(1) p:nth-of-type(1){
+  margin-bottom: 20px;
+}
+.area:nth-last-of-type(1) p:nth-of-type(2){
+  font-size: 35px;
+}
+/* .area input, .area textarea{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+} */
+
+
+.out{
+  width: 500px;
+  height: 70px;
+  text-align: center;
+  background-color: #3CB371;
+  border-radius: 40px;
+}
+.out a{
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  padding-top: 18px;
+}
