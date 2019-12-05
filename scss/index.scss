@@ -17,13 +17,16 @@ $productBgColor : #D8D8D8;
 	width: 75%;
 	height: 250px;
 	border: solid #000000 1px;
-	margin: 10px auto 10px;
+	margin: 10px auto 40px;
 	text-align: center;
 }
 #contents_area {
 	width: 100%;
 	padding: 20px;
-	> ul {
+	h2 {
+		font-size: 1.5em;
+		margin-bottom: 20px;
+	}	> ul {
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
@@ -65,13 +68,14 @@ li.favorite {
 	bottom: 10px;
 	right: 10px;
 }
-footer {
-	p:last-child {
-		width: 50px;
-		height: 50px;
-		border: solid #000000 1px;
-		position: fixed;
-		bottom: 20px;
-		right: 20px;
+#link_to_bbs {
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	bottom: 80px;
+	right: 85px;
+	transform: translate(-50%, -50%);
+	img {
+		border-radius: 50%;
 	}
 }

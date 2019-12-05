@@ -10,13 +10,18 @@
   width: 75%;
   height: 250px;
   border: solid #000000 1px;
-  margin: 10px auto 10px;
+  margin: 10px auto 40px;
   text-align: center;
 }
 
 #contents_area {
   width: 100%;
   padding: 20px;
+}
+
+#contents_area h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
 }
 
 #contents_area > ul {
@@ -68,11 +73,15 @@ li.favorite {
   right: 10px;
 }
 
-footer p:last-child {
+#link_to_bbs {
   width: 50px;
   height: 50px;
-  border: solid #000000 1px;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 80px;
+  right: 85px;
+  transform: translate(-50%, -50%);
+}
+
+#link_to_bbs img {
+  border-radius: 50%;
 }
