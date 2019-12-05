@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/* CSS Document */
+
+// 変数宣言
+$bgColor : #9FF781;
+$borderColor : #A4A4A4;
+$listBgColor :#D8F6CE;
+$divMargin : 0 auto 30px;
+$trHeight : 60px;
+$h2Height : 60px;
+$fixedButtonHeight : 80px;
+$footerHeight : 80px;
+
+// 関数
+@import './mixin';
+
+/*----------------------------------------
+				reset
+----------------------------------------*/
+@import './reset';
+
+/*----------------------------------------
+				body
+----------------------------------------*/
+#wrapp {
+	width: 100vw;
+	height: 100vh;
+	background-color: $bgColor;
+}
+#category_list {
+	width: 95%;
+	margin: 0 auto;
+	> p {
+		margin-bottom: 30px;
+		font-size: 1.5em;
+		text-align: center;
+		color: #fff;
+	}
+}
+#large_category_list {
+	width: 100%;
+	margin: 0 auto 10px;
+	display: flex;
+	justify-content: space-between;
+	li {
+		width: 170px;
+		padding: 10px;
+		text-align: center;
+		border: solid $borderColor 1px;
+		background-color: $listBgColor;
+	}
+}
+#small_category_area {
+	display: flex;
+	justify-content: space-between;
+}
+.small_category_list {
+	width: 170px;
+	color: #848484;
+	background-color: $listBgColor;
+	border: solid $borderColor 1px;
+	li {
+		width: 170px;
+		padding: 15px;
+		border-bottom: solid $borderColor 1px;
+	}
+}

@@ -1,0 +1,126 @@
+/* CSS Document */
+/*----------------------------------------
+				reset
+----------------------------------------*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, address, code, del, em,
+img, ins, dl, dt, dd, ol, ul, li, form, label,
+table, caption, tbody, tfoot, tfoot, thead, tr, th, td,
+article, aside, canvas, header, menu, nav, section
+, summary, time, mark, audio, video {
+  margin: 0px;
+  padding: 0px;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+header, footer, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  quotes: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  vertical-align: top;
+  font-size: 0;
+  line-height: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+input {
+  border: none;
+}
+
+button {
+  outline: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*----------------------------------------
+				body
+----------------------------------------*/
+#wrapp {
+  width: 100vw;
+  height: 100vh;
+  background-color: #9FF781;
+}
+
+#category_list {
+  width: 95%;
+  margin: 0 auto;
+}
+
+#category_list > p {
+  margin-bottom: 30px;
+  font-size: 1.5em;
+  text-align: center;
+  color: #fff;
+}
+
+#large_category_list {
+  width: 100%;
+  margin: 0 auto 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#large_category_list li {
+  width: 170px;
+  padding: 10px;
+  text-align: center;
+  border: solid #A4A4A4 1px;
+  background-color: #D8F6CE;
+}
+
+#small_category_area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.small_category_list {
+  width: 170px;
+  color: #848484;
+  background-color: #D8F6CE;
+  border: solid #A4A4A4 1px;
+}
+
+.small_category_list li {
+  width: 170px;
+  padding: 15px;
+  border-bottom: solid #A4A4A4 1px;
+}
