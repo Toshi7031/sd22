@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/* CSS Document */
+
+// 変数宣言
+$headerColor : #3cb371;
+$productBgColor : #D8D8D8;
+// 関数
+@import './mixin';
+//header and footer load
+@import './header_and_footer.scss';
+body{
+  width: 100vw;
+}
+.input_info{
+  margin: 0 auto;
+  width: 60%;
+  height: 60vh;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  border: solid 1px;
+  text-align: center;
+  h1{
+    font-size: 2em;
+    width: 100%;
+    margin:40px 0px;
+  }
+  h2{
+      font-size: 1.5em;
+      width: 100%;
+      margin: 20px 0px;
+  }
+  .title_input{
+    padding: 10px;
+    .title{
+      border: solid 1px;
+      border-radius: 10px;
+      font-size: 1.5em;
+    }
+  }
+  .talk_type{
+    padding: 10px;
+  }
+  .input_genre{
+    padding: 10px;
+
+  }
+  button{
+    margin-top: 15px;
+    font-size: 1.5em;
+  }
+
+}
