@@ -8,8 +8,7 @@
 
 #branding {
   width: 75%;
-  height: 250px;
-  border: solid #000000 1px;
+  height: 350px;
   margin: 10px auto 40px;
   text-align: center;
 }
@@ -25,14 +24,9 @@
 }
 
 #contents_area > ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .products {
@@ -86,11 +80,9 @@ li.favorite {
   position: fixed;
   bottom: 80px;
   right: 85px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 #link_to_bbs img {
   border-radius: 50%;
 }
-/*# sourceMappingURL=index.css.map */
