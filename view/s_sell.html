@@ -1,67 +1,119 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ja">
+
 <head>
-<meta charset="UTF-8">
-<title>出品ページ</title>
-<link href="../css/s_sell.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>出品ページ</title>
+  <link href="../css/header_and_footer.css" rel="stylesheet" type="text/css">
+  <link href="../css/s_sell.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
+  <div id="wrapp">
+    <div id="global_nav">
+      <h1><a href="./index.html"><img src="../images/image_materials/logo.png" width="308" height="77" alt="まさる堂ロゴ"></a>
+      </h1>
+      <div id="header_search_area">
+        <input type="text" name="search" placeholder="何かお探しですか？">
+        <button>検索</button>
+      </div>
+      <div id="header_login_area">
+        <button>ログイン</button>
+        <button>文字/色変更</button>
+      </div>
+    </div><!-- global_navi -->
+    <nav>
+      <ul>
+        <li><a href="">商品ジャンル一覧</a></li>
+        <li><a href="">掲示板一覧</a></li>
+        <li><a href="">出品</a></li>
+        <li><a href="">マイページ</a></li>
+      </ul>
+    </nav><!-- top_navi -->
 
-  <section class="top">
-    <p><a href=""><img src="../images/image_materials/arrow.jpg" width="40" alt="arrow"></a></p>
-    <p>商品の情報を入力</p>
-  </section>
+    <section class="pictures">
+      <ul>
+        <li><span>1</span><input type="image" src="" alt=""></li>
+        <li><span>2</span><input type="image" src="" alt=""></li>
+        <li><span>3</span><input type="image" src="" alt=""></li>
+        <li><span>4</span><input type="image" src="" alt=""></li>
+        <li><span>5</span><input type="image" src="" alt=""></li>
+        <li><span>6</span><input type="image" src="" alt=""></li>
+      </ul>
+    </section>
 
-  <section class="pictures">
-    <ul>
-      <li><span>1</span><img class="first" src="../images/image_materials/sell.jpg" width="100">（必須）</li>
-      <li><span>2</span><img class="second" src="../images/products/camera.jpg" width="150"></li>
-      <li><span>3</span></li>
-      <li><span>4</span></li>
-      <li><span>5</span></li>
-      <li><span>6</span></li>
-    </ul>
-  </section>
+    <p class="ten"><a href="s_tenplate.html">テンプレート</a></p>
 
-  <p class="ten"><a href="s_tenplate.html">テンプレート</a></p>
-
-  <p class="green">商品名と説明</p>
-  <section class="area">
-    <p>商品名</p>
-    <input class="one" type="text" name="name" placeholder="（必須、400文字まで）">
-    <p>商品の説明</p>
-    <textarea rows="6" cols="185" name="about" placeholder="（任意、1000文字まで）
+    <p class="green">商品名と説明</p>
+    <section class="area">
+      <p>商品名</p>
+      <input class="one" type="text" name="name" placeholder="（必須、400文字まで）">
+      <p>商品の説明</p>
+      <textarea rows="6" cols="185" name="about" placeholder="（任意、1000文字まで）
 （色、素材、重さ、定価、注意点など）
 
 例：2010年頃に1万円で購入したジャケットです。
 ライトグレーで傷はありません。合わせやすいのでおすすめです。"></textarea>
-  </section>
+    </section>
 
-  <p class="green">商品の詳細</p>
-  <section class="area">
-    <p><span>カテゴリー</span><a href="s_category1.html">（必須）</a></p>
-    <p><span>商品の状態</span><a href="s_jyoutai.html">（必須）</a></p>
-  </section>
+    <p class="green">商品の詳細</p>
+    <section class="area">
+      <p><span>カテゴリー</span><a href="s_category1.html">（必須）</a></p>
+      <p><span>商品の状態</span><a href="s_jyoutai.html">（必須）</a></p>
+    </section>
 
-  <p class="green">配送について</p>
-  <section class="area">
-    <p><span>配送の負担</span><a href="s_price.html">（必須）</a></p>
-    <p><span>配送の方法</span><a href="s_send.html">未定</a></p>
-    <p><span>発送元の地域</span><a href="s_place.html">選ぶ</a></p>
-    <p><span>発送までの日数</span><a href="s_day.html">選ぶ</a></p>
-  </section>
+    <p class="green">配送について</p>
+    <section class="area">
+      <p><span>配送の負担</span><a href="s_price.html">（必須）</a></p>
+      <p><span>配送の方法</span><a href="s_send.html">未定</a></p>
+      <p><span>発送元の地域</span><a href="s_place.html">選ぶ</a></p>
+      <p><span>発送までの日数</span><a href="s_day.html">選ぶ</a></p>
+    </section>
 
-  <p class="green">販売価格（300～9,999,999）</p>
-  <section class="mny">
-    <p><input type="text" name="" placeholder="￥0"></p>
-  </section>
+    <p class="green">販売価格（300～9,999,999）</p>
+    <section class="mny">
+      <p><input type="text" name="" placeholder="￥0"></p>
+    </section>
 
-  <section class="area">
-    <p>販売手数料<span>-</span></p>
-    <p>販売利益<span>-</span></p>
-  </section>
+    <section class="area">
+      <p>販売手数料<span>-</span></p>
+      <p>販売利益<span>-</span></p>
+    </section>
 
-  <p class="out"><a href="./s_check.html">出品する</a></p>
+    <p class="out"><a href="./s_check.html">出品する</a></p>
+    <footer>
+      <div class="guide">
+        <h3>ガイド</h3>
+        <ul>
+          <li><a href="">まさる堂ガイド</a></li>
+          <li><a href="">よくあるご質問</a></li>
+          <li><a href="">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div class="about_of_masarudo">
+        <h3>まさる堂について</h3>
+        <ul>
+          <li><a href="">会社概要</a></li>
+          <li><a href="">プライバシーポリシー</a></li>
+          <li><a href="">まさる堂利用規約</a></li>
+          <li><a href="">特定商取引法に基づく表記</a></li>
+          <li><a href="">古物営業法に基づく表記</a></li>
+          <li><a href="">採用情報</a></li>
+        </ul>
+      </div>
+      <div class="linsk">
+        <h3>リンク</h3>
+        <p><a href="">まさる堂ホームページ</a></p>
+      </div>
+      <div class="trade_mark">
+        <p>まさる堂</p>
+        <p>© Masarudo, Inc.</p>
+      </div>
+    </footer>
+  </div>
 
 </body>
+
 </html>
