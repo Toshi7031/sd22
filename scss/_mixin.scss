@@ -4,6 +4,6 @@ $set-prefix:  -webkit-, -moz-, -ms-, '';
 
 @mixin property_set_prefix($name, $value) {
 	@each $prefix in $set-prefix {
-			#{$prefix}#{$name}: $value;
+		#{$prefix}#{$name}: $value;
 	}
 }

@@ -4,10 +4,11 @@
   const HOST    = 'localhost';
   const DB_USER = 'root';
   const DB_PASS = '';
-  const DB_NAME = 'ph22';
+  const DB_NAME = 'masarudoh';
 
   //画像アップロード先
-  const UPLOAD_PATH = './images/';
+  const ICON_UPLOAD_PATH = '../images/icons/';
+  const PRODUCT_IMAGE_UPLOAD_PATH = '../images/products';
 
 
   //funcのPATH
