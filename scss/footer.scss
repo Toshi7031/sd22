@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/* CSS Document */
+
+// 変数宣言
+$headerColor : #3cb371;
+$globalNavHeight : 70px;
+$navColor : #81F781;
+$buttonColor : #FACC2E;
+$nav_height : 50px;
+
+// 関数
+@import './mixin';
+
+/*----------------------------------------
+				footer
+----------------------------------------*/
+footer {
+	width: 100%;
+	height: 400px;
+	padding: 40px 12% 10px 12%;
+	color: #E6E6E6;
+	background-color: $headerColor;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	h3 {
+		font-size: 1.3em;
+		padding-bottom: 10px;
+		margin-bottom: 15px;
+		border-bottom: solid #E6E6E6 1px;
+	}
+	li {
+		font-size: 1.1em;
+		margin-bottom: 20px;
+	}
+	a {
+		color: #E6E6E6;
+	}
+	.guide,.about_of_masarudo,.linsk {
+		width: 33.3%;
+		padding-right: 60px;
+		margin-bottom: 40px;
+	}
+	.trade_mark {
+		width: 100%;
+		text-align: center;
+	}
+}
