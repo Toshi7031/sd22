@@ -6,4 +6,4 @@ require_once '../model/func/func.php';
 
 
 
-require_once '../view/login.php';
+require_once '../view/';
