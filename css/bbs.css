@@ -67,6 +67,7 @@ button {
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -97,14 +98,9 @@ body {
 }
 
 .bbs_top ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   height: 100%;
   overflow: hidden;
 }
@@ -163,8 +159,7 @@ body {
   border: 1px solid #81F781;
   text-align: center;
   /* テキストの揃え */
-  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
 
@@ -173,8 +168,7 @@ body {
   width: 20px;
   /* 影をつけるために線幅で設定せずにboxを使用する */
   height: 20px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   position: absolute;
   right: 0%;
   top: 0%;
@@ -215,8 +209,7 @@ body {
   border: 1px solid #ddd;
   text-align: center;
   /* テキストの揃え */
-  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
 
@@ -225,8 +218,7 @@ body {
   width: 20px;
   /* 影をつけるために線幅で設定せずにboxを使用する */
   height: 20px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   position: absolute;
   left: 0%;
   top: 0%;
@@ -257,15 +249,9 @@ body {
   bottom: 0px;
   width: 80%;
   border: solid 1px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .talk_send button {
@@ -287,4 +273,3 @@ body {
   border: solid 1px;
   outline: 0;
 }
-/*# sourceMappingURL=bbs.css.map */

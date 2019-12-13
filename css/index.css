@@ -24,9 +24,14 @@
 }
 
 #contents_area > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .products {
@@ -80,9 +85,11 @@ li.favorite {
   position: fixed;
   bottom: 80px;
   right: 85px;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 #link_to_bbs img {
   border-radius: 50%;
 }
+/*# sourceMappingURL=index.css.map */
