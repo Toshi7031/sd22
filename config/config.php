@@ -9,7 +9,3 @@
   //画像アップロード先
   const ICON_UPLOAD_PATH = '../images/icons/';
   const PRODUCT_IMAGE_UPLOAD_PATH = '../images/products';
-
-
-  //funcのPATH
-  define('_FUNC_FILE', __DIR__ . '/../model/func/func.php');
