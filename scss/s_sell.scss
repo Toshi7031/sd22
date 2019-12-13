@@ -2,41 +2,59 @@
 /* CSS Document */
 
 // 変数宣言
-$headerColor : #3cb371;
+$bgColor : #E4E4E4;
 $productBgColor : #D8D8D8;
+$headerColor : #3CB371;
 $buttonColor : #FACC2E;
 
 // 関数
 @import './mixin';
 /*----------------------------------------
+				reset
+----------------------------------------*/
+@import './reset';
+textarea {
+  border: none;
+}
+
+/*----------------------------------------
+				header
+----------------------------------------*/
+@import './header';
+
+/*----------------------------------------
+				footer
+----------------------------------------*/
+@import './footer';
+
+/*----------------------------------------
 				body
 ----------------------------------------*/
 body{
-  background-color: #E4E4E4;
-}
-
-#wrapp {
-	width: 100vw;
-}
-
-#wrapp {
-  > section, > p{
-    width: 80%;
-    border: solid #000000 1px;
-  } 
+  width: 100%;
+  background-color: $bgColor;
 }
 
 .pictures {
+  width: 80%;
+  margin: 0 auto;
   ul {
+    width: (180px * 3) + 100px;
+    max-width: (180px * 4);
+    min-width: (180px * 3) + 40px;
+    margin: 20px auto;
+    padding: 10px;
+    // margin-bottom: 30px;
     display: flex;
-    margin-top: 20px;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   li {
-    width: 200px;
-    height: 200px;
-    background-color: white;
+    width: 180px;
+    height: 180px;
+    background-color: #fff;
     display: block;
+    margin-bottom: 25px;
   }
   span {
     padding: 10px 15px;
@@ -44,84 +62,112 @@ body{
     top: 10px;
     background-color: lightgray;
   }
-  
-  .first{
-    position: absolute;
-    top: 125px;
-    left: 65px;
-  }
-  .second{
-    position: absolute;
-    top: 110px;
-    left: 260px;
+  input {
+    width: 100%;
+    height: 100%;
+    line-height: 180px;
   }
 }
 
 .ten{
   background-color: #33AB53;
-  height: 30px;
-  width: 150px;
-  padding-top: 5px;
+  height: 40px;
+  width: 200px;
+  line-height: 40px;
   text-align: center;
   border-radius: 20px;
+  position: relative;
+  left: 80%;
   a{
+    width: 100%;
+    height: 100%;
     color: #fff;
+    display: block;
   }
 }
 
 .green{
-  width: 100%;
+  width: 80%;
   font-size: 20px;
   color: #3CB371;
   font-weight: bold;
-  padding: 5px;
+  // padding: 5px;
+  margin: 0 auto 10px;
 }
 
 .area{
+  width: 80%;
   padding: 20px;
-  margin-bottom: 50px;
-  background-color: white;
-  p{
+  margin: 0 auto 50px;
+  background-color: #fff;
+  p {
+    height: 1.5em;
+    line-height: 1.5em;
     display: flex;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 20px;
+  }
+  p:last-child {
+    margin-bottom: 0;
   }
   textarea {
     width: 100%;
   }
-  span{
-    width: 80%;
-    padding-top: 5px;
-  }
-  a{
+  span:first-child{
     width: 20%;
+  }
+  span:nth-child(2) {
+    width: 10%;
     color: gray;
-    padding: 5px;
+  }
+  select {
+    width: 70%;
     text-align: right;
   }
 }
+
 .one{
   margin-bottom: 50px;
 }
 
 .mny{
+  width: 80%;
   background-color: #fff;
-  margin-bottom: 50px;
-  display: flex;
+  padding: 10px;
+  margin: 0 auto 50px;
+  text-align: right;
   input{
     height: 50px;
-    position: relative;
-    left: 580px;
     text-align: right;
+    margin-right: 10px;
+    border-bottom: solid $productBgColor 1px;
   }
 }
 
+/* なぜかnth-child(6)で動作 */
+.area:nth-child(6) {
+  input, textarea {
+    width: 100%;
+    font-size: 1.3em;
+    border-bottom: solid $productBgColor 2px;
+  }
+  input {
+    height: 50px;
+  }
+  textarea {
+    height: 150px;
+  }
+}
+
+.area:nth-last-of-type(1) p {
+  width: 100%;
+  position: relative;
+}
 .area:nth-last-of-type(1) span{
   width: 5%;
   text-align: right;
   position: absolute;
-  right: 10px;
-  padding-right: 20px;
+  right: 0;
 }
 .area:nth-last-of-type(1) p:nth-of-type(1){
   margin-bottom: 20px;
@@ -135,13 +181,15 @@ body{
   width: 500px;
   height: 70px;
   text-align: center;
+  line-height: 70px;
+  margin: 0 auto 50px;
   background-color: #3CB371;
   border-radius: 40px;
   a {
     color: #fff;
+    font-size: 1.6em;
     font-weight: bold;
-    font-size: 25px;
-    padding-top: 18px;
+    display: block;
   }
 }
 /* .area input, .area textarea{
