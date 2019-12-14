@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* CSS Document */
 
 // 変数宣言
 $headerColor : #3cb371;
@@ -11,9 +10,6 @@ $nav_height : 50px;
 // 関数
 @import './mixin';
 
-/*----------------------------------------
-				header
-----------------------------------------*/
 h1 {
 	width: 200px;
 	height: $globalNavHeight * 0.8;
