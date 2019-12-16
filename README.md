@@ -31,28 +31,28 @@ index.php
 
 
 # 作業分担
-  峯松
-    購入
-      s_sell.php
-      s_sell.js
-      s_check.php
+## - 峯松
+### - 購入
+- s_sell.php
+- s_sell.js
+- s_check.php
 
-    取引
+### - 取引
       controller/negotiate.php
       view/negotiate.php
       negotiate.js
 
-    マイページ
+### - マイページ
       controller/mypage.php
       view/mypage.php
 
-    ログイン
+### - ログイン
       log_in.js
 
-    登録
+### - 登録
       sign_in_check.js
 
-    パスワード変更
+### - パスワード変更
       controller/change_password.php
       view/change_password.php
       change_password.css
@@ -64,8 +64,8 @@ index.php
       change_complete.css
 
 
-  松井
-    掲示板
+## - 松井
+### - 掲示板
       bbs.php
       bbs.css
       bbs.js
@@ -76,19 +76,19 @@ index.php
       new_bbs.css
       new_bbs.js
 
-    商品一覧/詳細
+### - 商品一覧/詳細
       product_deteals.php
       product_view.php
 
-    購入
+### - 購入
       buy_procedures.php
       buy_procedures.js
       controller/buy_complete.php
       view/buy_complete.php
 
 
-  松原
-    登録
+## - 松原
+### - 登録
       controller/sign_in.php
       view/sign_in.php
       sign_in.css
@@ -97,13 +97,13 @@ index.php
       sign_in_complete.php
       sign_in_complete.css
 
-    ログイン/ログアウト
+###    ログイン/ログアウト
       view/login.php
       login.css
       view/logout.php
       logout.css
 
-    退会 
+###    退会 
       controller/leave_reason.php
       view/leave_reason.php
       leave_reason.css
@@ -115,11 +115,11 @@ index.php
       leave_complete.css
 
 
-  上原
-    新着商品読み込み
+##  上原
+###    新着商品読み込み
       index.php
 
-    ログイン/ログアウト
+###    ログイン/ログアウト
       controller/login.php
       controller/logout.php
 
@@ -130,7 +130,7 @@ index.php
     2.↑を受け取ったら、一旦、Gitにプッシュ、マージを行ってから、書き換えの許可を出す
     3.許可を受け取ったら、書き換える
 
-コーディング時の注意事項
+# コーディング時の注意事項
   1.inputタグのnameは、対応するカラム名と同じにする
   2.インデントは半角スペース２つ
   3.コメントは適宜つける
