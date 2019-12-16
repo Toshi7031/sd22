@@ -140,12 +140,12 @@ body{
     height: 50px;
     text-align: right;
     margin-right: 10px;
-    border-bottom: solid $productBgColor 1px;
+    border-bottom: solid $productBgColor 2px;
   }
 }
 
-/* なぜかnth-child(6)で動作 */
-.area:nth-child(6) {
+/* なぜかnth-child(5)で動作 */
+.area:nth-child(5) {
   input, textarea {
     width: 100%;
     font-size: 1.3em;
@@ -157,6 +157,10 @@ body{
   textarea {
     height: 150px;
   }
+}
+
+.area:nth-child(7) > p:nth-child(2) {
+  margin-bottom: 30px;
 }
 
 .area:nth-last-of-type(1) p {
@@ -176,25 +180,23 @@ body{
   font-size: 35px;
 }
 
-
 .out{
   width: 500px;
+  margin: 0 auto 50px;
   height: 70px;
   text-align: center;
-  line-height: 70px;
-  margin: 0 auto 50px;
-  background-color: #3CB371;
-  border-radius: 40px;
-  a {
+  button {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
     color: #fff;
-    font-size: 1.6em;
-    font-weight: bold;
-    display: block;
+    font-size: 1.3em;
+    background-color: #3CB371;
+    border-radius: 40px;
   }
 }
 /* .area input, .area textarea{
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-
 } */
