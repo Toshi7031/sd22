@@ -4,12 +4,7 @@
 
 
 #  ファイル構成
-
-index.php
-│
-├ config         config.phpが入っているフォルダ
-
-
+```
 index.php
 │
 ├ config        config.phpが入っているフォルダ
@@ -24,7 +19,7 @@ index.php
 ├ scss          scssのフォルダ
 ├ sql           sqlのフォルダ
 └ view          html部が入ったフォルダ
-
+```
 
 
 
