@@ -29,21 +29,33 @@
       <section class="area">
         <p>
           <span>カテゴリー</span><span>（必須）</span>
-          <select name="product_categories">
-            <option value="">選択してください</option>
-            <option value=""></option>
-            <option value="">選択してください</option>
-            <option value="">選択してください</option>
-            <option value="">選択してください</option>
-            <option value="">選択してください</option>
-            <option value="">選択してください</option>
-            <option value="">選択してください</option>
+          <select name="large_product_categories">
+            <option value="0">選択してください</option>
+            <option value="1">レディース</option>
+            <option value="2">メンズ</option>
+            <option value="3">キッズ</option>
+            <option value="4">インテリア・住まい</option>
+            <option value="5">家電</option>
+            <option value="6">ホビー・娯楽</option>
+            <option value="7">ハンドメイド</option>
+          </select>
+        </p>
+        <p>
+          <span></span><span></span>
+          <select name="small_product_categories" disabled>
+            <option value="">選択できません</option>
           </select>
         </p>
         <p>
           <span>商品の状態</span><span>（必須）</span>
           <select name="product_condition">
-            <option value="">選択してください</option>
+            <option value="0">選択してください</option>
+            <option value="1">新品・未使用</option>
+            <option value="2">未使用に近い</option>
+            <option value="3">目立った傷や汚れなし</option>
+            <option value="4">やや傷や汚れあり</option>
+            <option value="5">傷や汚れあり</option>
+            <option value="6">全体的に状態が悪い</option>
           </select>
         </p>
       </section>
@@ -129,7 +141,7 @@
         <p>
           <span>発送までの日数</span><span></span>
           <select name="send">
-            <option value="">選択してください</option>
+            <option value="0">選択してください</option>
             <option value="12">１～２日で発送</option>
             <option value="23">２～３日で発送</option>
             <option value="47">４～７日で発送</option>
@@ -137,14 +149,14 @@
         </p>
       </section>
 
-      <p class="green">販売価格（300～9,999,999）</p>
+      <p class="green">販売価格（300～300,000）</p>
       <section class="mny">
-        <p><span>￥</span><input type="number" name="price" placeholder="300" min="300"></p>
+        <p><span>￥</span><input type="number" name="price" placeholder="300" min="300" max="300000"></p>
       </section>
 
       <section class="area">
-        <p>販売手数料<span>-</span></p>
-        <p>販売利益<span>-</span></p>
+        <p id="commission_rate">販売手数料<span>-</span></p>
+        <p id="profit">販売利益<span>-</span></p>
       </section>
 
       <p class="out"><button type="submit" name="check" value="c">出品する</button></p>

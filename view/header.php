@@ -3,8 +3,12 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
   <title><?php echo $title; ?></title>
-  <link href="<?php echo $css_path; ?>" rel="stylesheet" type="text/css">
+  <link href="../css/<?php echo $css_file_name; ?>" rel="stylesheet" type="text/css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
 </head>
 
 <body>
@@ -24,7 +28,7 @@
       <ul>
         <li><a href="">商品ジャンル一覧</a></li>
         <li><a href="">掲示板一覧</a></li>
-        <li><a href="">出品</a></li>
+        <li><a href="./s_sell.php">出品</a></li>
         <li><a href="">マイページ</a></li>
       </ul>
     </nav><!-- top_navi -->

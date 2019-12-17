@@ -28,6 +28,9 @@
       </div>
     </footer>
   </article>
+<?php if(file_exists('../js/'.$js_file_name)): ?>
+  <script src="../js/<?php echo $js_file_name;?>"></script>
+<?php endif; ?>
 </body>
 
 </html>
