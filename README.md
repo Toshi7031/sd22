@@ -50,6 +50,7 @@ index.php
   - controller/change_complete.php
   - view/change_complete.php
   - change_complete.css
+- その他修正
 
 
 ## - 松井
