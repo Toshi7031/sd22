@@ -28,7 +28,7 @@
       <ul>
         <li><a href="">商品ジャンル一覧</a></li>
         <li><a href="">掲示板一覧</a></li>
-        <li><a href="./controller/s_sell.php">出品</a></li>
+        <li><a href="./controller/exhibition_sell.php">出品</a></li>
         <li><a href="">マイページ</a></li>
       </ul>
     </nav><!-- top_navi -->
