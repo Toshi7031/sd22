@@ -77,10 +77,11 @@ function wrap_password(string $password)
 /**
  * データベースにレコードを書き込む関数
  *
- * @param string $sql INSERT文
- * @param array $post_info  
- * @param string 
- * @return Response すべて*になった文字列
+ * @param string $table テーブル名
+ * @param array  $colmun データを挿入するカラム
+ * @param array  $post_info 挿入するデータ
+ * @param string $colmun データを挿入するカラム
+ * @param string $post_info 挿入するデータ
  */
 function write_db(string $table, $colmun, $post_info) {
   $cnt = 1;
@@ -183,30 +184,36 @@ function read_db(string $table, $colmun = '') {
   return $rows;
 }
 
-// function delete_db($id){
-//   $sql = 'UPDATE t_post SET del_flg = 1 WHERE id = ?';
-//   $cn = mysqli_connect(HOST, DB_USER, DB_PASS, DB_NAME);
 
-//   //接続失敗時エラーコードを返却
-//   if(mysqli_connect_errno($cn)){
-//     return $error_code = '202';
-//   }
+/**
+ * データベースのdelflagを1にする関数
+ *
+ * @param string $table テーブル名
+ */
+function stand_delflag($table, $id){
+  $sql = "UPDATE " . DB_PASS . "." . $table . " SET delflag = 1 WHERE id = ?";
+  $cn = mysqli_connect(HOST, DB_USER, DB_PASS, DB_NAME);
 
-//   mysqli_set_charset($cn, 'utf8');
+  //接続失敗時エラーコードを返却
+  if(mysqli_connect_errno($cn)){
+    return $error_code = '202';
+  }
 
-//   mysqli_begin_transaction($cn);
-//   try{
-//     $stmt = mysqli_prepare($cn, $sql);
-//     mysqli_stmt_bind_param($stmt, 'i', $id);
-//     mysqli_execute($stmt);
-//   }
-//   catch(Exception $e){
-//     mysqli_rollback($cn);
-//     mysqli_close($cn);
-//     return $error_code = '202';
-//   }
-//   mysqli_commit($cn);
+  mysqli_set_charset($cn, 'utf8');
 
-//   mysqli_close($cn);
-//   return;
-// }
+  mysqli_begin_transaction($cn);
+  try{
+    $stmt = mysqli_prepare($cn, $sql);
+    mysqli_stmt_bind_param($stmt, 'i', $id);
+    mysqli_execute($stmt);
+  }
+  catch(Exception $e){
+    mysqli_rollback($cn);
+    mysqli_close($cn);
+    return $error_code = '202';
+  }
+  mysqli_commit($cn);
+
+  mysqli_close($cn);
+  return;
+}
