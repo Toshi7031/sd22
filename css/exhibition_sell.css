@@ -413,7 +413,8 @@ body {
 }
 
 .area:nth-last-of-type(1) span {
-  width: 5%;
+  width: 20%;
+  min-width: 145px;
   text-align: right;
   position: absolute;
   right: 0;
