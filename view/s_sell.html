@@ -6,13 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>出品ページ</title>
-  <link href="../css/header_and_footer.css" rel="stylesheet" type="text/css">
   <link href="../css/s_sell.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-  <div id="wrapp">
-    <div id="global_nav">
+  <div id="wrap">
+    <header id="global_nav">
       <h1><a href="./index.html"><img src="../images/image_materials/logo.png" width="308" height="77" alt="まさる堂ロゴ"></a>
       </h1>
       <div id="header_search_area">
@@ -23,7 +22,7 @@
         <button>ログイン</button>
         <button>文字/色変更</button>
       </div>
-    </div><!-- global_navi -->
+    </header><!-- global_navi -->
     <nav>
       <ul>
         <li><a href="">商品ジャンル一覧</a></li>
@@ -33,14 +32,15 @@
       </ul>
     </nav><!-- top_navi -->
 
+    <p class="green">商品画像</p>
     <section class="pictures">
       <ul>
-        <li><span>1</span><input type="image" src="" alt=""></li>
-        <li><span>2</span><input type="image" src="" alt=""></li>
-        <li><span>3</span><input type="image" src="" alt=""></li>
-        <li><span>4</span><input type="image" src="" alt=""></li>
-        <li><span>5</span><input type="image" src="" alt=""></li>
-        <li><span>6</span><input type="image" src="" alt=""></li>
+        <li><span>1</span><input type="file"></li>
+        <li><span>2</span><input type="file"></li>
+        <li><span>3</span><input type="file"></li>
+        <li><span>4</span><input type="file"></li>
+        <li><span>5</span><input type="file"></li>
+        <li><span>6</span><input type="file"></li>
       </ul>
     </section>
 
@@ -60,21 +60,63 @@
 
     <p class="green">商品の詳細</p>
     <section class="area">
-      <p><span>カテゴリー</span><a href="s_category1.html">（必須）</a></p>
-      <p><span>商品の状態</span><a href="s_jyoutai.html">（必須）</a></p>
+      <p>
+        <span>カテゴリー</span><span>（必須）</span>
+        <select name="">
+          <option value="">選択してください</option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+      </p>
+      <p>
+        <span>商品の状態</span><span>（必須）</span>
+        <select name="">
+          <option value="">選択してください</option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+      </p>
     </section>
 
     <p class="green">配送について</p>
     <section class="area">
-      <p><span>配送の負担</span><a href="s_price.html">（必須）</a></p>
-      <p><span>配送の方法</span><a href="s_send.html">未定</a></p>
-      <p><span>発送元の地域</span><a href="s_place.html">選ぶ</a></p>
-      <p><span>発送までの日数</span><a href="s_day.html">選ぶ</a></p>
+      <p>
+        <span>配送の負担</span><span>（必須）</span>
+        <select name="">
+          <option value="">選択してください</option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+      </p>
+      <p>
+        <span>配送の方法</span><span></span>
+        <select name="">
+          <option value="">選択してください</option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+      </p>
+      <p>
+        <span>発送元の地域</span><span></span>
+        <select name="">
+          <option value="">選択してください</option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+      </p>
+      <p>
+        <span>発送までの日数</span><span></span>
+        <select name="">
+          <option value="">選択してください</option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+      </p>
     </section>
 
     <p class="green">販売価格（300～9,999,999）</p>
     <section class="mny">
-      <p><input type="text" name="" placeholder="￥0"></p>
+      <p><span>￥</span><input type="number" name="" placeholder="300" min="300"></p>
     </section>
 
     <section class="area">
@@ -83,6 +125,7 @@
     </section>
 
     <p class="out"><a href="./s_check.html">出品する</a></p>
+
     <footer>
       <div class="guide">
         <h3>ガイド</h3>

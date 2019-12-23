@@ -1,77 +1,171 @@
 <?php
-//*************************
-//課題No.01
-//作成日:2019/06/06
-//作成者:峯松康二
-//クラス:IH-12A-905
-//*************************
 
-
-function h($s) {
+/**
+ * エスケープ処理をする関数
+ *
+ * @param string $s エスケープしたい文字列
+ * @return Response エスケープされた文字列
+ */
+function h($s)
+{
   return htmlspecialchars($s, ENT_QUOTES, 'UTF-8');
 }
 
 
-function redirect($url) {
+/**
+ * リダイレクトをする関数
+ * exitも含んでいる
+ *
+ * @param string $url リダイレクト先のurl
+ */
+function redirect($url)
+{
   header('HTTP/1.1 301 Moved Permanently');
   header("Location: $url");
   exit;
 }
 
 
-// 概要  ：半角英数字から$length文字分ランダムに文字を返す
-// 引数  ：int $length (<= 35)
-// 戻り値：$length文字分のランダムな半角英数字
-function random_string(int $length) {
-  if($length > 35) {
+/**
+ * ランダムな文字列を出力する関数
+ *
+ * @param int $length 出力したい文字数
+ * @return Response ランダムな文字列
+ */
+function random_string(int $length)
+{
+  if ($length > 35) {
     $length = 1;
   }
-  $length = 36 - (int)$length;
+  $length = 36 - (int) $length;
   return substr(str_shuffle('0123456789abcdefghijklmnopqrstuvwxyz'), $length);
 }
 
 
-// 概要  ：引数がメールアドレスかどうかチェックする。
-function mach_email(string $address) {
-  if(filter_var($address, FILTER_VALIDATE_EMAIL)) {
-		return true;
+/**
+ * 渡された文字列がメールアドレスかをチェックする関数
+ *
+ * @param string $address チェックしたい文字列
+ * @return bool メールアドレスの場合はtrue 違う場合はfalse
+ */
+function mach_email(string $address)
+{
+  if (filter_var($address, FILTER_VALIDATE_EMAIL)) {
+    return true;
   }
-  if(strpos($address, '@docomo.ne.jp') !== false || strpos($address, '@ezweb.ne.jp') !== false) {
-		$pattern = '/^([a-zA-Z])+([a-zA-Z0-9\._-])*@(docomo\.ne\.jp|ezweb\.ne\.jp)$/';
-		if(preg_match($pattern, $address) === 1) {
-			return true;
-		}
+  if (strpos($address, '@docomo.ne.jp') !== false || strpos($address, '@ezweb.ne.jp') !== false) {
+    $pattern = '/^([a-zA-Z])+([a-zA-Z0-9\._-])*@(docomo\.ne\.jp|ezweb\.ne\.jp)$/';
+    if (preg_match($pattern, $address) === 1) {
+      return true;
+    }
   }
   return false;
 }
 
-// 概要  ：引数の文字列を全て文字数分の*に変更する。
-function wrap_password(string $password) {
+/**
+ * 渡された文字列をすべて*にする関数
+ *
+ * @param string $password 変換したい文字列
+ * @return Response すべて*になった文字列
+ */
+function wrap_password(string $password)
+{
   return str_repeat('*', strlen($password));
 }
 
 
-// 概要  ：データベースに接続してSQLを実行する
-// 引数1 ：string $sql プリペアドステートメント
-// 引数2 ：string/array $data SQL文の条件
-// 戻り値：エラー発生時 string
-//        参照系 array
-//        更新系 bool
-function execute_sql(string $sql, $data = NULL) {
-  $rows = array();
-  if(is_array($data)){
-    $data = array_values($data);  //連想配列を普通の配列に変換
-    $cnt = count($data);
+/**
+ * データベースにレコードを書き込む関数
+ *
+ * @param string $table テーブル名
+ * @param array  $colmun データを挿入するカラム
+ * @param array  $post_info 挿入するデータ
+ * @param string $colmun データを挿入するカラム
+ * @param string $post_info 挿入するデータ
+ */
+function write_db(string $table, $colmun, $post_info) {
+  $cnt = 1;
+  $colmuns = '';
+  $questions = '?';
+
+  if(is_array($post_info)){
+    $colmun = array_values($post_info); //連想配列を普通の配列に変換
+    $post_info = array_values($post_info);  //同上
+    $cnt = count($post_info);
+    $colmuns = $colmun[0];
+
     // データ型を生成
-    $data_type = substr(gettype($data[0]), 0, 1);
+    $type = substr(gettype($post_info[0]), 0, 1);
+    for($i = 1; $i < $cnt; ++$i){
+      $type .= substr(gettype($post_info[$i]), 0, 1);
+    }
+
+    //プリペアドステートメントを作成するための変数生成
     for($i = 1; $i < $cnt; ++$i) {
-      $data_type .= substr(gettype($data[$i]), 0, 1);
-      echo 'array';
+      $colmuns .= ',' . $colmun[$i];
+      $questions .= ',?';
     }
   }
-  elseif(!is_null($data)) {
-    $data_type = substr(gettype($data), 0, 1);
+  else {
+    $colmuns = $colmun;
+    // データ型を生成
+    $type = substr(gettype($post_info[0]), 0, 1);
   }
+
+  // sqlを生成(プリペアドステートメント)
+  $sql = "INSERT INTO " . DB_NAME . "." . $table .  " (" . $colmuns . ") VALUES (". $questions .")";
+
+  $cn = mysqli_connect(HOST, DB_USER, DB_PASS, DB_NAME);
+  //接続失敗時エラーコードを返却
+  if(mysqli_connect_errno($cn)){
+    return $error_code = '201';
+  }
+  mysqli_set_charset($cn, 'utf8');
+  mysqli_begin_transaction($cn);
+  try{
+    $stmt = mysqli_prepare($cn, $sql);
+    mysqli_stmt_bind_param($stmt, $type, ...$post_info);
+    mysqli_execute($stmt);
+  }
+  catch(Exception $e){
+    mysqli_rollback($cn);
+    mysqli_close($cn);
+    return $error_code = '201';
+  }
+  mysqli_commit($cn);
+  mysqli_close($cn);
+
+  return;
+}
+
+
+/**
+ * データベースからレコードを取得する関数
+ *
+ * @param string $table テーブル名
+ * @param array $colmun カラム名
+ * @param string $colmun カラム名
+ * @return array $rows 取得したレコードの二次元配列
+ */
+function read_db(string $table, $colmun = '') {
+  $rows = array();
+  $cnt = 1;
+  $colmuns = '';
+
+  // カラムが配列の場合
+  if(is_array($colmun)){
+    $colmun = array_values($colmun); //連想配列を普通の配列に変換
+    $cnt = count($colmun);
+
+    for($i = 1; $i < $cnt; ++$i) {
+      $colmuns .= $colmun[$i];
+    }
+  }
+  else {
+    $colmuns = $colmun;
+  }
+
+  $sql = "SELECT " . $colmuns . " FROM " . DB_NAME . "." . $table;
 
   $cn = mysqli_connect(HOST, DB_USER, DB_PASS, DB_NAME);
 
@@ -81,30 +175,45 @@ function execute_sql(string $sql, $data = NULL) {
   }
 
   mysqli_set_charset($cn, 'utf8');
+  $result =  mysqli_query($cn, $sql);  
+  
+  while ($row = mysqli_fetch_assoc($result)) {
+    $rows[] = $row;
+  }
+  mysqli_close($cn);
+  return $rows;
+}
+
+
+/**
+ * データベースのdelflagを1にする関数
+ *
+ * @param string $table テーブル名
+ */
+function stand_delflag($table, $id){
+  $sql = "UPDATE " . DB_PASS . "." . $table . " SET delflag = 1 WHERE id = ?";
+  $cn = mysqli_connect(HOST, DB_USER, DB_PASS, DB_NAME);
+
+  //接続失敗時エラーコードを返却
+  if(mysqli_connect_errno($cn)){
+    return $error_code = '202';
+  }
+
+  mysqli_set_charset($cn, 'utf8');
+
   mysqli_begin_transaction($cn);
   try{
     $stmt = mysqli_prepare($cn, $sql);
-    if(!is_null($data)){
-      is_array($data) ? mysqli_stmt_bind_param($stmt, $data_type, ...$data) : mysqli_stmt_bind_param($stmt, $data_type, $data);
-    }
-    mysqli_stmt_execute($stmt);
-    $result = mysqli_stmt_get_result($stmt);
+    mysqli_stmt_bind_param($stmt, 'i', $id);
+    mysqli_execute($stmt);
   }
   catch(Exception $e){
     mysqli_rollback($cn);
     mysqli_close($cn);
-    return $error_code = '201';
-    // return;
+    return $error_code = '202';
   }
   mysqli_commit($cn);
 
-  if(mysqli_stmt_field_count($stmt) > 1){
-    while ($row = mysqli_fetch_assoc($result)) {
-      $rows[] = $row;
-    }
-    mysqli_close($cn);
-    return $rows;
-  }
   mysqli_close($cn);
-  return true;
+  return;
 }
