@@ -143,8 +143,7 @@ body{
   }
 }
 
-/* なぜかnth-child(5)で動作 */
-.area:nth-child(5) {
+#description_area {
   input, textarea {
     width: 100%;
     font-size: 1.3em;
@@ -192,6 +191,7 @@ body{
     color: #fff;
     font-size: 1.3em;
     background-color: #3CB371;
+    border: none;
     border-radius: 40px;
   }
 }

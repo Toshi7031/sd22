@@ -89,7 +89,7 @@ function write_db(string $table, $colmun, $post_info) {
   $questions = '?';
 
   if(is_array($post_info)){
-    $colmun = array_values($post_info); //連想配列を普通の配列に変換
+    $colmun = array_values($colmun); //連想配列を普通の配列に変換
     $post_info = array_values($post_info);  //同上
     $cnt = count($post_info);
     $colmuns = $colmun[0];
@@ -175,7 +175,7 @@ function read_db(string $table, $colmun = '') {
   }
 
   mysqli_set_charset($cn, 'utf8');
-  $result =  mysqli_query($cn, $sql);  
+  $result = mysqli_query($cn, $sql);
   
   while ($row = mysqli_fetch_assoc($result)) {
     $rows[] = $row;
@@ -216,4 +216,20 @@ function stand_delflag($table, $id){
 
   mysqli_close($cn);
   return;
+}
+
+
+/**
+ * 商品の通し番号を取得する関数
+ * 
+ * @return int $id 
+ */
+function get_product_id() {
+  $sql = "SELECT MAX(id) AS 'id' FROM masarudoh.products";
+  $mysqli = new mysqli(HOST, DB_USER, DB_PASS, DB_NAME);
+  $mysqli->set_charset('utf8');
+  $result = $mysqli->query($sql);
+  $row = $result->fetch_row();
+  $mysqli->close();
+  return $row;
 }
