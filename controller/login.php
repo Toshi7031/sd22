@@ -13,18 +13,18 @@ $url = 'index.php';
 
 
   // エラーチェック
-  
-  
-  
-  // 空白チェック
-  
-  
-  
-  
 
-  // エラーなしで$_SESSION['login_flg']をtrueにする
-  
-  
+
+
+  // 空白チェック
+
+
+
+
+
+  // エラーなしで$_SESSION['login_flg']をtrueに、$_SESSION['login_id']にIDを記述
+
+
 
 //表示部の読み出し
 require_once '../view/header.php';
