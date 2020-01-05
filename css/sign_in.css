@@ -1,6 +1,6 @@
-@charset "UTF-8";
+@charset "utf-8";
+/* CSS Document */
 
-/* reset */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -12,7 +12,7 @@ fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
+time, mark, audio, video{
 	margin:0;
 	padding:0;
   outline:0;
@@ -104,70 +104,99 @@ button{
 
 
 
-a{
-  text-decoration: none;
-  color: black;
-}
-
 header{
   background-color: #3cb371;
   height: 80px;
+  margin-bottom: 50px;
 }
 header img{
   padding-top: 8px;
   margin-left: 10px;
 }
 
-h1 {
+#input{
+  border: solid gray 1px;
+  margin: 0 auto;
+  width: 60%;
+  padding: 30px 100px;
+  margin-bottom: 20px;
+}
+
+h1{
   text-align: center;
-  padding: 25px;
-	font-size: 33px;
+  font-size: 33px;
   font-weight: lighter;
 }
 
-#input{
-  border: solid gray 1px;
-  width: 35%;
-  padding: 20px 50px;
-  margin-bottom: 100px;
-	margin: 0 auto;
+table{
+  width: 600px;
 }
-#input p{
-  font-size: 20px;
-  line-height: 30px;
+.word{
+  padding: 40px 0px 10px;
+  font-size: 18px;
 }
+.box{
+  padding: 0px 20px;
+}
+.ad_word{
+	padding: 10px 0px 10px 20px;
+	font-size: 15px;
+}
+.ad_box{
+  padding: 0px 0px 0px 40px;
+}
+
 input{
+  height: 30px;
+	width: 175px;
 	font-size: 20px;
 }
-#input p:nth-of-type(2) input, p:nth-of-type(4) input{  /* text box */
-  height: 40px;
-  width: 100%;
-  margin-bottom: 25px;
+tr:nth-of-type(2) input, tr:nth-of-type(5) input{  /* name, password */
+  width: 300px;
 }
-#input p:nth-of-type(5) input{  /* login button */
-  padding: 5px;
-	font-size: 20px;
-	margin-bottom: 30px;
+
+/* 住所エリア */
+tr:nth-child(15) > td > input{  /* zip */
+	width: 80px;
 }
-#input p:nth-last-of-type(2) a,#input p:nth-last-of-type(3) a{  /* id,password忘れた */
-	font-size: 17px;
+tr:nth-child(18) > td > input, tr:nth-child(20) > td > input, tr:nth-child(22) > td > input{
+  width: 250px;
 }
-#input p:nth-last-of-type(2) a{  /* パスワードを忘れた */
-  position: relative;
-  bottom: 30px;
-  left: 220px;
+
+/* メールアドレスエリア */
+tr:nth-child(30) > td{
+  padding: 20px 20px 10px;
 }
-#input p:nth-last-of-type(1) a{
-  font-size: 28px;
+tr:nth-child(28) > td > input, tr:nth-child(31) > td > input{
+  width: 350px;
 }
-#input p:nth-of-type(5), #input p:nth-last-of-type(1){
-  text-align: center;
+
+.send {
+	text-align: center;
+	margin-bottom: 50px;
+}
+.send button{
+	margin-top: 20px;
+	height: 55px;
+	font-size: 23px;
+	padding: 10px;
 }
 
 footer{
   height: 70px;
   width: 100%;
-  position: absolute;
+  position: relative;
   bottom: 0px;
   background-color: #3cb371;
+}
+
+/* when there`s an error */
+.err, .ad_err{
+  color: red;
+  font-size: 15px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.ad_err{
+  padding-left: 40px;
 }
