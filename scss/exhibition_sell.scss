@@ -91,7 +91,6 @@ body{
   font-size: 20px;
   color: #3CB371;
   font-weight: bold;
-  // padding: 5px;
   margin: 0 auto 10px;
 }
 
@@ -144,8 +143,7 @@ body{
   }
 }
 
-/* なぜかnth-child(5)で動作 */
-.area:nth-child(5) {
+#description_area {
   input, textarea {
     width: 100%;
     font-size: 1.3em;
@@ -168,7 +166,8 @@ body{
   position: relative;
 }
 .area:nth-last-of-type(1) span{
-  width: 5%;
+  width: 20%;
+  min-width: 145px;
   text-align: right;
   position: absolute;
   right: 0;
@@ -192,6 +191,7 @@ body{
     color: #fff;
     font-size: 1.3em;
     background-color: #3CB371;
+    border: none;
     border-radius: 40px;
   }
 }

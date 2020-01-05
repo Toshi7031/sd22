@@ -3,10 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: localhost
--- 生成日時: 2019 年 12 月 17 日 18:30
+-- 生成日時: 2019 年 12 月 28 日 00:58
 -- サーバのバージョン： 10.3.20-MariaDB
--- PHP のバージョン: 7.3.11
+-- PHP のバージョン: 7.4.0
 
+SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
@@ -39,20 +40,41 @@ CREATE TABLE `comments` (
 -- --------------------------------------------------------
 
 --
+-- テーブルの構造 `day_to_send`
+--
+
+DROP TABLE IF EXISTS `day_to_send`;
+CREATE TABLE `day_to_send` (
+  `id` int(11) NOT NULL,
+  `day_to_send` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- テーブルのデータのダンプ `day_to_send`
+--
+
+INSERT INTO `day_to_send` (`id`, `day_to_send`) VALUES
+(1, '１～２日で発送'),
+(2, '２～３日で発送'),
+(3, '４～７日で発送');
+
+-- --------------------------------------------------------
+
+--
 -- テーブルの構造 `large_product_categories`
 --
 
 DROP TABLE IF EXISTS `large_product_categories`;
 CREATE TABLE `large_product_categories` (
   `id` int(2) NOT NULL,
-  `large_product_categories` varchar(64) DEFAULT NULL COMMENT '大カテゴリ'
+  `large_product_category` varchar(64) DEFAULT NULL COMMENT '大カテゴリ'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- テーブルのデータのダンプ `large_product_categories`
 --
 
-INSERT INTO `large_product_categories` (`id`, `large_product_categories`) VALUES
+INSERT INTO `large_product_categories` (`id`, `large_product_category`) VALUES
 (1, 'レディース'),
 (2, 'メンズ'),
 (3, 'キッズ'),
@@ -122,10 +144,11 @@ CREATE TABLE `products` (
   `id` int(11) NOT NULL COMMENT 'id',
   `product_name` varchar(150) NOT NULL COMMENT '商品名',
   `price` int(7) NOT NULL COMMENT '希望価格',
-  `dicsription` text DEFAULT NULL COMMENT '商品説明',
+  `description` varchar(1000) DEFAULT NULL COMMENT '商品説明',
   `product_category_id` int(3) NOT NULL COMMENT 'カテゴリ',
   `product_condition_id` int(1) NOT NULL COMMENT '商品の状態',
   `postage_id` int(6) NOT NULL COMMENT '送料負担者',
+  `send_method` int(2) NOT NULL COMMENT '配送方法',
   `state_id` int(1) NOT NULL COMMENT '発送元の地域',
   `days_to_send` int(2) NOT NULL COMMENT '発送までの日数',
   `exhibition_date` date NOT NULL COMMENT '出品日',
@@ -133,15 +156,19 @@ CREATE TABLE `products` (
   `favourite` int(4) DEFAULT 0 COMMENT 'お気に入り数',
   `exhibitor` int(6) NOT NULL COMMENT '出品者',
   `buyer` int(6) DEFAULT NULL COMMENT '購入者',
-  `progress` int(1) DEFAULT NULL COMMENT '取引の進捗'
+  `progress` int(1) DEFAULT NULL COMMENT '取引の進捗',
+  `images_count` int(2) DEFAULT NULL COMMENT '画像ファイル数'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- テーブルのデータのダンプ `products`
 --
 
-INSERT INTO `products` (`id`, `product_name`, `price`, `dicsription`, `product_category_id`, `product_condition_id`, `postage_id`, `state_id`, `days_to_send`, `exhibition_date`, `acquisition_date`, `favourite`, `exhibitor`, `buyer`, `progress`) VALUES
-(1, 'Nintendo Switch 本体 (ニンテンドースイッチ) Joy-Con(L) ネオンブルー/(R) ネオンレッド(バッテリー持続時間が長くなったモデル)', 32500, '未開封です。', 30, 1, 1, 27, 2, '2019-12-17', NULL, 0, 3, NULL, NULL);
+INSERT INTO `products` (`id`, `product_name`, `price`, `description`, `product_category_id`, `product_condition_id`, `postage_id`, `send_method`, `state_id`, `days_to_send`, `exhibition_date`, `acquisition_date`, `favourite`, `exhibitor`, `buyer`, `progress`, `images_count`) VALUES
+(1, 'Nintendo Switch 本体 (ニンテンドースイッチ) Joy-Con(L) ネオンブルー/(R) ネオンレッド(バッテリー持続時間が長くなったモデル)', 32500, '未開封です。', 30, 1, 1, 5, 27, 2, '2019-12-17', NULL, 0, 3, NULL, NULL, 1),
+(2, '漢検漢字学習ステップ2級', 599, '「漢検2級漢字学習ステップ」\r\n定価: ￥ 1,320\r\n\r\n#本 #BOOK #参考書\r\n\r\n鉛筆の書き込みが少しあります。\r\n自宅保管の点ご了承ください。', 29, 4, 1, 1, 28, 1, '2019-12-28', NULL, 0, 2, NULL, NULL, 1),
+(3, 'Aquascutum トレンチコート ベージュ', 22500, 'アクアスキュータムのトレンチコートです^ ^\r\n\r\n裏地もチェック柄で定番アイテムの定番カラーですので、これからのシーズンにも活躍するかと思います。\r\n\r\n上質なアイテムですので\r\n是非お探しの方はご検討くださいませ。\r\n\r\n特筆する汚れなどはないかと思いますが、中古品ですので神経質な方はご遠慮下さい。\r\n\r\nsize 8\r\n\r\n着丈 83cm\r\n身幅 51cm\r\n袖丈 71cm\r\n\r\n素人による採寸ですので多少の誤差はご了承下さい。\r\n\r\n何か不明点などありましたらお気軽お問い合わせください^_^', 1, 3, 1, 5, 14, 1, '2019-12-28', NULL, 0, 7, NULL, NULL, 2),
+(4, 'Corniche by Tricker\'s サイドゴアブーツ', 15555, 'サイズ　7 1/2', 38, 4, 1, 4, 41, 2, '2019-12-28', NULL, 0, 5, NULL, NULL, 3);
 
 -- --------------------------------------------------------
 
@@ -166,6 +193,32 @@ INSERT INTO `product_condition` (`id`, `product_condition`) VALUES
 (4, 'やや傷や汚れあり'),
 (5, '傷や汚れあり'),
 (6, '全体的に状態が悪い');
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `send_method`
+--
+
+DROP TABLE IF EXISTS `send_method`;
+CREATE TABLE `send_method` (
+  `id` int(11) NOT NULL,
+  `send_method` varchar(64) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- テーブルのデータのダンプ `send_method`
+--
+
+INSERT INTO `send_method` (`id`, `send_method`) VALUES
+(1, 'ゆうメール'),
+(2, 'レターパック'),
+(3, '普通郵便（定形、定形外）'),
+(4, 'クロネコヤマト'),
+(5, 'ゆうパック'),
+(6, 'クリックポスト'),
+(7, 'ゆうパケット'),
+(8, '未定');
 
 -- --------------------------------------------------------
 
@@ -294,6 +347,12 @@ INSERT INTO `states` (`id`, `state`) VALUES
 --
 
 --
+-- テーブルのインデックス `day_to_send`
+--
+ALTER TABLE `day_to_send`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- テーブルのインデックス `large_product_categories`
 --
 ALTER TABLE `large_product_categories`
@@ -325,6 +384,12 @@ ALTER TABLE `product_condition`
   ADD PRIMARY KEY (`id`);
 
 --
+-- テーブルのインデックス `send_method`
+--
+ALTER TABLE `send_method`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- テーブルのインデックス `small_product_categories`
 --
 ALTER TABLE `small_product_categories`
@@ -339,6 +404,12 @@ ALTER TABLE `states`
 --
 -- ダンプしたテーブルのAUTO_INCREMENT
 --
+
+--
+-- テーブルのAUTO_INCREMENT `day_to_send`
+--
+ALTER TABLE `day_to_send`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- テーブルのAUTO_INCREMENT `large_product_categories`
@@ -362,13 +433,19 @@ ALTER TABLE `notification`
 -- テーブルのAUTO_INCREMENT `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id', AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id', AUTO_INCREMENT=5;
 
 --
 -- テーブルのAUTO_INCREMENT `product_condition`
 --
 ALTER TABLE `product_condition`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id', AUTO_INCREMENT=7;
+
+--
+-- テーブルのAUTO_INCREMENT `send_method`
+--
+ALTER TABLE `send_method`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- テーブルのAUTO_INCREMENT `small_product_categories`
@@ -391,6 +468,7 @@ ALTER TABLE `states`
 --
 ALTER TABLE `notification`
   ADD CONSTRAINT `notification_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `member` (`id`);
+SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
