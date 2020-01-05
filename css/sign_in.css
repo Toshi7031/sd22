@@ -1,0 +1,202 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video{
+	margin:0;
+	padding:0;
+  outline:0;
+  border: none;
+	font-size:100%;
+	vertical-align:baseline;
+}
+
+body {
+	line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+	display:block;
+}
+
+nav ul {
+	list-style:none;
+}
+
+blockquote, q {
+	quotes:none;
+}
+
+ol,ul{
+	quotes: none;
+}
+li{
+	list-style-type: none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  text-decoration: none;
+  vertical-align:baseline;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000;
+  font-style:italic;
+  font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+select {
+  vertical-align:middle;
+  border: none;
+}
+
+img{
+	vertical-align: top;
+	font-size: 0;
+	line-height: 0;
+}
+
+button{
+	outline: 0;
+}
+
+*,*:before,*:after{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+
+header{
+  background-color: #3cb371;
+  height: 80px;
+  margin-bottom: 50px;
+}
+header img{
+  padding-top: 8px;
+  margin-left: 10px;
+}
+
+#input{
+  border: solid gray 1px;
+  margin: 0 auto;
+  width: 60%;
+  padding: 30px 100px;
+  margin-bottom: 20px;
+}
+
+h1{
+  text-align: center;
+  font-size: 33px;
+  font-weight: lighter;
+}
+
+table{
+  width: 600px;
+}
+.word{
+  padding: 40px 0px 10px;
+  font-size: 18px;
+}
+.box{
+  padding: 0px 20px;
+}
+.ad_word{
+	padding: 10px 0px 10px 20px;
+	font-size: 15px;
+}
+.ad_box{
+  padding: 0px 0px 0px 40px;
+}
+
+input{
+  height: 30px;
+	width: 175px;
+	font-size: 20px;
+}
+tr:nth-of-type(2) input, tr:nth-of-type(5) input{  /* name, password */
+  width: 300px;
+}
+
+/* 住所エリア */
+tr:nth-child(15) > td > input{  /* zip */
+	width: 80px;
+}
+tr:nth-child(18) > td > input, tr:nth-child(20) > td > input, tr:nth-child(22) > td > input{
+  width: 250px;
+}
+
+/* メールアドレスエリア */
+tr:nth-child(30) > td{
+  padding: 20px 20px 10px;
+}
+tr:nth-child(28) > td > input, tr:nth-child(31) > td > input{
+  width: 350px;
+}
+
+.send {
+	text-align: center;
+	margin-bottom: 50px;
+}
+.send button{
+	margin-top: 20px;
+	height: 55px;
+	font-size: 23px;
+	padding: 10px;
+}
+
+footer{
+  height: 70px;
+  width: 100%;
+  position: relative;
+  bottom: 0px;
+  background-color: #3cb371;
+}
+
+/* when there`s an error */
+.err, .ad_err{
+  color: red;
+  font-size: 15px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.ad_err{
+  padding-left: 40px;
+}
