@@ -104,11 +104,6 @@ button{
 
 
 
-a{
-  text-decoration: none;
-  color: black;
-}
-
 header{
   background-color: #3cb371;
   height: 80px;
@@ -118,50 +113,27 @@ header img{
   margin-left: 10px;
 }
 
-h1 {
+h1{
   text-align: center;
-  padding: 25px;
+	margin-top: 150px;
 	font-size: 33px;
-  font-weight: lighter;
+	font-weight: lighter;
 }
 
-#input{
-  border: solid gray 1px;
-  width: 35%;
-  padding: 20px 50px;
-  margin-bottom: 100px;
-	margin: 0 auto;
+form{
+	margin-top: 70px;
+	display: flex;
+	width: 25%;
+	margin-left: 37.5%;
 }
-#input p{
-  font-size: 20px;
-  line-height: 30px;
+form p{
+	padding: 10px;
 }
-input{
+button{
 	font-size: 20px;
 }
-#input p:nth-of-type(2) input, p:nth-of-type(4) input{  /* text box */
-  height: 40px;
-  width: 100%;
-  margin-bottom: 25px;
-}
-#input p:nth-of-type(5) input{  /* login button */
-  padding: 5px;
-	font-size: 20px;
-	margin-bottom: 30px;
-}
-#input p:nth-last-of-type(2) a,#input p:nth-last-of-type(3) a{  /* id,password忘れた */
-	font-size: 17px;
-}
-#input p:nth-last-of-type(2) a{  /* パスワードを忘れた */
-  position: relative;
-  bottom: 30px;
-  left: 220px;
-}
-#input p:nth-last-of-type(1) a{
-  font-size: 28px;
-}
-#input p:nth-of-type(5), #input p:nth-last-of-type(1){
-  text-align: center;
+p:nth-of-type(2){
+	margin-left: 45%;
 }
 
 footer{
