@@ -20,8 +20,7 @@
         <button>検索</button>
       </div>
       <div id="header_login_area">
-        <button>ログイン</button>
-        <button>文字/色変更</button>
+        <button><a href="./controller/login.php">ログイン</a></button>
       </div>
     </div><!-- global_navi -->
     <nav>
