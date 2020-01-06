@@ -14,16 +14,15 @@
 <body>
   <article>
     <header>
-      <h1><a href="../index.php"><img src="../images/image_materials/logo.png" width="308" height="77" alt="まさる堂ロゴ"></a></h1>
+      <h1><a href="../index.php"><img src="../images/image_materials/logo.png" alt="まさる堂ロゴ"></a></h1>
     </header>
     <section id="main_area">
       <h2>ご案内メールを送信いたしました。</h2>
       <p>メールに記載されているリンクから、パスワード変更の手続きを行ってください。</p>
     </section>
-    <section>
+    <footer>
       <p><a href="../index.php">トップに戻る</a></p>
-    </section>
-    <footer></footer>
+    </footer>
   </article>
 </body>
 </html>

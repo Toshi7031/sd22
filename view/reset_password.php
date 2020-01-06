@@ -14,7 +14,7 @@
 <body>
   <article>
     <header>
-      <h1><a href="../index.php"><img src="../images/image_materials/logo.png" width="308" height="77" alt="まさる堂ロゴ"></a></h1>
+      <h1><a href="../index.php"><img src="../images/image_materials/logo.png" alt="まさる堂ロゴ"></a></h1>
     </header>
     <section id="main_area">
       <h2>パスワードの再設定</h2>
@@ -25,13 +25,19 @@
             <td>新しいパスワードを入力してください</td>
           </tr>
           <tr>
-            <td><input type="password" name="check1" value="<?php echo $input['check1'];?>" placeholder="新しいパスワード"><br /><span id="check1"><?php echo $error_msg['check1'];?></span></td>
+            <td>
+              <span id="check1"><?php echo $error_msg['check1']; ?></span><br />
+              <input type="password" name="check1" value="<?php echo $input['check1']; ?>" placeholder="新しいパスワード">
+            </td>
           </tr>
           <tr>
             <td>確認のため、もう一度新しいパスワードを入力してください</td>
           </tr>
           <tr>
-            <td><input type="password" name="check2" value="<?php echo $input['check2'];?>" placeholder="もう一度入力してください"><br /><span id="check2"><?php echo $error_msg['check2'];?></span></td>
+            <td>
+              <span id="check2"><?php echo $error_msg['check2']; ?></span><br />
+              <input type="password" name="check2" value="<?php echo $input['check2']; ?>" placeholder="もう一度入力してください">
+            </td>
           </tr>
           <tr>
             <td><button type="submit" name="change" value="c">パスワードを変更する</button></td>
@@ -41,8 +47,9 @@
     </section>
     <footer></footer>
   </article>
-<?php if(file_exists('../js/'.$js_file_name)): ?>
-  <script src="../js/<?php echo $js_file_name;?>"></script>
-<?php endif; ?>
+  <?php if (file_exists('../js/' . $js_file_name)) : ?>
+    <script src="../js/<?php echo $js_file_name; ?>"></script>
+  <?php endif; ?>
 </body>
+
 </html>
