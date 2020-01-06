@@ -49,6 +49,29 @@ if($thred[$i -1]['public_type'] == 1){
 
 //コメント内容を受取
 $comments = read_db('comments',$comments_colmun);
+
+//コメントしているユーザIDを取り出して配列に挿入
+for($i = 0;$comments[$i]['member_id'];$i++){
+  $participant[] = "{$comments[$i]['member_id']}";
+}
+//配列に入っている重複している会員IDを統一化
+$participant = array_unique($participant);
+//where文に挿入するためxxxxx,xxxxx,xxxxxという形にする(for)
+$str_participant = "$participant[0]";
+for($i = 1 ; $participant[$i] ; $i++){
+  $str_participant .= ",{$participant[$i]}";
+}
+//sql文に追加
+$sql = "SELECT id,nickname FROM member WHERE id in({$str_participant})";
+//DB接続
+$mysqli = new mysqli(HOST,DB_USER,DB_PASS,DB_NAME);
+$mysqli -> set_charset("utf8");
+$result = $mysqli -> query($sql);
+$mysqli -> close();
+//ユーザ情報を配列に挿入
+$array_participant = $result -> fetch_all(MYSQLI_ASSOC);
+//ユーザIDを主キーとした配列に変換
+
 //自分のトーク内容と相手のトーク内容を分ける
 for($i = 0;$array_comments[$i];$i++){
   //ログインIDと照合し、配列に入れる
@@ -56,7 +79,7 @@ for($i = 0;$array_comments[$i];$i++){
 
   }
   else{
-    echo '相手';
+
   }
 }
 
@@ -64,5 +87,5 @@ for($i = 0;$array_comments[$i];$i++){
 
 //ajaxを利用して随時読み込み
 
-  require_once '../view/bbs.php';
+require_once '../view/bbs.php';
 ?>
