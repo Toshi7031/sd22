@@ -14,22 +14,21 @@
 <body>
   <article>
     <header>
-      <h1><a href="../index.php"><img src="../images/image_materials/logo.png" width="308" height="77" alt="まさる堂ロゴ"></a></h1>
+      <h1><a href="../index.php"><img src="../images/image_materials/logo.png" alt="まさる堂ロゴ"></a></h1>
     </header>
     <section id="main_area">
       <h2>パスワードをお忘れの方</h2>
       <p>登録されているメールアドレスを入力してください。パスワード再設定のご案内をお送りします。</p>
       <p>メールアドレス</p>
       <form action="" method="post">
-        <input type="email" name="email" placeholder="登録されているメールアドレス">
-        <button type="submit">送信</button>
+        <input type="email" name="email" placeholder="登録されているメールアドレス"><br><span></span>
+        <button type="submit">送信する</button>
       </form>
     </section>
-    <section>
+    <footer>
       <p><a href="./login.php">ログイン画面に戻る</a></p>
       <p><a href="../index.php">トップに戻る</a></p>
-    </section>
-    <footer></footer>
+    </footer>
   </article>
 <?php if(file_exists('../js/'.$js_file_name)): ?>
   <script src="../js/<?php echo $js_file_name;?>"></script>

@@ -14,12 +14,10 @@
 <body>
   <article>
     <header>
-      <h1><a href="../index.php"><img src="../images/image_materials/logo.png" width="308" height="77" alt="まさる堂ロゴ"></a></h1>
+      <h1><a href="../index.php"><img src="../images/image_materials/logo.png" alt="まさる堂ロゴ"></a></h1>
     </header>
     <section id="main_area">
       <h2>パスワードの再設定が完了しました。</h2>
-    </section>
-    <section>
       <p><a href="../index.php">トップに戻る</a></p>
     </section>
     <footer></footer>
