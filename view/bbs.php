@@ -12,18 +12,15 @@
    <div class="bbs_top">
        <ul>
            <li><button class="history_back" type="button" onclick="history.back()"><img src="../images/image_materials/arrow.png" alt=""></button><span>掲示板</span></li>
-           <li><h2 class="bbs_name"><?php //echo $thred_name ?></h2></li>
+           <li><h2 class="bbs_name"><?php echo $thred[$thred_id - 1]['name']; ?></h2></li>
            <li><img class="title" src="../images/image_materials/logo.png" alt="まさる堂"></li>
        </ul>
    </div>
    <div class="bbs_contents">
         <ul>
-            <?php //echo トーク内容 ?>
-            <li class="<?php echo $talking ?>"><img class="talk_image" src="../images/icons/yjimage.jpeg" alt=""><span>名前</span><p class="talk">トーク内容1</p></li>
-            <li class="you"><img class="talk_image" src="../images/icons/yjimage.jpeg" alt=""><span>名前</span><p class="talk">トーク内容2</p></li>
-            <li class="you"><img class="talk_image" src="../images/icons/yjimage.jpeg" alt=""><span>名前</span><p class="talk">トーク内容3</p></li>
-            <li class="you"><img class="talk_image" src="../images/icons/yjimage.jpeg" alt=""><span>名前</span><p class="talk">トーク内容4</p></li>
-            <li class="me"> <p class="talk">トーク内容5</p> </li>
+        <?php for($i = 0;$talk[$i];$i++): ?>
+            <li class="<?php echo $talk[$i]['class']; ?>"><img class="talk_image" src="../images/icons/<?php echo $talk[$i]['member_id'] ?>.jpeg" alt=""><span><?php echo $talk[$i]['name']; ?></span><p class="talk"><?php echo $talk[$i]['comment']; ?></p></li>
+        <?php endfor; ?>
         </ul>
         <div class="talk_send">
             <form action="" method="post" class='flex'>

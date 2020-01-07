@@ -17,7 +17,7 @@ $comments_colmun = [
   'comment',
 ];
 //テスト用変数
-$thred_id = str_pad(2,6,0,STR_PAD_LEFT);
+$thred_id = str_pad(1,6,0,STR_PAD_LEFT);
 $login_id = str_pad(1,6,0,STR_PAD_LEFT);
 //getで表示する掲示板のIDを受け取る(if)
 if(isset($_GET['thred_id'])){
@@ -77,13 +77,15 @@ for($i = 0 ; $comments[$i];$i++){
   if($login_id == $comments[$i]['member_id']){
     $talk[$i] = [
       'class' => 'me',
-      'name' => $array_participant[(int)$comments[$i]['member_id']],
+      'member_id' => $comments[$i]['member_id'],
+      'name' => '',
       'comment' => $comments[$i]['comment'],
     ];
   }
   else{
     $talk[$i] = [
-      'class' => 'me',
+      'class' => 'you',
+      'member_id' => $comments[$i]['member_id'],
       'name' => $array_participant[(int)$comments[$i]['member_id']],
       'comment' => $comments[$i]['comment'],
     ];
