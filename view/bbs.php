@@ -19,7 +19,7 @@
    <div class="bbs_contents">
         <ul>
             <?php //echo トーク内容 ?>
-            <li class="you"><img class="talk_image" src="../images/icons/yjimage.jpeg" alt=""><span>名前</span><p class="talk">トーク内容1</p></li>
+            <li class="<?php echo $talking ?>"><img class="talk_image" src="../images/icons/yjimage.jpeg" alt=""><span>名前</span><p class="talk">トーク内容1</p></li>
             <li class="you"><img class="talk_image" src="../images/icons/yjimage.jpeg" alt=""><span>名前</span><p class="talk">トーク内容2</p></li>
             <li class="you"><img class="talk_image" src="../images/icons/yjimage.jpeg" alt=""><span>名前</span><p class="talk">トーク内容3</p></li>
             <li class="you"><img class="talk_image" src="../images/icons/yjimage.jpeg" alt=""><span>名前</span><p class="talk">トーク内容4</p></li>

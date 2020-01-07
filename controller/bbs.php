@@ -71,21 +71,23 @@ $mysqli -> close();
 //ユーザ情報を配列に挿入
 $array_participant = $result -> fetch_all(MYSQLI_ASSOC);
 //ユーザIDを主キーとした配列に変換
-
-//自分のトーク内容と相手のトーク内容を分ける
-for($i = 0;$array_comments[$i];$i++){
-  //ログインIDと照合し、配列に入れる
-  if($login_id == $array_comments[$i]['member_id']){
-
+$array_participant = array_column($array_participant,'nickname','id');
+//自分のトーク内容と相手のトーク内容を分け,配列に挿入
+for($i = 0 ; $comments[$i];$i++){
+  if($login_id == $comments[$i]['member_id']){
+    $talk[$i] = [
+      'class' => 'me',
+      'name' => $array_participant[(int)$comments[$i]['member_id']],
+      'comment' => $comments[$i]['comment'],
+    ];
   }
   else{
-
+    $talk[$i] = [
+      'class' => 'me',
+      'name' => $array_participant[(int)$comments[$i]['member_id']],
+      'comment' => $comments[$i]['comment'],
+    ];
   }
 }
-
-//トーク内容を変数に入れる
-
-//ajaxを利用して随時読み込み
-
 require_once '../view/bbs.php';
 ?>
