@@ -99,6 +99,7 @@ button {
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -128,8 +129,7 @@ button {
   background-color: #FA5858;
   border-radius: 20px;
   outline: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 #procedures_header {
@@ -139,12 +139,8 @@ button {
   color: #A4A4A4;
   background-color: #fff;
   border: solid #A4A4A4 1px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 #procedures_header p:first-child {
@@ -256,15 +252,9 @@ button {
   height: 50%;
   margin: 0 20px 0 20px;
   font-size: 1.8em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
 }
 
@@ -292,15 +282,9 @@ button {
   margin: 0 auto 30px;
   background-color: #fff;
   border: solid #000000 1px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #delivery_destination p {
