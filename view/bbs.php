@@ -24,7 +24,7 @@
         </ul>
         <div class="talk_send">
             <form action="" method="get" class='flex'>
-                    <textarea class="send_text" name="text" cols="30"></textarea>
+                    <textarea class="send_text" name="comment" cols="30"></textarea>
                     <button type="submit"><img src="../images/image_materials/plane.png" alt=""></button>
             </form>
         </div>
