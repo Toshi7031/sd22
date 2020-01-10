@@ -3,8 +3,8 @@
   $title = '商品一覧';
   $css_file_name = 'product_view.css';
   $product_limit = 2; //テスト用に2に宣言
-  if(isset($_GET['next_page']||isset($_GET['']))
-  $page = 0
+  //ページをgetで値受取
+  //if(isset($_GET['next_page']||isset($_GET['']))
   //test
   $_GET['search'] = '漢　習';
   //値受取(if)
