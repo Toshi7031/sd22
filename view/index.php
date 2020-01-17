@@ -20,7 +20,12 @@
         <button>検索</button>
       </div>
       <div id="header_login_area">
-        <button><a href="./controller/login.php">ログイン</a></button>
+<?php if(isset($_SESSION['login_flg']) && $_SESSION['login_flg'] === true): ?>
+        <p><a href="./controller/logout.php">ログアウト</a></p>
+        <p><a href="./controller/mypage_notification.php">マイページ</a></p>
+<?php else: ?>
+        <p><a href="./controller/login.php">ログイン</a></p>
+<?php endif; ?>
       </div>
     </div><!-- global_navi -->
     <nav>
@@ -28,7 +33,7 @@
         <li><a href="">商品ジャンル一覧</a></li>
         <li><a href="">掲示板一覧</a></li>
         <li><a href="./controller/exhibition_sell.php">出品</a></li>
-        <li><a href="">マイページ</a></li>
+        <li><a href="">お問い合わせ</a></li>
       </ul>
     </nav><!-- top_navi -->
     <div id="branding">

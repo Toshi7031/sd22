@@ -11,10 +11,10 @@ $nav_height : 50px;
 @import './mixin';
 
 h1 {
-	width: 200px;
+	width: 30%;
+	min-width: 200px;
 	height: $globalNavHeight * 0.8;
-	margin-left: 20px;
-	margin-right: 10%;
+	padding-left: 20px;
 	img {
 		width: auto;
 		height: $globalNavHeight * 0.8;
@@ -25,8 +25,7 @@ h1 {
 	height: $globalNavHeight;
 	background-color: $headerColor;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 }
 #header_search_area {
@@ -56,14 +55,21 @@ h1 {
 }
 #header_login_area {
 	width: 30%;
-	button{
+	padding-left: 20px;
+	p{
 		width: 150px;
 		height: 40px;
 		font-size: 1em;
 		margin-right: 15px;
+		text-align: center;
+		line-height: 40px;
 		background-color: $buttonColor;
 		border-radius: 8px;
 		box-shadow: 3px 3px rgba(0,0,0,0.3);
+	}
+	a {
+		color: #000;
+		display: block;
 	}
 }
 /*----------------------------------------
