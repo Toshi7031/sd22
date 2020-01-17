@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+// 変数宣言
+$bgColor : #E4E4E4;
+$productBgColor : #D8D8D8;
+$headerColor : #3CB371;
+$buttonColor : #FACC2E;
+
+// 関数
+@import './mixin';
+/*----------------------------------------
+				reset
+----------------------------------------*/
+@import './reset';
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+header{
+  background-color: #3cb371;
+  height: 80px;
+  position: relative;
+}
+header img{
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  margin-left: 10px;
+}
+
+h1 {
+  width: 80%;
+  font-size: 1.8em;
+  font-weight: 500;
+  margin: 30px auto 30px;
+  text-align: center;
+}
+
+#input_area {
+  width: 50%;
+  max-width: 960px;
+  height: 55vh;
+  max-height: 350px;
+  margin: 0 auto;
+  border: solid gray 1px;
+  form {
+    width: 100%;
+    padding: 20px;
+    p {
+      width: 75%;
+    }
+    p:nth-child(odd) {
+      margin-bottom: 5px;
+      font-size: 1em;
+      font-weight: 400;
+    }
+    p:nth-child(even) {
+      margin-bottom: 13px;
+    }
+    input {
+      width: 100%;
+      height: 40px;
+      border: solid gray 1px;
+    }
+    button {
+      width: 100px;
+      height: 30px;
+      line-height: 30px;
+      display: block;
+      margin: 0 auto;
+      background-color: #fff;
+      border: solid gray 1px;
+      cursor: pointer;
+    }
+    p, button {
+      margin: 0 auto;
+    }
+  }
+  > p {
+    width: auto;
+    margin-bottom: 8px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -30px;
+      transform: translateY(-50%);
+      border-left: solid #000 8px;
+      border-top: solid transparent 8px;
+      border-bottom: solid transparent 8px;      
+    }
+  }
+  .help_area {
+    display: block;
+    ul {
+      border: solid #000000 1px;
+      margin: 0 auto;
+      li {
+        padding-bottom: 10px;
+        text-align: center;
+        border-bottom: solid gray 1px;
+      }
+    }
+  }
+  .hidden {
+    height: 0px;
+    display: none;
+  }
+}
+
+footer{
+  height: 70px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #3cb371;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    width: 50%;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  a {
+    color: $bgColor;
+  }
+}

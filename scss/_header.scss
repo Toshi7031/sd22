@@ -7,69 +7,68 @@ $navColor : #81F781;
 $buttonColor : #FACC2E;
 $nav_height : 50px;
 
-// 関数
-@import './mixin';
-
-h1 {
-	width: 30%;
-	min-width: 200px;
-	height: $globalNavHeight * 0.8;
-	padding-left: 20px;
-	img {
-		width: auto;
-		height: $globalNavHeight * 0.8;
-	}
-}
-#global_nav {
+header {
 	width: 100%;
 	height: $globalNavHeight;
 	background-color: $headerColor;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-#header_search_area {
-	width: 40%;
-	min-width: 300px;
-	height: 50px;
-	position: relative;
-	input {
-		width: 80%;
+	h1 {
+		width: 30%;
+		min-width: 200px;
+		height: $globalNavHeight * 0.8;
+		padding-left: 20px;
+		img {
+			width: auto;
+			height: $globalNavHeight * 0.8;
+		}
+	}
+	.header_search_area {
+		width: 40%;
+		min-width: 300px;
 		height: 50px;
-		padding-left: 10px;
-		margin-right: 0;
-		background-color: #E6E6E6;
-		border-radius: 10px 0 0 10px;
-		outline: 0;
+		position: relative;
+		input {
+			width: 80%;
+			height: 50px;
+			padding-left: 10px;
+			margin-right: 0;
+			background-color: #E6E6E6;
+			border-radius: 10px 0 0 10px;
+			outline: 0;
+		}
+		button {
+			width: 20%;
+			height: 50px;
+			background-color: $buttonColor;
+			border: none;
+			border-radius: 0 10px 10px 0;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
 	}
-	button {
-		width: 20%;
-		height: 50px;
-		background-color: $buttonColor;
-		border: none;
-		border-radius: 0 10px 10px 0;
-		position: absolute;
-		top: 0;
-		right: 0;
-	}
-}
-#header_login_area {
-	width: 30%;
-	padding-left: 20px;
-	p{
-		width: 150px;
-		height: 40px;
-		font-size: 1em;
-		margin-right: 15px;
-		text-align: center;
-		line-height: 40px;
-		background-color: $buttonColor;
-		border-radius: 8px;
-		box-shadow: 3px 3px rgba(0,0,0,0.3);
-	}
-	a {
-		color: #000;
-		display: block;
+	.header_login_area {
+		width: 30%;
+		padding-left: 20px;
+		display: flex;
+		p{
+			width: 45%;
+			max-width: 150px;
+			height: 40px;
+			font-size: 1em;
+			margin-right: 15px;
+			text-align: center;
+			line-height: 40px;
+			background-color: $buttonColor;
+			border-radius: 8px;
+			box-shadow: 3px 3px rgba(0,0,0,0.3);
+		}
+		a {
+			color: #000;
+			display: block;
+		}
 	}
 }
 /*----------------------------------------

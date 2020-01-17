@@ -13,26 +13,26 @@
 
 <body>
   <article>
-    <div id="global_nav">
+    <header>
       <h1><a href="#"><img src="./images/image_materials/logo.png" width="308" height="77" alt="まさる堂ロゴ"></a></h1>
-      <div id="header_search_area">
+      <div class="header_search_area">
         <input type="text" name="search" placeholder="何かお探しですか？">
         <button>検索</button>
       </div>
-      <div id="header_login_area">
-<?php if(isset($_SESSION['login_flg']) && $_SESSION['login_flg'] === true): ?>
-        <p><a href="./controller/logout.php">ログアウト</a></p>
-        <p><a href="./controller/mypage_notification.php">マイページ</a></p>
-<?php else: ?>
-        <p><a href="./controller/login.php">ログイン</a></p>
-<?php endif; ?>
+      <div class="header_login_area">
+        <?php if (isset($_SESSION['login_id']) && !empty($_SESSION['login_id'])) : ?>
+          <p><a href="./controller/logout.php">ログアウト</a></p>
+          <p><a href="./controller/mypage_notification.php">マイページ</a></p>
+        <?php else : ?>
+          <p><a href="./controller/login.php">ログイン</a></p>
+        <?php endif; ?>
       </div>
-    </div><!-- global_navi -->
+    </header><!-- global_navi -->
     <nav>
       <ul>
         <li><a href="">商品ジャンル一覧</a></li>
         <li><a href="">掲示板一覧</a></li>
-        <li><a href="./controller/exhibition_sell.php">出品</a></li>
+        <li><a href="./s_sell.php">出品</a></li>
         <li><a href="">お問い合わせ</a></li>
       </ul>
     </nav><!-- top_navi -->
@@ -42,156 +42,18 @@
     <div id="contents_area">
       <h2>新着商品</h2>
       <ul>
-        <li class="products">
-          <a href="./controller/product_deteals.php">
-            <ul>
-              <li class="product_img"><img src="./images/products/61Yyhwxq32L._AC_SL1200_.jpg" width="180px" height="180px" alt=""></li>
-              <li class="product_name">商品名</li>
-              <li class="product_price">商品価格</li>
-              <li class="favorite"><img src="./images/image_materials/hart.jpg" width="30" height="30" alt=""></li>
-            </ul>
-          </a>
-        </li>
-        <li class="products">
-          <a href="./controller/product_deteals.php">
-            <ul>
-              <li class="product_img"><img src="./images/products/61Yyhwxq32L._AC_SL1200_.jpg" width="180px" height="180px" alt=""></li>
-              <li class="product_name">商品名</li>
-              <li class="product_price">商品価格</li>
-              <li class="favorite"><img src="./images/image_materials/hart.jpg" width="30" height="30" alt=""></li>
-            </ul>
-          </a>
-        </li>
-        <li class="products">
-          <a href="./controller/product_deteals.php">
-            <ul>
-              <li class="product_img"><img src="./images/products/61Yyhwxq32L._AC_SL1200_.jpg" width="180px" height="180px" alt=""></li>
-              <li class="product_name">商品名</li>
-              <li class="product_price">商品価格</li>
-              <li class="favorite"><img src="./images/image_materials/hart.jpg" width="30" height="30" alt=""></li>
-            </ul>
-          </a>
-        </li>
-        <li class="products">
-          <a href="./controller/product_deteals.php">
-            <ul>
-              <li class="product_img"><img src="./images/products/61Yyhwxq32L._AC_SL1200_.jpg" width="180px" height="180px" alt=""></li>
-              <li class="product_name">商品名</li>
-              <li class="product_price">商品価格</li>
-              <li class="favorite"><img src="./images/image_materials/hart.jpg" width="30" height="30" alt=""></li>
-            </ul>
-          </a>
-        </li>
-        <li class="products">
-          <a href="./controller/product_deteals.php">
-            <ul>
-              <li class="product_img"><img src="./images/products/61Yyhwxq32L._AC_SL1200_.jpg" width="180px" height="180px" alt=""></li>
-              <li class="product_name">商品名</li>
-              <li class="product_price">商品価格</li>
-              <li class="favorite"><img src="./images/image_materials/hart.jpg" width="30" height="30" alt=""></li>
-            </ul>
-          </a>
-        </li>
-        <li class="products">
-          <a href="./controller/product_deteals.php">
-            <ul>
-              <li class="product_img"><img src="./images/products/61Yyhwxq32L._AC_SL1200_.jpg" width="180px" height="180px" alt=""></li>
-              <li class="product_name">商品名</li>
-              <li class="product_price">商品価格</li>
-              <li class="favorite"><img src="./images/image_materials/hart.jpg" width="30" height="30" alt=""></li>
-            </ul>
-          </a>
-        </li>
-        <li class="products">
-          <a href="./controller/product_deteals.php">
-            <ul>
-              <li class="product_img"><img src="./images/products/61Yyhwxq32L._AC_SL1200_.jpg" width="180px" height="180px" alt=""></li>
-              <li class="product_name">商品名</li>
-              <li class="product_price">商品価格</li>
-              <li class="favorite"><img src="./images/image_materials/hart.jpg" width="30" height="30" alt=""></li>
-            </ul>
-          </a>
-        </li>
-        <li class="products">
-          <a href="./controller/product_deteals.php">
-            <ul>
-              <li class="product_img"><img src="./images/products/61Yyhwxq32L._AC_SL1200_.jpg" width="180px" height="180px" alt=""></li>
-              <li class="product_name">商品名</li>
-              <li class="product_price">商品価格</li>
-              <li class="favorite"><img src="./images/image_materials/hart.jpg" width="30" height="30" alt=""></li>
-            </ul>
-          </a>
-        </li>
-        <li class="products">
-          <a href="./controller/product_deteals.php">
-            <ul>
-              <li class="product_img"><img src="./images/products/61Yyhwxq32L._AC_SL1200_.jpg" width="180px" height="180px" alt=""></li>
-              <li class="product_name">商品名</li>
-              <li class="product_price">商品価格</li>
-              <li class="favorite"><img src="./images/image_materials/hart.jpg" width="30" height="30" alt=""></li>
-            </ul>
-          </a>
-        </li>
-        <li class="products">
-          <a href="./controller/product_deteals.php">
-            <ul>
-              <li class="product_img"><img src="./images/products/61Yyhwxq32L._AC_SL1200_.jpg" width="180px" height="180px" alt=""></li>
-              <li class="product_name">商品名</li>
-              <li class="product_price">商品価格</li>
-              <li class="favorite"><img src="./images/image_materials/hart.jpg" width="30" height="30" alt=""></li>
-            </ul>
-          </a>
-        </li>
-        <li class="products">
-          <a href="./controller/product_deteals.php">
-            <ul>
-              <li class="product_img"><img src="./images/products/61Yyhwxq32L._AC_SL1200_.jpg" width="180px" height="180px" alt=""></li>
-              <li class="product_name">商品名</li>
-              <li class="product_price">商品価格</li>
-              <li class="favorite"><img src="./images/image_materials/hart.jpg" width="30" height="30" alt=""></li>
-            </ul>
-          </a>
-        </li>
-        <li class="products">
-          <a href="./controller/product_deteals.php">
-            <ul>
-              <li class="product_img"><img src="./images/products/61Yyhwxq32L._AC_SL1200_.jpg" width="180px" height="180px" alt=""></li>
-              <li class="product_name">商品名</li>
-              <li class="product_price">商品価格</li>
-              <li class="favorite"><img src="./images/image_materials/hart.jpg" width="30" height="30" alt=""></li>
-            </ul>
-          </a>
-        </li>
-        <li class="products">
-          <a href="./controller/product_deteals.php">
-            <ul>
-              <li class="product_img"><img src="./images/products/61Yyhwxq32L._AC_SL1200_.jpg" width="180px" height="180px" alt=""></li>
-              <li class="product_name">商品名</li>
-              <li class="product_price">商品価格</li>
-              <li class="favorite"><img src="./images/image_materials/hart.jpg" width="30" height="30" alt=""></li>
-            </ul>
-          </a>
-        </li>
-        <li class="products">
-          <a href="./controller/product_deteals.php">
-            <ul>
-              <li class="product_img"><img src="./images/products/61Yyhwxq32L._AC_SL1200_.jpg" width="180px" height="180px" alt=""></li>
-              <li class="product_name">商品名</li>
-              <li class="product_price">商品価格</li>
-              <li class="favorite"><img src="./images/image_materials/hart.jpg" width="30" height="30" alt=""></li>
-            </ul>
-          </a>
-        </li>
-        <li class="products">
-          <a href="./controller/product_deteals.php">
-            <ul>
-              <li class="product_img"><img src="./images/products/61Yyhwxq32L._AC_SL1200_.jpg" width="180px" height="180px" alt=""></li>
-              <li class="product_name">商品名</li>
-              <li class="product_price">商品価格</li>
-              <li class="favorite"><img src="./images/image_materials/hart.jpg" width="30" height="30" alt=""></li>
-            </ul>
-          </a>
-        </li>
+        <?php foreach ($products as $value) : ?>
+          <li class="products">
+            <a href="./controller/product_deteals.php?id=<?php echo $products['id'] ?>">
+              <ul>
+                <li class="product_img"><img src="./images/products/product_<?php echo $products['id'] ?>_1.jpg" width="180px" height="180px" alt=""></li>
+                <li class="product_name"><?php echo $products['product_name']; ?></li>
+                <li class="product_price"><?php echo $products['price']; ?></li>
+                <li class="favorite"><img src="./images/image_materials/hart.jpg" width="30" height="30" alt=""></li>
+              </ul>
+            </a>
+          </li>
+        <?php endforeach; ?>
       </ul>
     </div><!-- contents_area -->
     <footer>

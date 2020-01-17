@@ -1,6 +1,6 @@
-@charset "UTF-8";
-
-/* reset */
+/*----------------------------------------
+				reset
+----------------------------------------*/
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -13,52 +13,53 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
-	margin:0;
-	padding:0;
-  outline:0;
+  margin: 0;
+  padding: 0;
+  outline: 0;
   border: none;
-	font-size:100%;
-	vertical-align:baseline;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
 body {
-	line-height:1;
+  line-height: 1;
 }
 
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section {
-	display:block;
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
 
 nav ul {
-	list-style:none;
+  list-style: none;
 }
 
 blockquote, q {
-	quotes:none;
+  quotes: none;
 }
 
-ol,ul{
-	quotes: none;
+ol, ul {
+  quotes: none;
 }
-li{
-	list-style-type: none;
+
+li {
+  list-style-type: none;
 }
 
 a {
-  margin:0;
-  padding:0;
-  font-size:100%;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
   text-decoration: none;
-  vertical-align:baseline;
+  vertical-align: baseline;
 }
 
 /* change colours to suit your needs */
 mark {
-  background-color:#ff9;
-  color:#000;
-  font-style:italic;
-  font-weight:bold;
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
 }
 
 del {
@@ -66,80 +67,108 @@ del {
 }
 
 table {
-  border-collapse:collapse;
-  border-spacing:0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* change border colour to suit your needs */
 hr {
-  display:block;
-  height:1px;
-  border:0;
-  border-top:1px solid #cccccc;
-  margin:1em 0;
-  padding:0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
-select {
-  vertical-align:middle;
+input, select {
+  vertical-align: middle;
   border: none;
 }
 
-img{
-	vertical-align: top;
-	font-size: 0;
-	line-height: 0;
+img {
+  vertical-align: top;
+  font-size: 0;
+  line-height: 0;
 }
 
-button{
-	outline: 0;
+button {
+  outline: 0;
 }
 
-*,*:before,*:after{
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
 
-
-header{
+/*----------------------------------------
+				body
+----------------------------------------*/
+header {
   background-color: #3cb371;
   height: 80px;
+  position: relative;
 }
-header img{
-  padding-top: 8px;
+
+header img {
+  height: 70%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
   margin-left: 10px;
 }
 
-h1{
+h1 {
   text-align: center;
-	margin-top: 150px;
-	font-size: 33px;
-	font-weight: lighter;
+  margin-top: 150px;
+  font-size: 33px;
+  font-weight: lighter;
 }
 
-form{
-	margin-top: 70px;
-	display: flex;
-	width: 25%;
-	margin-left: 37.5%;
-}
-form p{
-	padding: 10px;
-}
-button{
-	font-size: 20px;
-}
-p:nth-of-type(2){
-	margin-left: 45%;
+form {
+  margin-top: 70px;
+  display: flex;
+  width: 25%;
+  margin-left: 37.5%;
 }
 
-footer{
+form p {
+  padding: 10px;
+}
+
+button {
+  font-size: 20px;
+}
+
+p:nth-of-type(2) {
+  margin-left: 45%;
+}
+
+footer {
   height: 70px;
   width: 100%;
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   background-color: #3cb371;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  width: 50%;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+footer a {
+  color: #E4E4E4;
 }
