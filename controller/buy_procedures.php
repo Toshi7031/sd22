@@ -2,28 +2,17 @@
   /*-------------------------------------
   購入手続きプロセス
   -------------------------------------*/
+  //req
+  require '../config/config.php';
+  require '../model/func/func.php';
   /*-------------------------------------
   変数宣言
   -------------------------------------*/
-
   //ページ情報
   $title = '購入手続き';
   $css_file_name = 'buy_procedures.css';
-  //商品情報の取り出しカラム指定
-  $product = [
-    'id',
-    'product_name',
-    'price',
-    'postage_id',
-  ];
-  //会員情報の取り出しカラム指定
-  $member = [
-    'address1',
-    'address2',
-    'address3',
-    'proceeds',
-    'point',
-  ];
+  $_SESSION['login_id'] = 1;
+  $_GET['product_id'] = 1;
 
   /*-------------------------------------
   値受取
@@ -40,17 +29,31 @@
   else{
     //不正アクセスエラー
   }
+  //ログインセッション確認
+  if(isset($_SESSION['login_id'])){
+    $login_id = $_SESSION['login_id'];
+  }
+  else{
+    //不正アクセスエラー
+  }
 
   /*-------------------------------------
   db読み込み
   -------------------------------------*/
-
-//  read_db();
-
+  //sql作成
+  $product_sql = "SELECT product_name,price,postage_id FROM products WHERE id = {$product_id}";
+  $member_sql = "SELECT point,proceeds FROM member WHERE id = {$login_id} ";
+  //db接続
+  $mysql = new mysqli(HOST,DB_USER,DB_PASS,DB_NAME);
+  //実行
+  $result = $mysql -> query($product_sql);
+  $array_product = $result -> fetch_all(MYSQLI_ASSOC);
+  $result = $mysql -> query($member_sql);
+  $array_member = $result -> fetch_all(MYSQLI_ASSOC);
   /*-------------------------------------
   req
   -------------------------------------*/
-  require '../config/config.php';
-  require '../model/func/func.php';
+  require '../view/header.php';
   require '../view/buy_procedures.html';
+  require '../view/footer.php';
 ?>
