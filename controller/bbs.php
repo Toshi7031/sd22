@@ -1,5 +1,4 @@
 <?php
-
 //require
 require_once'../config/config.php';
 require_once'../model/func/func.php';
