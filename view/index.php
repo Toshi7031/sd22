@@ -41,20 +41,24 @@
     </div><!-- branding -->
     <div id="contents_area">
       <h2>新着商品</h2>
+<?php if(count($products) !== 0):?>
       <ul>
-        <?php foreach ($products as $value) : ?>
+<?php foreach($products as $value):?>
           <li class="products">
-            <a href="./controller/product_deteals.php?id=<?php echo $products['id'] ?>">
+            <a href="./controller/product_deteals.php?id=<?php echo $value['id'] ?>">
               <ul>
-                <li class="product_img"><img src="./images/products/product_<?php echo $products['id'] ?>_1.jpg" width="180px" height="180px" alt=""></li>
-                <li class="product_name"><?php echo $products['product_name']; ?></li>
-                <li class="product_price"><?php echo $products['price']; ?></li>
+                <li class="product_img"><img src="./images/products/product_<?php echo $value['id'] ?>_1.jpg" width="180px" height="180px" alt=""></li>
+                <li class="product_name"><?php echo $value['product_name']; ?></li>
+                <li class="product_price"><?php echo $value['price']; ?></li>
                 <li class="favorite"><img src="./images/image_materials/hart.jpg" width="30" height="30" alt=""></li>
               </ul>
             </a>
           </li>
-        <?php endforeach; ?>
+<?php endforeach;?>
       </ul>
+<?php else:?>
+      <p><?php echo $error_msg;?></p>
+<?php endif;?>
     </div><!-- contents_area -->
     <footer>
       <div class="guide">
