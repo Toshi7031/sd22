@@ -28,5 +28,10 @@ try {
   $error_msg = '商品の読み込み中にエラーが発生しました。';
 }
 
+// 金額にカンマを追加
+for($i = 0; $i < count($products); ++$i) {
+  $products[$i]['price'] = number_format((int)$products[$i]['price']);
+}
+
 //表示部の読み出し
 require_once './view/index.php';

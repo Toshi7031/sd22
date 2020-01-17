@@ -49,7 +49,7 @@
               <ul>
                 <li class="product_img"><img src="./images/products/product_<?php echo $value['id'] ?>_1.jpg" width="180px" height="180px" alt=""></li>
                 <li class="product_name"><?php echo $value['product_name']; ?></li>
-                <li class="product_price"><?php echo $value['price']; ?></li>
+                <li class="product_price">￥<?php echo $value['price']; ?></li>
                 <li class="favorite"><img src="./images/image_materials/hart.jpg" width="30" height="30" alt=""></li>
               </ul>
             </a>
