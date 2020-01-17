@@ -99,6 +99,7 @@ button {
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -126,17 +127,10 @@ button {
 
 #topic_list ul {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #topic_list li {
@@ -152,4 +146,3 @@ button {
 #topic_list li:nth-child(9) {
   font-size: 1.1em;
 }
-/*# sourceMappingURL=select_bbs_category.css.map */

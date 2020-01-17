@@ -213,23 +213,28 @@ button {
 ----------------------------------------*/
 #wrapp {
   width: 100vw;
-  background-color: #BDBDBD; }
-  #wrapp > p {
-    width: 60%;
-    margin: 0 auto 30px;
-    text-align: center;
-    font-size: 1.5em;
-    color: #FA5858; }
-  #wrapp button {
-    width: 70%;
-    height: 70px;
-    font-size: 1.4em;
-    color: #fff;
-    border: none;
-    background-color: #FA5858;
-    border-radius: 20px;
-    outline: 0;
-    box-shadow: none; }
+  background-color: #BDBDBD;
+}
+
+#wrapp > p {
+  width: 60%;
+  margin: 0 auto 30px;
+  text-align: center;
+  font-size: 1.5em;
+  color: #FA5858;
+}
+
+#wrapp button {
+  width: 70%;
+  height: 70px;
+  font-size: 1.4em;
+  color: #fff;
+  border: none;
+  background-color: #FA5858;
+  border-radius: 20px;
+  outline: 0;
+  box-shadow: none;
+}
 
 #procedures_header {
   width: 100%;
@@ -239,13 +244,19 @@ button {
   background-color: #fff;
   border: solid #A4A4A4 1px;
   display: flex;
-  align-items: center; }
-  #procedures_header p:first-child {
-    margin-left: 20px;
-    margin-right: 5%; }
-  #procedures_header img {
-    width: 49px;
-    height: 50px; }
+
+  align-items: center;
+}
+
+#procedures_header p:first-child {
+  margin-left: 20px;
+  margin-right: 5%;
+}
+
+#procedures_header img {
+  width: 49px;
+  height: 50px;
+}
 
 #about_of_product {
   width: 60%;
@@ -327,7 +338,8 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative; }
+  position: relative;
+}
 
 #payment .terms_of_payment {
   border-bottom: solid #A4A4A4 1px; }
@@ -352,7 +364,10 @@ button {
   border: solid #000000 1px;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
-  #delivery_destination p {
-    font-size: 1.8em;
-    padding: 0 20px 0 20px; }
+  align-items: center;
+}
+
+#delivery_destination p {
+  font-size: 1.8em;
+  padding: 0 20px 0 20px;
+}
