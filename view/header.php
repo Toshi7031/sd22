@@ -13,21 +13,21 @@
 
 <body>
   <article>
-    <div id="global_nav">
+    <header>
       <h1><a href="../index.php"><img src="../images/image_materials/logo.png" width="308" height="77" alt="まさる堂ロゴ"></a></h1>
-      <div id="header_search_area">
+      <div class="header_search_area">
         <input type="text" name="search" placeholder="何かお探しですか？">
         <button>検索</button>
       </div>
-      <div id="header_login_area">
-<?php if(isset($login_flg) && $login_flg === true): ?>
-      <p><a href="./controller/logout.php">ログアウト</a></p>
-      <p><a href="./controller/mypage_notification.php">マイページ</a></p>
-<?php else: ?>
-      <p><a href="./controller/login.php">ログイン</a></p>
+      <div class="header_login_area">
+<?php if (isset($_SESSION['login_id']) && !empty($_SESSION['login_id'])) : ?>
+        <p><a href="./controller/logout.php">ログアウト</a></p>
+        <p><a href="./controller/mypage_notification.php">マイページ</a></p>
+<?php else:?>
+        <p><a href="./controller/login.php">ログイン</a></p>
 <?php endif; ?>
       </div>
-    </div><!-- global_navi -->
+    </header><!-- global_navi -->
     <nav>
       <ul>
         <li><a href="">商品ジャンル一覧</a></li>
