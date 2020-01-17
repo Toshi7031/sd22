@@ -156,9 +156,11 @@ function read_db(string $table, $colmun = '') {
   if(is_array($colmun)){
     $colmun = array_values($colmun); //連想配列を普通の配列に変換
     $cnt = count($colmun);
-
+    //$i = 1 からだとarray[0]がスキップされるので$i = 0からに変更しました。初回は,区切りは必要ないのでforから外しています。
+    $colmuns = $colmun[0];
     for($i = 1; $i < $cnt; ++$i) {
-      $colmuns .= $colmun[$i];
+      //select文のところは,区切りで書かないとエラーが出るから書き換えてます。
+      $colmuns .= ",{$colmun[$i]}";
     }
   }
   else {
@@ -166,9 +168,7 @@ function read_db(string $table, $colmun = '') {
   }
 
   $sql = "SELECT " . $colmuns . " FROM " . DB_NAME . "." . $table;
-
   $cn = mysqli_connect(HOST, DB_USER, DB_PASS, DB_NAME);
-
   //接続失敗時エラーコードを返却
   if(mysqli_connect_errno($cn)){
     return $error_code = '201';
@@ -176,7 +176,6 @@ function read_db(string $table, $colmun = '') {
 
   mysqli_set_charset($cn, 'utf8');
   $result = mysqli_query($cn, $sql);
-  
   while ($row = mysqli_fetch_assoc($result)) {
     $rows[] = $row;
   }
@@ -221,8 +220,8 @@ function stand_delflag($table, $id){
 
 /**
  * 商品の通し番号を取得する関数
- * 
- * @return int $id 
+ *
+ * @return int $id
  */
 function get_product_id() {
   $sql = "SELECT MAX(id) AS 'id' FROM masarudoh.products";

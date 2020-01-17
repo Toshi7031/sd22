@@ -7,7 +7,8 @@ $productBgColor : #D8D8D8;
 // 関数
 @import './mixin';
 //header and footer load
-@import './header_and_footer.scss';
+@import './header';
+@import './footer';
 body{
   width: 100vw;
 }
