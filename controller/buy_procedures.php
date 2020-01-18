@@ -51,7 +51,7 @@
   $result = $mysql -> query($member_sql);
   $array_member = $result -> fetch_all(MYSQLI_ASSOC);
   /*-------------------------------------
-  req
+  view req
   -------------------------------------*/
   require '../view/header.php';
   require '../view/buy_procedures.html';
