@@ -53,6 +53,7 @@ header {
 		width: 30%;
 		padding-left: 20px;
 		display: flex;
+		justify-content: space-around;
 		p{
 			width: 45%;
 			max-width: 150px;
@@ -82,26 +83,28 @@ nav {
 	background-color: $navColor;
 	display: flex;
 	justify-content: space-between;
-	ul {
+	> ul {
 		width: 100%;
 		height: $nav_height;
 		padding: 0 20px 0 20px;
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
-	}
-	li {
-		width: 15%;
-		height: $nav_height * 0.7;
-		background-color: #fff;
-		border: solid #E6E6E6 1px;
-	}
-	a {
-		width: 100%;
-		height: 100%;
-		color: #000000;
-		line-height: $nav_height * 0.7;
-		display: block;
+		> li {
+			width: 15%;
+			height: $nav_height * 0.7;
+			background-color: #fff;
+			border: solid #E6E6E6 1px;
+			//ここのaとselectのaの共通項目をまとめる
+			> p, a {
+				width: 100%;
+				height: 100%;
+				color: #000000;
+				line-height: $nav_height * 0.7;
+				display: block;
+				cursor: pointer;
+			}
+		}
 	}
 	button {
 		width: 100%;
@@ -110,3 +113,8 @@ nav {
 		background-color: $buttonColor;
 	}
 }
+
+/*----------------------------------------
+				select_product_category
+----------------------------------------*/
+@import './select_product_category';

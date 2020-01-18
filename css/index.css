@@ -160,6 +160,7 @@ header .header_login_area {
   width: 30%;
   padding-left: 20px;
   display: flex;
+  justify-content: space-around;
 }
 
 header .header_login_area p {
@@ -193,7 +194,7 @@ nav {
   justify-content: space-between;
 }
 
-nav ul {
+nav > ul {
   width: 100%;
   height: 50px;
   padding: 0 20px 0 20px;
@@ -202,19 +203,20 @@ nav ul {
   align-items: center;
 }
 
-nav li {
+nav > ul > li {
   width: 15%;
   height: 35px;
   background-color: #fff;
   border: solid #E6E6E6 1px;
 }
 
-nav a {
+nav > ul > li > p, nav > ul > li a {
   width: 100%;
   height: 100%;
   color: #000000;
   line-height: 35px;
   display: block;
+  cursor: pointer;
 }
 
 nav button {
@@ -222,6 +224,84 @@ nav button {
   height: 100%;
   border-radius: 10px;
   background-color: #FACC2E;
+}
+
+/*----------------------------------------
+				select_product_category
+----------------------------------------*/
+#category_list {
+  border: solid #000000 1px;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  background-color: rgba(159, 247, 129, 0.8);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+#category_list > p {
+  height: 30px;
+  margin-bottom: 2vh;
+  font-size: 1.4em;
+  text-align: center;
+  line-height: 30px;
+  color: #fff;
+  position: relative;
+}
+
+#category_list .cancel_button {
+  width: 30px;
+  height: 30px;
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  top: 20px;
+  right: 2%;
+  transform: translateX(-2%);
+  -webkit-transform: translateX(-2%);
+  cursor: pointer;
+}
+
+#large_category_list {
+  width: 100%;
+  margin: 0 auto 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#large_category_list li {
+  width: 170px;
+  padding: 10px;
+  text-align: center;
+  border: solid #A4A4A4 1px;
+  background-color: #D8F6CE;
+}
+
+#small_category_area {
+  display: flex;
+  justify-content: space-between;
+}
+
+#small_category_area .small_category_list {
+  width: 170px;
+  color: #848484;
+  background-color: #D8F6CE;
+  border: solid #A4A4A4 1px;
+}
+
+#small_category_area .small_category_list li {
+  width: 170px;
+  padding: 15px;
+  border-bottom: solid #A4A4A4 1px;
+}
+
+nav {
+  margin-bottom: 0px;
 }
 
 /*----------------------------------------
@@ -273,10 +353,11 @@ footer .trade_mark {
 }
 
 #branding {
-  width: 75%;
-  height: 350px;
-  margin: 10px auto 40px;
-  text-align: center;
+  width: 100%;
+  height: 50vh;
+  border: solid #000000 1px;
+  background: url(../images/image_materials/test.jpg) center center no-repeat;
+  background-size: cover;
 }
 
 #contents_area {
