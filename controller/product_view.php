@@ -3,10 +3,11 @@
 商品一覧
 ----------------------------------------------------*/
   require '../config/config.php';
+
   //変数宣言
   $title = '商品一覧';
   $css_file_name = 'product_view.css';
-  $product_limit = 2; //テスト用に2に宣言
+  $product_limit = 1; //テスト用に2に宣言
   $_GET['search'] = '';//test
   $page_contents = 1; //test 1ページに対する個数
 
@@ -19,8 +20,9 @@
   if(isset($_GET['search'])){
     //検索ワードが送信されていれば変数に代入
     $search = $_GET['search'];
-    //検索情報をセッションで保持
+    //ページ数をリセット
     $page = 1;
+    //検索情報をセッションで保持
     $_SESSION = [
       'name' => $search,
     ];
