@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+// 変数宣言
+$bgColor : rgba(159,247,129,0.8);
+$borderColor : #A4A4A4;
+$listBgColor :#D8F6CE;
+$divMargin : 0 auto 30px;
+$trHeight : 60px;
+$h2Height : 60px;
+$fixedButtonHeight : 80px;
+$footerHeight : 80px;
+
+#product_category_list {
+	width: 100vw;
+	height: 100vh;
+	padding: 20px;
+	background-color: $bgColor;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+#large_category_list {
+	width: 100%;
+	height: 36px;
+	line-height: 36px;
+	margin: 0 auto 10px;
+	display: flex;
+	justify-content: space-between;
+	li {
+		width: 170px;
+		height: 100%;
+		text-align: center;
+		font-weight: 620;
+		background-color: $listBgColor;
+		a {
+			color: #000;
+		}
+	}
+}
+#small_category_area {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	.small_category_list {
+		width: 170px;
+		color: #848484;
+		background-color: $listBgColor;
+		li {
+			width: 100%;
+			height: auto;
+			padding: 15px;
+			border-bottom: solid $borderColor 1px;
+			a {
+				width: 100%;
+				height: 100%;
+				color: #000;
+				display: inline-block;
+				cursor: pointer;
+			}
+		}
+	}
+}

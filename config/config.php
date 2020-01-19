@@ -1,9 +1,9 @@
 <?php
 
   //データベース
-  const HOST    = 'lamp_mysql_1';
+  const HOST    = 'localhost';
   const DB_USER = 'root';
-  const DB_PASS = 'root';
+  const DB_PASS = '';
   const DB_NAME = 'masarudoh';
 
   //画像アップロード先
