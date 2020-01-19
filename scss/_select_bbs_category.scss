@@ -2,34 +2,19 @@
 /* CSS Document */
 
 // 変数宣言
-$bgColor : #9FF781;
+$bgColor : rgba(159,247,129,0.8);
 $listBgColor :#D8F6CE;
 
-// 関数
-@import './mixin';
-
-/*----------------------------------------
-				reset
-----------------------------------------*/
-@import './reset';
-
-/*----------------------------------------
-				body
-----------------------------------------*/
-#wrapp {
+#bbs_category_list {
 	width: 100vw;
 	height: 100vh;
+	padding: 20px;
 	background-color: $bgColor;
-}
-#topic_list {
-	width: 95%;
-	margin: 0 auto;
-	> p {
-		margin-bottom: 30px;
-		font-size: 1.5em;
-		color: #fff;
-		text-align: center;
-	}
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
 	ul {
 		width: 100%;
 		display: flex;
@@ -48,5 +33,12 @@ $listBgColor :#D8F6CE;
 	}
 	li:nth-child(9) {
 		font-size: 1.1em;
+	}
+	a {
+		color: #000;
+		display: block;
+	}
+	.list_title {
+		margin-bottom: 50px;
 	}
 }
