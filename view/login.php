@@ -21,21 +21,21 @@
 
     <div id="input_area">
       <form action="" method="post">
-        <p>メールアドレス</p>
-        <p><input type="text" name="email"></p>
-        <p>パスワード</p>
+        <p>メールアドレス<span><?php echo $error_mes['email']; ?></span></p>
+        <p><input type="text" name="email" value="<?php echo h($input['email']);?>"></p>
+        <p>パスワード<span><?php echo $error_mes['password']; ?></span></p>
         <p><input type="password" name="password"></p>
         <button type="submit" name="login" value="l">ログイン</button>
       </form>
 
       <p class="help">お困りですか？</p>
-      <div class="help_area hidden">
-        <ul>
+      <!-- <div class="help_area hidden"> -->
+        <ul class="help_area">
           <li><a href="">ログインIDを忘れた</a></li>
           <li><a href="">パスワードを忘れた</a></li>
           <li><a href="./sign_in.php">新規会員登録</a></li>
         </ul>
-      </div>
+      <!-- </div> -->
     </div><!-- input -->
 
     <footer>

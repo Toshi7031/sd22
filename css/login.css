@@ -155,6 +155,11 @@ h1 {
   font-weight: 400;
 }
 
+#input_area form p:nth-child(odd) span {
+  margin-left: 15px;
+  color: #FE2E64;
+}
+
 #input_area form p:nth-child(even) {
   margin-bottom: 13px;
 }
@@ -203,23 +208,15 @@ h1 {
 }
 
 #input_area .help_area {
-  display: block;
-}
-
-#input_area .help_area ul {
-  border: solid #000000 1px;
+  width: 40%;
   margin: 0 auto;
-}
-
-#input_area .help_area ul li {
-  padding-bottom: 10px;
-  text-align: center;
-  border-bottom: solid gray 1px;
-}
-
-#input_area .hidden {
-  height: 0px;
   display: none;
+}
+
+#input_area .help_area li {
+  margin-bottom: 10px;
+  text-align: center;
+  border-bottom: solid #3CB371 1px;
 }
 
 footer {
