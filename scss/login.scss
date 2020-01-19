@@ -57,6 +57,10 @@ h1 {
       margin-bottom: 5px;
       font-size: 1em;
       font-weight: 400;
+      span {
+        margin-left: 15px;
+        color: #FE2E64;
+      }
     }
     p:nth-child(even) {
       margin-bottom: 13px;
@@ -101,20 +105,14 @@ h1 {
     }
   }
   .help_area {
-    display: block;
-    ul {
-      border: solid #000000 1px;
-      margin: 0 auto;
-      li {
-        padding-bottom: 10px;
-        text-align: center;
-        border-bottom: solid gray 1px;
-      }
-    }
-  }
-  .hidden {
-    height: 0px;
+    width: 40%;
+    margin: 0 auto;
     display: none;
+    li {
+      margin-bottom: 10px;
+      text-align: center;
+      border-bottom: solid $headerColor 1px;
+    }
   }
 }
 
