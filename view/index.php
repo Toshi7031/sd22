@@ -32,86 +32,114 @@
     </header><!-- global_navi -->
     <nav>
       <ul>
-      <li id="select_product_category">
+        <li id="select_product_category">
           <p>商品ジャンル一覧</p>
-          <div id="category_list">
-            <p>商品一覧</p>
-            <p class="cancel_button">×</p>
+          <div id="product_category_list">
+            <p class="list_title">商品一覧</p>
+            <p class="cancel_button"><span></span></p>
             <ul id="large_category_list">
-              <li>レディース</li>
-              <li>メンズ</li>
-              <li>キッズ</li>
-              <li>インテリア・住まい</li>
-              <li>家電</li>
-              <li>ホビー・娯楽</li>
-              <li>ハンドメイド</li>
+              <li><a href="">レディース</a></li>
+              <li><a href="">メンズ</a></li>
+              <li><a href="">キッズ</a></li>
+              <li><a href="">インテリア・住まい</a></li>
+              <li><a href="">家電</a></li>
+              <li><a href="">ホビー・娯楽</a></li>
+              <li><a href="">ハンドメイド</a></li>
             </ul>
             <div id="small_category_area">
               <ul class="small_category_list">
-                <li>服</li>
-                <li>帽子</li>
-                <li>アクセサリー</li>
-                <li>その他</li>
+                <li><a href="">服</a></li>
+                <li><a href="">帽子</a></li>
+                <li><a href="">アクセサリー</a></li>
+                <li><a href="">その他</a></li>
               </ul>
               <ul class="small_category_list">
-                <li>服</li>
-                <li>帽子</li>
-                <li>アクセサリー</li>
-                <li>その他</li>
+                <li><a href="">服</a></li>
+                <li><a href="">帽子</a></li>
+                <li><a href="">アクセサリー</a></li>
+                <li><a href="">その他</a></li>
               </ul>
               <ul class="small_category_list">
-                <li>ベビー服</li>
-                <li>キッズ服</li>
-                <li>キッズ靴</li>
-                <li>子供用ファッション小物</li>
-                <li>外出・移動用具</li>
-                <li>ベビー家具・寝具・室内用品</li>
-                <li>おもちゃ</li>
-                <li>その他</li>
+                <li><a href="">ベビー服</a></li>
+                <li><a href="">キッズ服</a></li>
+                <li><a href="">キッズ靴</a></li>
+                <li><a href="">子供用ファッション小物</a></li>
+                <li><a href="">外出・移動用具</a></li>
+                <li><a href="">ベビー家具・寝具・室内用品</a></li>
+                <li><a href="">おもちゃ</a></li>
+                <li><a href="">その他</a></li>
               </ul>
               <ul class="small_category_list">
-                <li>キッチン・食器</li>
-                <li>ベッド・マットレス・寝具</li>
-                <li>机・いす</li>
-                <li>収納寝具</li>
-                <li>カーペット・ラグ・マット</li>
-                <li>照明</li>
-                <li>時計</li>
-                <li>インテリア小物</li>
-                <li>季節・年中行事</li>
-                <li>その他</li>
+                <li><a href="">キッチン・食器</a></li>
+                <li><a href="">ベッド・マットレス・寝具</a></li>
+                <li><a href="">机・いす</a></li>
+                <li><a href="">収納寝具</a></li>
+                <li><a href="">カーペット・ラグ・マット</a></li>
+                <li><a href="">照明</a></li>
+                <li><a href="">時計</a></li>
+                <li><a href="">インテリア小物</a></li>
+                <li><a href="">季節・年中行事</a></li>
+                <li><a href="">その他</a></li>
               </ul>
               <ul class="small_category_list">
-                <li>スマホ</li>
-                <li>スマホアクセサリー</li>
-                <li>PC・タブレット</li>
-                <li>カメラ</li>
-                <li>テレビ・映像機器</li>
-                <li>オーディオ機器</li>
-                <li>美容・健康</li>
-                <li>冷暖房・空調</li>
-                <li>生活家電</li>
-                <li>その他</li>
+                <li><a href="">スマホ</a></li>
+                <li><a href="">スマホアクセサリー</a></li>
+                <li><a href="">PC・タブレット</a></li>
+                <li><a href="">カメラ</a></li>
+                <li><a href="">テレビ・映像機器</a></li>
+                <li><a href="">オーディオ機器</a></li>
+                <li><a href="">美容・健康</a></li>
+                <li><a href="">冷暖房・空調</a></li>
+                <li><a href="">生活家電</a></li>
+                <li><a href="">その他</a></li>
               </ul>
               <ul class="small_category_list">
-                <li>本・DVD・音楽</li>
-                <li>ゲーム</li>
-                <li>スポーツ・レジャー</li>
-                <li>その他</li>
+                <li><a href="">本・DVD・音楽</a></li>
+                <li><a href="">ゲーム</a></li>
+                <li><a href="">スポーツ・レジャー</a></li>
+                <li><a href="">その他</a></li>
               </ul>
               <ul class="small_category_list">
-                <li>アクセサリー(女性)</li>
-                <li>ファッション・小物</li>
-                <li>アクセサリー・時計</li>
-                <li>日用品・インテリア</li>
-                <li>趣味・おもちゃ</li>
-                <li>素材・材料</li>
-                <li>その他</li>
+                <li><a href="">アクセサリー(女性)</a></li>
+                <li><a href="">ファッション・小物</a></li>
+                <li><a href="">アクセサリー・時計</a></li>
+                <li><a href="">日用品・インテリア</a></li>
+                <li><a href="">趣味・おもちゃ</a></li>
+                <li><a href="">素材・材料</a></li>
+                <li><a href="">その他</a></li>
               </ul>
             </div>
           </div>
         </li>
-        <li><a href="">掲示板一覧</a></li>
+        <li id="select_bbs_category">
+          <p>掲示板一覧</p>
+          <div id="bbs_category_list">
+            <p class="list_title">掲示板一覧</p>
+            <p class="cancel_button"><span></span></p>
+            <ul>
+              <li><a href="">雑談</a></li>
+              <li><a href="">ニュース・経済</a></li>
+              <li><a href="">国内・海外旅行</a></li>
+              <li><a href="">家庭菜園</a></li>
+              <li><a href="">ボランティア</a></li>
+              <li><a href="">登山</a></li>
+              <li><a href="">囲碁・将棋</a></li>
+              <li><a href="">温泉巡り</a></li>
+              <li><a href="">ウォーキング・ジョギング</a></li>
+              <li><a href="">社交ダンス</a></li>
+              <li><a href="">ピアノ</a></li>
+              <li><a href="">神社・仏閣巡り</a></li>
+              <li><a href="">英会話</a></li>
+              <li><a href="">音楽鑑賞</a></li>
+              <li><a href="">サイクリング</a></li>
+              <li><a href="">読書</a></li>
+              <li><a href="">スポーツ観戦</a></li>
+              <li><a href="">料理・お菓子作り</a></li>
+              <li><a href="">動画</a></li>
+              <li><a href="">写真</a></li>
+            </ul>
+          </div>
+        </li>
         <li><a href="./controller/exhibition_sell.php">出品</a></li>
         <li><a href="">お問い合わせ</a></li>
       </ul>

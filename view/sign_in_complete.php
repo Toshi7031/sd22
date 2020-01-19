@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
-    <title>登録完了画面</title>
+    <title>まさる堂/新規登録完了画面</title>
     <link rel="stylesheet" href="../css/sign_in_complete.css" type="text/css">
     <meta http-equiv="refresh" content="3;URL=../view/index.php">  <!-- 3秒後にindex.phpに飛ぶ -->
   </head>

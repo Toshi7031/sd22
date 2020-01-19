@@ -10,11 +10,7 @@ $h2Height : 60px;
 $fixedButtonHeight : 80px;
 $footerHeight : 80px;
 
-// .hidden {
-// 	opacity: 0;
-// }
-#category_list {
-	border: solid #000000 1px;
+#product_category_list {
 	width: 100vw;
 	height: 100vh;
 	padding: 20px;
@@ -24,55 +20,45 @@ $footerHeight : 80px;
 	top: 0;
 	left: 0;
 	z-index: 100;
-	> p {
-		height: 30px;
-		margin-bottom: 2vh;
-		font-size: 1.4em;
-		text-align: center;
-		line-height: 30px;
-		color: #fff;
-		position: relative;
-	}
-	.cancel_button {
-		width: 30px;
-		height: 30px;
-		color: #000;
-		background-color: #fff;
-		text-align: center;
-		vertical-align: middle;
-		position: absolute;
-		top: 20px;
-		right: 2%;
-		transform: translateX(-2%);
-		-webkit-transform: translateX(-2%);
-		cursor: pointer;
-	}
 }
 #large_category_list {
 	width: 100%;
+	height: 36px;
+	line-height: 36px;
 	margin: 0 auto 10px;
 	display: flex;
 	justify-content: space-between;
 	li {
 		width: 170px;
-		padding: 10px;
+		height: 100%;
 		text-align: center;
-		border: solid $borderColor 1px;
+		font-weight: 620;
 		background-color: $listBgColor;
+		a {
+			color: #000;
+		}
 	}
 }
 #small_category_area {
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	.small_category_list {
 		width: 170px;
 		color: #848484;
 		background-color: $listBgColor;
-		border: solid $borderColor 1px;
 		li {
-			width: 170px;
+			width: 100%;
+			height: auto;
 			padding: 15px;
 			border-bottom: solid $borderColor 1px;
+			a {
+				width: 100%;
+				height: 100%;
+				color: #000;
+				display: inline-block;
+				cursor: pointer;
+			}
 		}
 	}
 }
