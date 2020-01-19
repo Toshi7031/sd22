@@ -4,7 +4,7 @@
     <meta http-equiv="content-Type" content="text/html;charset=UTF-8">
     <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
     <script src="../js/ajaxzip3.js" charset="UTF-8"></script>
-    <title>新規登録</title>
+    <title>まさる堂/新規登録</title>
     <link rel="stylesheet" href="../css/sign_in.css" type="text/css">
   </head>
   <body>
