@@ -42,7 +42,7 @@
         </p>
         <p>
           <span></span><span></span>
-          <select name="product_category_id" disabled>
+          <select name="small_product_category_id" disabled>
             <option value="">選択できません</option>
           </select>
         </p>
