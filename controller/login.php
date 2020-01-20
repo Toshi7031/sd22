@@ -12,6 +12,10 @@ if(isset($_SESSION['login_id']) && !empty($_SESSION['login_id'])) {
   redirect($url);
 }
 
+$input = array(
+  'email' => '',
+  'password' => '',
+);
 $error_mes = array(
   'email' => '',
   'password' => '',
@@ -26,7 +30,7 @@ if(isset($_POST['login']) && !empty($_POST['login'])){
 
   // エラーチェック
   if(empty($input['email'])){
-    $error_mes['email'] = 'emailが空白です';
+    $error_mes['email'] = 'メールアドレスが空白です';
   }
   elseif(!mach_email($input['email'])) {
     $error_mes['email'] = 'メールアドレスに誤りがあります';

@@ -4,7 +4,31 @@ $(function() {
   const input_price = $('.mny input');
   const span_commission_rate = $('#commission_rate span');
   const span_profit = $('#profit span');
+  const pictures_input = $('.pictures input[type=file]');
 
+
+  pictures_input.after('<span class="thumbnail"></span>');
+  // アップロードするファイルを選択
+  $('input[type=file]').change(function() {
+    let input = $(this);
+    let file = input.prop('files')[0];
+    let thumbnail = input.next('span');
+
+    // 画像以外は処理を停止
+    if (! file.type.match('image.*')) {
+      // クリア
+      input.val('');
+      thumbnail.html('');
+      return;
+    }
+    // 画像表示
+    let reader = new FileReader();
+    reader.onload = function() {
+      let img_src = $('<img>').attr('src', reader.result);
+      thumbnail.html(img_src);
+    }
+    reader.readAsDataURL(file);
+  });
 
   // カテゴリ選択時の処理
   // 大カテゴリを選択したとき
@@ -94,10 +118,13 @@ $(function() {
 
   // 値段を入力したとき
   input_price.on('input', function(event) {
-    let value = input_price.val();
+    let value = $(this).val();
     let commission_rate = Math.round(value / 10);
     let profit = value - commission_rate;
-    span_commission_rate.text(commission_rate);
-    span_profit.text(profit);
+
+    commission_rate = commission_rate.toLocaleString();
+    profit = profit.toLocaleString();
+    span_commission_rate.text( commission_rate + '￥');
+    span_profit.text(profit + '￥');
   });
 });

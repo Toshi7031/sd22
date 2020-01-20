@@ -2,7 +2,7 @@
 /* CSS Document */
 
 // 変数宣言
-$bgColor : #E4E4E4;
+$bodyBgColor : #E4E4E4;
 $productBgColor : #D8D8D8;
 $headerColor : #3CB371;
 $buttonColor : #FACC2E;
@@ -28,7 +28,7 @@ $buttonColor : #FACC2E;
 				body
 ----------------------------------------*/
 body{
-  background-color: $bgColor;
+  background-color: $bodyBgColor;
 }
 
 .area{

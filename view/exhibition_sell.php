@@ -149,7 +149,7 @@
         </p>
       </section>
 
-      <p class="green">販売価格（300～300,000）</p>
+      <p class="green">販売価格（300￥～300,000￥）</p>
       <section class="mny">
         <p><span>￥</span><input type="number" name="price" value="<?php echo $input['price'];?>" placeholder="300" min="300" max="300000"></p>
       </section>

@@ -38,75 +38,75 @@
             <p class="list_title">商品一覧</p>
             <p class="cancel_button"><span></span></p>
             <ul id="large_category_list">
-              <li><a href="">レディース</a></li>
-              <li><a href="">メンズ</a></li>
-              <li><a href="">キッズ</a></li>
-              <li><a href="">インテリア・住まい</a></li>
-              <li><a href="">家電</a></li>
-              <li><a href="">ホビー・娯楽</a></li>
-              <li><a href="">ハンドメイド</a></li>
+              <li><a href="./controller/product_view.php?large_product_category=1">レディース</a></li>
+              <li><a href="./controller/product_view.php?large_product_category=2">メンズ</a></li>
+              <li><a href="./controller/product_view.php?large_product_category=3">キッズ</a></li>
+              <li><a href="./controller/product_view.php?large_product_category=4">インテリア・住まい</a></li>
+              <li><a href="./controller/product_view.php?large_product_category=5">家電</a></li>
+              <li><a href="./controller/product_view.php?large_product_category=6">ホビー・娯楽</a></li>
+              <li><a href="./controller/product_view.php?large_product_category=7">ハンドメイド</a></li>
             </ul>
             <div id="small_category_area">
               <ul class="small_category_list">
-                <li><a href="">服</a></li>
-                <li><a href="">帽子</a></li>
-                <li><a href="">アクセサリー</a></li>
-                <li><a href="">その他</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=1&small_product_category=1">服</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=1&small_product_category=2">帽子</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=1&small_product_category=3">アクセサリー</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=1&small_product_category=38">その他</a></li>
               </ul>
               <ul class="small_category_list">
-                <li><a href="">服</a></li>
-                <li><a href="">帽子</a></li>
-                <li><a href="">アクセサリー</a></li>
-                <li><a href="">その他</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=2&small_product_category=1">服</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=2&small_product_category=2">帽子</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=2&small_product_category=3">アクセサリー</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=2&small_product_category=38">その他</a></li>
               </ul>
               <ul class="small_category_list">
-                <li><a href="">ベビー服</a></li>
-                <li><a href="">キッズ服</a></li>
-                <li><a href="">キッズ靴</a></li>
-                <li><a href="">子供用ファッション小物</a></li>
-                <li><a href="">外出・移動用具</a></li>
-                <li><a href="">ベビー家具・寝具・室内用品</a></li>
-                <li><a href="">おもちゃ</a></li>
-                <li><a href="">その他</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=3&small_product_category=4">ベビー服</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=3&small_product_category=5">キッズ服</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=3&small_product_category=6">キッズ靴</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=3&small_product_category=7">子供用ファッション小物</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=3&small_product_category=8">外出・移動用具</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=3&small_product_category=9">ベビー家具・寝具・室内用品</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=3&small_product_category=10">おもちゃ</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=3&small_product_category=38">その他</a></li>
               </ul>
               <ul class="small_category_list">
-                <li><a href="">キッチン・食器</a></li>
-                <li><a href="">ベッド・マットレス・寝具</a></li>
-                <li><a href="">机・いす</a></li>
-                <li><a href="">収納寝具</a></li>
-                <li><a href="">カーペット・ラグ・マット</a></li>
-                <li><a href="">照明</a></li>
-                <li><a href="">時計</a></li>
-                <li><a href="">インテリア小物</a></li>
-                <li><a href="">季節・年中行事</a></li>
-                <li><a href="">その他</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=4&small_product_category=11">キッチン・食器</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=4&small_product_category=12">ベッド・マットレス・寝具</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=4&small_product_category=13">机・いす</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=4&small_product_category=14">収納寝具</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=4&small_product_category=15">カーペット・ラグ・マット</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=4&small_product_category=16">照明</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=4&small_product_category=17">時計</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=4&small_product_category=18">インテリア小物</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=4&small_product_category=19">季節・年中行事</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=4&small_product_category=38">その他</a></li>
               </ul>
               <ul class="small_category_list">
-                <li><a href="">スマホ</a></li>
-                <li><a href="">スマホアクセサリー</a></li>
-                <li><a href="">PC・タブレット</a></li>
-                <li><a href="">カメラ</a></li>
-                <li><a href="">テレビ・映像機器</a></li>
-                <li><a href="">オーディオ機器</a></li>
-                <li><a href="">美容・健康</a></li>
-                <li><a href="">冷暖房・空調</a></li>
-                <li><a href="">生活家電</a></li>
-                <li><a href="">その他</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=5&small_product_category=20">スマホ</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=5&small_product_category=21">スマホアクセサリー</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=5&small_product_category=22">PC・タブレット</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=5&small_product_category=23">カメラ</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=5&small_product_category=24">テレビ・映像機器</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=5&small_product_category=25">オーディオ機器</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=5&small_product_category=26">美容・健康</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=5&small_product_category=27">冷暖房・空調</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=5&small_product_category=28">生活家電</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=5&small_product_category=38">その他</a></li>
               </ul>
               <ul class="small_category_list">
-                <li><a href="">本・DVD・音楽</a></li>
-                <li><a href="">ゲーム</a></li>
-                <li><a href="">スポーツ・レジャー</a></li>
-                <li><a href="">その他</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=6&small_product_category=29">本・DVD・音楽</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=6&small_product_category=30">ゲーム</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=6&small_product_category=31">スポーツ・レジャー</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=6&small_product_category=38">その他</a></li>
               </ul>
               <ul class="small_category_list">
-                <li><a href="">アクセサリー(女性)</a></li>
-                <li><a href="">ファッション・小物</a></li>
-                <li><a href="">アクセサリー・時計</a></li>
-                <li><a href="">日用品・インテリア</a></li>
-                <li><a href="">趣味・おもちゃ</a></li>
-                <li><a href="">素材・材料</a></li>
-                <li><a href="">その他</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=6&small_product_category=32">アクセサリー(女性)</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=6&small_product_category=33">ファッション・小物</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=6&small_product_category=34">アクセサリー・時計</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=6&small_product_category=35">日用品・インテリア</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=6&small_product_category=36">趣味・おもちゃ</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=6&small_product_category=">素材・材料</a></li>
+                <li><a href="./controller/product_view.php?large_product_category=6&small_product_category=38">その他</a></li>
               </ul>
             </div>
           </div>
