@@ -145,7 +145,8 @@
       </ul>
     </nav><!-- top_navi -->
     <div id="branding">
-      <!-- <h2></h2> -->
+      <h2></h2>
+      <!-- <h2><img src="./images/image_materials/back.png" width="" height="" alt=""></h2> -->
     </div><!-- branding -->
     <div id="contents_area">
       <h2>新着商品</h2>
