@@ -118,10 +118,13 @@ $(function() {
 
   // 値段を入力したとき
   input_price.on('input', function(event) {
-    let value = input_price.val();
+    let value = $(this).val();
     let commission_rate = Math.round(value / 10);
     let profit = value - commission_rate;
-    span_commission_rate.text(commission_rate);
-    span_profit.text(profit);
+
+    commission_rate = commission_rate.toLocaleString();
+    profit = profit.toLocaleString();
+    span_commission_rate.text( commission_rate + '￥');
+    span_profit.text(profit + '￥');
   });
 });
