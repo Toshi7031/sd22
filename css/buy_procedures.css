@@ -96,7 +96,8 @@ button {
 ----------------------------------------*/
 #wrapp {
   width: 100vw;
-  background-color: #BDBDBD; }
+  background-color: #BDBDBD;
+  padding-bottom: 20px; }
   #wrapp > p {
     width: 60%;
     margin: 0 auto 30px;
@@ -163,7 +164,8 @@ button {
     bottom: 16px;
     right: 20px; }
 
-#use_cash, #payment {
+#use_cash,
+#payment {
   width: 60%;
   height: 200px;
   margin: 0 auto 30px;
@@ -198,12 +200,20 @@ button {
   #use_cash .use_point p:last-child {
     padding: 5px 15px 5px 15px;
     border-radius: 4px;
-    font-size: 1.5em;
+    font-size: 1.5em; }
+  #use_cash .use_point .input_point {
     position: absolute;
     top: 34px;
-    right: 10px; }
+    right: 10px;
+    width: 400px;
+    height: 50px;
+    padding-left: 15px;
+    font-size: 1.7em;
+    border: solid #FA5858 1px;
+    border-radius: 50px; }
 
-#payment .terms_of_payment, #payment .payment_amount {
+#payment .terms_of_payment,
+#payment .payment_amount {
   height: 50%;
   margin: 0 20px 0 20px;
   font-size: 1.8em;
@@ -239,3 +249,11 @@ button {
   #delivery_destination p {
     font-size: 1.8em;
     padding: 0 20px 0 20px; }
+  #delivery_destination select {
+    width: 400px;
+    height: 50px;
+    padding-left: 15px;
+    font-size: 0.7em;
+    border: solid #FA5858 1px;
+    border-radius: 50px;
+    background-color: #fff; }

@@ -1,7 +1,7 @@
 <?php
 
   //データベース
-  const HOST    = 'mysql:3306';
+  const HOST    = 'mysql';
   const DB_USER = 'root';
   const DB_PASS = 'root';
   const DB_NAME = 'masarudoh';

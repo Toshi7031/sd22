@@ -1,25 +1,49 @@
 <?php
+/*---------------------------------------------
+掲示板
+---------------------------------------------*/
+
 //require
-require_once'../config/config.php';
 require_once'../model/func/func.php';
-//変数宣言
+require_once'../config/config.php';
+
+/*---------------------------------------------
+変数宣言
+---------------------------------------------*/
+
 // session_start();
 $css_file_name = 'bbs.css';
-$thred_colmun = [
-  'id',
-  'name',
-  'public_type',
-  'white_list',
-];
-$comments_colmun = [
-  'thred_id',
-  'comment_id',
-  'member_id',
-  'comment',
-];
 //テスト用変数
-$_GET['thred_id'] = str_pad(1,6,0,STR_PAD_LEFT);
-$_SESSION['login_id'] = str_pad(1,6,0,STR_PAD_LEFT);
+$_GET['thred_id'] = 1;
+$_SESSION['login_id'] = 2;
+
+
+/*---------------------------------------------
+sql作成
+---------------------------------------------*/
+
+//thred情報のsql作成
+$thred_sql = 'SELECT id,name,public_type,white_list FROM thred';
+$comments_sql = 'SELECT thred_id,comment_id,member_id,comment FROM comments';
+
+/*---------------------------------------------
+データベース接続
+---------------------------------------------*/
+
+$mysqli = new mysqli(HOST, DB_USER, DB_PASS, DB_NAME);
+
+$result  = $mysql -> query($thred_sql);
+$array_thred = $result -> fetch_all(MYSQLI_ASSOC);
+
+$result = $mysql -> query($comments_sql);
+$array_comments = $result -> fetch_all(MYSQLI_ASSOC);
+
+$mysqli -> close();
+
+/*---------------------------------------------
+値受取
+---------------------------------------------*/
+
 //getで表示する掲示板のIDを受け取る(if)
 if(isset($_GET['thred_id'])){
   $thred_id = $_GET['thred_id'];
@@ -27,7 +51,7 @@ if(isset($_GET['thred_id'])){
 else{
   //受け取っていない場合は掲示板ホームへ送る
   //  header( "Location: ./bbs_list.php" ) ;
-  echo 'empty thred_id';
+  echo 'ID受取なし';
 }
 
 //ログインセッションから自分のIDを取り出し(if)
@@ -37,23 +61,18 @@ if(isset($_SESSION['login_id'])){
 else{
   $login_id = null;
 }
-//データベース接続し、スレッドデータを取得
-$thred = read_db('thred',$thred_colmun);
-//$thredのカラムの主キーをthred_idに変更する
-$thred = array_column($thred,null,'id');
-//public_typeを確認して1の場合はホワイトリストを確認
-if($thred[$thred_id]['public_type'] == 1){
-  //ホワイトリストを6文字区切りで配列に入れる
-  $array_white_list = str_split($thred[$thred_id]['white_list'],6);
-  //配列の中に一致する会員IDが無い場合はbbs_list.phpに返す
-  if(!in_array($login_id,$array_white_list)){
-    //  header( "Location: ./bbs_list.php" ) ;
-    echo 'ホワイトリストerr';
-  }
-}
 
-//コメント内容を受取
-$comments = read_db('comments',$comments_colmun);
+/*---------------------------------------------
+エラー処理
+---------------------------------------------*/
+
+//white_listに乗っていない場合、５０３
+var_dump($array_comments);
+var_dump($array_thred);
+
+/*---------------------------------------------
+配列処理
+---------------------------------------------*/
 
 //コメントしているユーザIDを取り出して配列に挿入
 for($i = 0;$comments[$i]['member_id'];$i++){
@@ -97,4 +116,5 @@ for($i = 0 ; $comments[$i];$i++){
   }
 }
 require_once '../view/bbs.php';
+
 ?>
