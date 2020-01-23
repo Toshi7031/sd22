@@ -10,7 +10,7 @@
   <body>
 
     <header>
-      <p><a href="./index.html"><img src="../images/image_materials/logo.png" width="250" alt="まさる堂ロゴ"></a></p>
+      <p><a href="../index.php"><img src="../images/image_materials/logo.png" width="250" alt="まさる堂ロゴ"></a></p>
     </header>
 
     <div id="input">

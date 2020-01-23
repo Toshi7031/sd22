@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>まさる堂/新規登録完了画面</title>
     <link rel="stylesheet" href="../css/sign_in_complete.css" type="text/css">
-    <meta http-equiv="refresh" content="3;URL=../view/index.php">  <!-- 3秒後にindex.phpに飛ぶ -->
+    <meta http-equiv="refresh" content="3;URL=../index.php">  <!-- 3秒後にindex.phpに飛ぶ -->
   </head>
   <body>
 
