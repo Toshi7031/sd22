@@ -1,40 +1,17 @@
 $(function() {
-  const select_large_product_category = $('[name="large_product_categories"]');
+  const select_large_product_category = $('[name="large_product_category_id"]');
   const select_small_product_category = $('[name="small_product_category_id"]');
   const input_price = $('.mny input');
   const span_commission_rate = $('#commission_rate span');
   const span_profit = $('#profit span');
   const pictures_input = $('.pictures input[type=file]');
 
-
-  pictures_input.after('<span class="thumbnail"></span>');
-  // アップロードするファイルを選択
-  $('input[type=file]').change(function() {
-    let input = $(this);
-    let file = input.prop('files')[0];
-    let thumbnail = input.next('span');
-
-    // 画像以外は処理を停止
-    if (! file.type.match('image.*')) {
-      // クリア
-      input.val('');
-      thumbnail.html('');
-      return;
-    }
-    // 画像表示
-    let reader = new FileReader();
-    reader.onload = function() {
-      let img_src = $('<img>').attr('src', reader.result);
-      thumbnail.html(img_src);
-    }
-    reader.readAsDataURL(file);
-  });
-
-  // カテゴリ選択時の処理
-  // 大カテゴリを選択したとき
-  select_large_product_category.change(function() {
+  const category_chage = () => {
+    // 大カテゴリの値を取得
     var large_product_category_id = select_large_product_category.val();
+    console.log(large_product_category_id);
 
+    // 大カテゴリの値で分岐
     if(large_product_category_id == 1 || large_product_category_id == 2) {
       select_small_product_category.prop('disabled', false);
       select_small_product_category.empty();
@@ -111,14 +88,11 @@ $(function() {
     else {
       select_small_product_category.prop('disabled', true);
       select_small_product_category.empty();
-      select_small_product_category.append('<option value="">選択できません</option>');
+      select_small_product_category.append('<option value="">１つめのカテゴリを選択選択してください</option>');
     }
-    
-  });
-
-  // 値段を入力したとき
-  input_price.on('input', function(event) {
-    let value = $(this).val();
+  }
+  const pick_payment = () => {
+    let value = input_price.val();
     let commission_rate = Math.round(value / 10);
     let profit = value - commission_rate;
 
@@ -126,5 +100,39 @@ $(function() {
     profit = profit.toLocaleString();
     span_commission_rate.text('￥' + commission_rate);
     span_profit.text('￥' + profit);
+  }
+
+  // ロード時の処理
+  category_chage();
+  pick_payment();
+  select_small_product_category.val(small_product_category_id);   //カテゴリの選択状態
+  pictures_input.after('<span class="thumbnail"></span>');
+
+  // アップロードするファイルを選択
+  $('input[type=file]').change(function() {
+    let input = $(this);
+    let file = input.prop('files')[0];
+    let thumbnail = input.next('span');
+
+    // 画像以外は処理を停止
+    if (! file.type.match('image.*')) {
+      // クリア
+      input.val('');
+      thumbnail.html('');
+      return;
+    }
+    // 画像表示
+    let reader = new FileReader();
+    reader.onload = function() {
+      let img_src = $('<img>').attr('src', reader.result);
+      thumbnail.html(img_src);
+    }
+    reader.readAsDataURL(file);
   });
+
+  // カテゴリ選択時の処理
+  select_large_product_category.on('click', category_chage);
+
+  // 値段を入力したとき
+  input_price.on('input', pick_payment);
 });
