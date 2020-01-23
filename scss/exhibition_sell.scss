@@ -155,6 +155,8 @@ body{
     li:nth-of-type(2) {
       width: 10%;
       line-height: 80px;
+      color: $headerColor;
+      font-weight: 700;
     }
     li:last-child {
       width: 70%;
@@ -192,7 +194,7 @@ body{
 .result {
   p {
     width: 100%;
-    font-size: 1.5em;
+    font-size: 1.3em;
     position: relative;
     &:first-child {
       margin-bottom: 20px;
@@ -202,12 +204,16 @@ body{
       right: 0;
     }
   }
+  p:last-child {
+    font-size: 2em;
+  }
 }
 
+// エラーメッセージ
 .error_mes {
   width: 80%;
   color: $errorMesColor;
-  font-size: 0.9em;
+  font-size: 1.1em;
 }
 
 // 説明文

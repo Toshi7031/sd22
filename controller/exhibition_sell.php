@@ -1,8 +1,9 @@
 <?PHP
-
 session_start();
+
 require_once '../config/config.php';
 require_once '../model/func/func.php';
+require_once '../model/login_check.php';
 
 // 初期化
 $title = 'まさる堂/出品ページ';
@@ -31,13 +32,20 @@ if(!empty($_POST['check'])) {
   // 画像処理
   $tmp_names = array();
   $i = 0;
+  $image_emmpty_cnt = 0;
   for($i = 0; $i < count($_FILES['image']['tmp_name']); ++$i) {
     if(empty($_FILES['image']['tmp_name'][$i])) {
+      $image_emmpty_cnt++;
+      if(6 <= $image_emmpty_cnt) {
+        $error_mes['image'] = '画像を1枚以上投稿してください。';
+      }  
       continue;
     }
+
+    // 画像のエラーチェック
     $file_size = getimagesize($_FILES['image']['tmp_name'][$i]);
     if(!($file_size['mime'] == "image/jpeg" || $file_size['mime'] == "image/png")) {
-      $error_mes['image'] = 'JPEGもしくはPNG以外のファイルが選択されています。';
+      $error_mes['image'] = 'ファイル形式がJPGもしくはPNG以外のファイルが選択されています。';
       break;
     }
 
@@ -57,7 +65,7 @@ if(!empty($_POST['check'])) {
   // 値受取
   foreach($input as $key => $value) {
     $input[$key] = (string)filter_input(INPUT_POST, $key);
-  }  
+  }
   $description = (string)filter_input(INPUT_POST, 'description');
   
   $error_flg = false;
@@ -132,15 +140,15 @@ if(!empty($_POST['check'])) {
   if(!(1 <= $input['postage_id'] && $input['postage_id'] <= 2)) {
     $error_mes['postage_id'] = '配送料の負担者を選択してください';
   }
-  if(!(1 <= $input['send_method'] && $input['send_method'] <= 8)) {
-    $error_mes['send_method'] = '配送の方法を選択してください';
-  }
-  if(!(1 <= $input['state_id'] && $input['state_id'] <= 48)) {
-    $error_mes['state_id'] = '発送元の地域を選択してください';
-  }
-  if(!(1 <= $input['days_to_send'] && $input['days_to_send'] <=3)) {
-    $error_mes['days_to_send'] = '発送までの日数を選択してください';
-  }
+  // if(!(1 <= $input['send_method'] && $input['send_method'] <= 8)) {
+  //   $error_mes['send_method'] = '配送の方法を選択してください';
+  // }
+  // if(!(1 <= $input['state_id'] && $input['state_id'] <= 48)) {
+  //   $error_mes['state_id'] = '発送元の地域を選択してください';
+  // }
+  // if(!(1 <= $input['days_to_send'] && $input['days_to_send'] <=3)) {
+  //   $error_mes['days_to_send'] = '発送までの日数を選択してください';
+  // }
   if(!(300 <= $input['price'] && $input['price'] <= 300000)) {
     $error_mes['price'] = '販売価格は300円以上、300,000円以内で入力してください';
   }

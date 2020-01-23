@@ -3,6 +3,7 @@ session_start();
 
 require_once '../config/config.php';
 require_once '../model/func/func.php';
+require_once '../model/login_check.php';
 
 $title = 'まさる堂/出品ページ';
 $css_file_name = 'exhibition_check.css';
@@ -39,8 +40,8 @@ if(isset($_POST['exhibition']) && $_POST['exhibition'] == $_SESSION['check']){
     'state_id' => (int)$_SESSION['state_id'],
     'days_to_send' => (int)$_SESSION['days_to_send'],
     'exhibition_date' => $date -> format('Y/m/d H:i:s'),
-    'exhibitor' => 2, //テストとして格納
-    // 'exhibitor' => $_SESSION['login_id'], 本番はログインIDを格納
+    // 'exhibitor' => 2, //テストとして格納
+    'exhibitor' => $_SESSION['login_id'], //本番はログインIDを格納
     'images_count' => (int)count($_SESSION['tmp_name']),
   );
 
