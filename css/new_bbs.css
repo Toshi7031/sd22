@@ -1,63 +1,63 @@
 /* CSS Document */
-h1 {
-  width: 30%;
-  min-width: 200px;
-  height: 56px;
-  padding-left: 20px; }
-  h1 img {
-    width: auto;
-    height: 56px; }
-
-#global_nav {
+header {
   width: 100%;
   height: 70px;
   background-color: #3cb371;
   display: flex;
   justify-content: center;
   align-items: center; }
-
-#header_search_area {
-  width: 40%;
-  min-width: 300px;
-  height: 50px;
-  position: relative; }
-  #header_search_area input {
-    width: 80%;
+  header h1 {
+    width: 30%;
+    min-width: 200px;
+    height: 56px;
+    padding-left: 20px; }
+    header h1 img {
+      width: auto;
+      height: 56px; }
+  header .header_search_area {
+    width: 40%;
+    min-width: 300px;
     height: 50px;
-    padding-left: 10px;
-    margin-right: 0;
-    background-color: #E6E6E6;
-    border-radius: 10px 0 0 10px;
-    outline: 0; }
-  #header_search_area button {
-    width: 20%;
-    height: 50px;
-    background-color: #FACC2E;
-    border: none;
-    border-radius: 0 10px 10px 0;
-    position: absolute;
-    top: 0;
-    right: 0; }
-
-#header_login_area {
-  width: 30%;
-  padding-left: 20px; }
-  #header_login_area p {
-    width: 150px;
-    height: 40px;
-    font-size: 1em;
-    margin-right: 15px;
-    text-align: center;
-    line-height: 40px;
-    background-color: #FACC2E;
-    border-radius: 8px;
-    box-shadow: 3px 3px rgba(0, 0, 0, 0.3); }
-  #header_login_area a {
-    color: #000;
-    display: block; }
+    position: relative; }
+    header .header_search_area input {
+      width: 80%;
+      height: 50px;
+      padding-left: 10px;
+      margin-right: 0;
+      background-color: #E6E6E6;
+      border-radius: 10px 0 0 10px;
+      outline: 0; }
+    header .header_search_area button {
+      width: 20%;
+      height: 50px;
+      background-color: #FACC2E;
+      border: none;
+      border-radius: 0 10px 10px 0;
+      position: absolute;
+      top: 0;
+      right: 0; }
+  header .header_login_area {
+    width: 30%;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-around; }
+    header .header_login_area p {
+      width: 45%;
+      max-width: 150px;
+      height: 40px;
+      font-size: 1em;
+      margin-right: 15px;
+      text-align: center;
+      line-height: 40px;
+      background-color: #FACC2E;
+      border-radius: 8px;
+      box-shadow: 3px 3px rgba(0, 0, 0, 0.3); }
+    header .header_login_area a {
+      color: #000;
+      display: block; }
 
 /*----------------------------------------
-				navi
+				nav
 ----------------------------------------*/
 nav {
   width: 100%;
@@ -67,29 +67,141 @@ nav {
   background-color: #81F781;
   display: flex;
   justify-content: space-between; }
-  nav ul {
+  nav > ul {
     width: 100%;
     height: 50px;
     padding: 0 20px 0 20px;
     display: flex;
     justify-content: space-evenly;
     align-items: center; }
-  nav li {
-    width: 15%;
-    height: 35px;
-    background-color: #fff;
-    border: solid #E6E6E6 1px; }
-  nav a {
-    width: 100%;
+    nav > ul > li {
+      width: 15%;
+      height: 35px;
+      background-color: #fff;
+      border: solid #E6E6E6 1px; }
+      nav > ul > li > p, nav > ul > li > a {
+        width: 100%;
+        height: 100%;
+        line-height: 35px;
+        color: #000;
+        display: block;
+        cursor: pointer; }
+  nav .list_title {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    letter-spacing: 5px;
+    color: #fff; }
+  nav .cancel_button {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #D8F6CE;
+    position: absolute;
+    top: 20px;
+    right: 5%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer; }
+  nav .cancel_button span::before,
+  nav .cancel_button span::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 84%;
+    height: 16%;
+    margin: -8% 0 0 -42%;
+    background: #A4A4A4; }
+  nav .cancel_button span::before {
+    transform: rotate(-45deg); }
+  nav .cancel_button span::after {
+    transform: rotate(45deg); }
+
+/*----------------------------------------
+				select_product_category
+----------------------------------------*/
+#product_category_list {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  background-color: rgba(159, 247, 129, 0.8);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900; }
+
+#large_category_list {
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  margin: 0 auto 10px;
+  display: flex;
+  justify-content: space-between; }
+  #large_category_list li {
+    width: 170px;
     height: 100%;
-    color: #000000;
-    line-height: 35px;
+    text-align: center;
+    font-weight: 620;
+    background-color: #D8F6CE; }
+    #large_category_list li a {
+      color: #000; }
+
+#small_category_area {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+  #small_category_area .small_category_list {
+    width: 170px;
+    color: #848484;
+    background-color: #D8F6CE; }
+    #small_category_area .small_category_list li {
+      width: 100%;
+      height: auto;
+      padding: 15px;
+      border-bottom: solid #A4A4A4 1px; }
+      #small_category_area .small_category_list li a {
+        width: 100%;
+        height: 100%;
+        color: #000;
+        display: inline-block;
+        cursor: pointer; }
+
+/*----------------------------------------
+				select_bbs_category
+----------------------------------------*/
+/* CSS Document */
+#bbs_category_list {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  background-color: rgba(159, 247, 129, 0.8);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900; }
+  #bbs_category_list ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; }
+  #bbs_category_list li {
+    width: 18%;
+    height: 70px;
+    line-height: 70px;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    text-align: center;
+    background-color: #D8F6CE; }
+  #bbs_category_list li:nth-child(9) {
+    font-size: 1.1em; }
+  #bbs_category_list a {
+    color: #000;
     display: block; }
-  nav button {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    background-color: #FACC2E; }
+  #bbs_category_list .list_title {
+    margin-bottom: 50px; }
 
 footer {
   width: 100%;

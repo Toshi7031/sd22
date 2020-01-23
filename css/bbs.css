@@ -20,58 +20,47 @@ time, mark, audio, video {
   outline: 0;
   border: none;
   font-size: 100%;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 body {
-  line-height: 1;
-}
+  line-height: 1; }
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block;
-}
+  display: block; }
 
 nav ul {
-  list-style: none;
-}
+  list-style: none; }
 
 blockquote, q {
-  quotes: none;
-}
+  quotes: none; }
 
 ol, ul {
-  quotes: none;
-}
+  quotes: none; }
 
 li {
-  list-style-type: none;
-}
+  list-style-type: none; }
 
 a {
   margin: 0;
   padding: 0;
   font-size: 100%;
   text-decoration: none;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 /* change colours to suit your needs */
 mark {
   background-color: #ff9;
   color: #000;
   font-style: italic;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 del {
-  text-decoration: line-through;
-}
+  text-decoration: line-through; }
 
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
 
 /* change border colour to suit your needs */
 hr {
@@ -80,29 +69,25 @@ hr {
   border: 0;
   border-top: 1px solid #cccccc;
   margin: 1em 0;
-  padding: 0;
-}
+  padding: 0; }
 
 input, select {
   vertical-align: middle;
-  border: none;
-}
+  border: none; }
 
 img {
   vertical-align: top;
   font-size: 0;
-  line-height: 0;
-}
+  line-height: 0; }
 
 button {
-  outline: 0;
-}
+  outline: 0; }
 
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 /*----------------------------------------
         header
@@ -110,15 +95,13 @@ button {
 body {
   width: 100vw;
   margin-top: 70px;
-  background-color: #EBEBEB;
-}
+  background-color: #EBEBEB; }
 
 .wrapp {
   width: 80%;
   position: absolute;
   left: 10%;
-  background-color: white;
-}
+  background-color: white; }
 
 .bbs_top {
   position: fixed;
@@ -126,59 +109,39 @@ body {
   left: 0px;
   width: 100%;
   height: 70px;
-  background-color: #3cb371;
-}
-
-.bbs_top ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-  overflow: hidden;
-}
-
-.bbs_top ul span {
-  color: white;
-}
-
-.bbs_top ul h2 {
-  font-size: 2em;
-  padding: 10px;
-  display: block;
-  background-color: white;
-}
-
-.bbs_top ul .title {
-  height: 50px;
-}
-
-.bbs_top ul button {
-  height: 100%;
-  border: none;
-  background: transparent;
-}
-
-.bbs_top ul button img {
-  height: 100%;
-}
+  background-color: #3cb371; }
+  .bbs_top ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    overflow: hidden; }
+    .bbs_top ul span {
+      color: white; }
+    .bbs_top ul h2 {
+      font-size: 2em;
+      padding: 10px;
+      display: block;
+      background-color: white; }
+    .bbs_top ul .title {
+      height: 50px; }
+    .bbs_top ul button {
+      height: 100%;
+      border: none;
+      background: transparent; }
+      .bbs_top ul button img {
+        height: 100%; }
 
 /*----------------------------------------
         contents
 ----------------------------------------*/
 .bbs_contents .talk_image {
   height: 70px;
-  border-radius: 50%;
-}
+  border-radius: 50%; }
 
 .bbs_contents span {
   font-size: 1.5em;
-  font-weight: 700;
-}
+  font-weight: 700; }
 
 .bbs_contents .me .talk {
   position: relative;
@@ -196,89 +159,69 @@ body {
   border: 1px solid #81F781;
   text-align: center;
   /* テキストの揃え */
-  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-}
-
-.bbs_contents .me .talk:before, .bbs_contents .me .talk:after {
-  content: '';
-  width: 20px;
-  /* 影をつけるために線幅で設定せずにboxを使用する */
-  height: 20px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  position: absolute;
-  right: 0%;
-  top: 0%;
-  margin-top: 10px;
-  margin-right: -10px;
-}
-
-.bbs_contents .me .talk:before {
-  background: #81F781;
-  /* 吹き出しの線と同じ色 */
-  bottom: -10px;
-}
-
-.bbs_contents .me .talk:after {
-  background: #81F781;
-  /* 吹き出しの地と同じ色 */
-  bottom: -9px;
-  /* 線の太さだけずらす */
-}
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 10px; }
+  .bbs_contents .me .talk:before, .bbs_contents .me .talk:after {
+    content: '';
+    width: 20px;
+    /* 影をつけるために線幅で設定せずにboxを使用する */
+    height: 20px;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    margin-top: 10px;
+    margin-right: -10px; }
+  .bbs_contents .me .talk:before {
+    background: #81F781;
+    /* 吹き出しの線と同じ色 */
+    bottom: -10px; }
+  .bbs_contents .me .talk:after {
+    background: #81F781;
+    /* 吹き出しの地と同じ色 */
+    bottom: -9px;
+    /* 線の太さだけずらす */ }
 
 .bbs_contents .you {
-  margin: 20px;
-}
-
-.bbs_contents .you .talk {
-  position: relative;
-  /* 三角の位置を固定するために設定 */
-  right: 35%;
-  bottom: 30px;
-  width: 300px;
-  /* 幅 */
-  margin: 0 auto 40px;
-  /* 上 左右 下のマージン */
-  padding: 20px;
-  /* ふきだし内の余白 */
-  background: #fff;
-  /* 背景色 */
-  border: 1px solid #ddd;
-  text-align: center;
-  /* テキストの揃え */
-  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-}
-
-.bbs_contents .you .talk:before, .bbs_contents .you .talk:after {
-  content: '';
-  width: 20px;
-  /* 影をつけるために線幅で設定せずにboxを使用する */
-  height: 20px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  position: absolute;
-  left: 0%;
-  top: 0%;
-  margin-top: 10px;
-  margin-left: -10px;
-}
-
-.bbs_contents .you .talk:before {
-  background: #ddd;
-  /* 吹き出しの線と同じ色 */
-  bottom: -10px;
-}
-
-.bbs_contents .you .talk:after {
-  background: #fff;
-  /* 吹き出しの地と同じ色 */
-  bottom: -9px;
-  /* 線の太さだけずらす */
-}
+  margin: 20px; }
+  .bbs_contents .you .talk {
+    position: relative;
+    /* 三角の位置を固定するために設定 */
+    right: 35%;
+    bottom: 30px;
+    width: 300px;
+    /* 幅 */
+    margin: 0 auto 40px;
+    /* 上 左右 下のマージン */
+    padding: 20px;
+    /* ふきだし内の余白 */
+    background: #fff;
+    /* 背景色 */
+    border: 1px solid #ddd;
+    text-align: center;
+    /* テキストの揃え */
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 10px; }
+    .bbs_contents .you .talk:before, .bbs_contents .you .talk:after {
+      content: '';
+      width: 20px;
+      /* 影をつけるために線幅で設定せずにboxを使用する */
+      height: 20px;
+      transform: rotate(45deg);
+      position: absolute;
+      left: 0%;
+      top: 0%;
+      margin-top: 10px;
+      margin-left: -10px; }
+    .bbs_contents .you .talk:before {
+      background: #ddd;
+      /* 吹き出しの線と同じ色 */
+      bottom: -10px; }
+    .bbs_contents .you .talk:after {
+      background: #fff;
+      /* 吹き出しの地と同じ色 */
+      bottom: -9px;
+      /* 線の太さだけずらす */ }
 
 /*----------------------------------------
         send_talk
@@ -289,38 +232,23 @@ body {
   left: 10%;
   bottom: 0px;
   width: 80%;
-  border: solid 1px;
-}
-
-.talk_send form {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.talk_send button {
-  border: none;
-  background: transparent;
-  height: 50px;
-}
-
-.talk_send button img {
-  height: 100%;
-}
-
-.talk_send .send_text {
-  margin: 30px;
-  width: 50%;
-  min-height: 50px;
-  resize: vertical;
-  border-radius: 20px;
-  border: solid 1px;
-  outline: 0;
-}
+  border: solid 1px; }
+  .talk_send form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .talk_send button {
+    border: none;
+    background: transparent;
+    height: 50px; }
+    .talk_send button img {
+      height: 100%; }
+  .talk_send .send_text {
+    margin: 30px;
+    width: 50%;
+    min-height: 50px;
+    resize: vertical;
+    border-radius: 20px;
+    border: solid 1px;
+    outline: 0; }
