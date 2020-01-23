@@ -70,5 +70,4 @@
   -------------------------------------*/
 
   require '../view/buy_procedures.php';
-  test
 ?>
