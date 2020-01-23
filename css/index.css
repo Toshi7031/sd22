@@ -271,7 +271,7 @@ nav .cancel_button span::after {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 900;
 }
 
 #large_category_list {
@@ -335,7 +335,7 @@ nav .cancel_button span::after {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 900;
 }
 
 #bbs_category_list ul {
