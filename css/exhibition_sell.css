@@ -548,6 +548,8 @@ body {
 .area ul li:nth-of-type(2) {
   width: 10%;
   line-height: 80px;
+  color: #3cb371;
+  font-weight: 700;
 }
 
 .area ul li:last-child {
@@ -583,7 +585,7 @@ body {
 
 .result p {
   width: 100%;
-  font-size: 1.5em;
+  font-size: 1.3em;
   position: relative;
 }
 
@@ -596,10 +598,14 @@ body {
   right: 0;
 }
 
+.result p:last-child {
+  font-size: 2em;
+}
+
 .error_mes {
   width: 80%;
   color: #FE2E64;
-  font-size: 0.9em;
+  font-size: 1.1em;
 }
 
 #description_area {
