@@ -5,6 +5,7 @@ $bgColor : #E4E4E4;
 $productBgColor : #D8D8D8;
 $headerColor : #3CB371;
 $buttonColor : #FACC2E;
+$errorMesColor : #FE2E64;
 
 // 関数
 @import './mixin';
@@ -59,7 +60,7 @@ h1 {
       font-weight: 400;
       span {
         margin-left: 15px;
-        color: #FE2E64;
+        color: $errorMesColor;
       }
     }
     p:nth-child(even) {

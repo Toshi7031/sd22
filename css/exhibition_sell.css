@@ -275,7 +275,7 @@ nav .cancel_button span::after {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 900;
 }
 
 #large_category_list {
@@ -339,7 +339,7 @@ nav .cancel_button span::after {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 900;
 }
 
 #bbs_category_list ul {
@@ -515,6 +515,10 @@ body {
   margin: 0 auto 10px;
 }
 
+.green .title {
+  margin-right: 30px;
+}
+
 .area {
   width: 80%;
   padding: 20px;
@@ -522,34 +526,39 @@ body {
   background-color: #fff;
 }
 
-.area p {
-  height: 1.5em;
-  line-height: 1.5em;
-  display: flex;
-  margin-bottom: 20px;
-  font-size: 20px;
-}
-
-.area p:last-child {
-  margin-bottom: 0;
-}
-
-.area textarea {
+.area ul {
   width: 100%;
+  height: 80px;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.area span:first-child {
+.area ul li {
+  height: 100%;
+}
+
+.area ul li:first-child {
   width: 20%;
+  line-height: 80px;
 }
 
-.area span:nth-child(2) {
+.area ul li:nth-of-type(2) {
   width: 10%;
-  color: gray;
+  line-height: 80px;
 }
 
-.area select {
+.area ul li:last-child {
   width: 70%;
-  text-align: right;
+}
+
+.area ul li:last-child select {
+  width: 100%;
+  height: 40px;
+  line-height: 80px;
+  margin-top: 20px;
 }
 
 .one {
@@ -565,10 +574,48 @@ body {
 }
 
 .mny input {
+  width: 20%;
   height: 50px;
   text-align: right;
   margin-right: 10px;
   border-bottom: solid #D8D8D8 2px;
+}
+
+.result p {
+  width: 100%;
+  font-size: 1.5em;
+  position: relative;
+}
+
+.result p:first-child {
+  margin-bottom: 20px;
+}
+
+.result p span {
+  position: absolute;
+  right: 0;
+}
+
+.error_mes {
+  width: 80%;
+  color: #FE2E64;
+  font-size: 0.9em;
+}
+
+#description_area {
+  width: 80%;
+  margin: 0 auto 30px;
+  padding: 20px;
+  background-color: #fff;
+  font-size: 1.1em;
+}
+
+#description_area li > span {
+  margin-left: 30px;
+}
+
+#description_area ul > li:first-child {
+  margin-bottom: 5px;
 }
 
 #description_area input, #description_area textarea {
@@ -583,31 +630,6 @@ body {
 
 #description_area textarea {
   height: 150px;
-}
-
-.area:nth-child(7) > p:nth-child(2) {
-  margin-bottom: 30px;
-}
-
-.area:nth-last-of-type(1) p {
-  width: 100%;
-  position: relative;
-}
-
-.area:nth-last-of-type(1) span {
-  width: 20%;
-  min-width: 145px;
-  text-align: right;
-  position: absolute;
-  right: 0;
-}
-
-.area:nth-last-of-type(1) p:nth-of-type(1) {
-  margin-bottom: 20px;
-}
-
-.area:nth-last-of-type(1) p:nth-of-type(2) {
-  font-size: 35px;
 }
 
 .out {
