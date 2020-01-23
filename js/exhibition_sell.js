@@ -124,7 +124,7 @@ $(function() {
 
     commission_rate = commission_rate.toLocaleString();
     profit = profit.toLocaleString();
-    span_commission_rate.text( commission_rate + '￥');
-    span_profit.text(profit + '￥');
+    span_commission_rate.text('￥' + commission_rate);
+    span_profit.text('￥' + profit);
   });
 });
