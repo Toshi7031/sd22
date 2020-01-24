@@ -57,11 +57,11 @@ if(isset($_POST['exhibition']) && $_POST['exhibition'] == $_SESSION['check']){
   // 画像を本フォルダに移動
   for($i = 0; $i < $post_info['images_count']; ++$i) {
     $file_info = getimagesize('../images/tmp/' . $_SESSION['tmp_name'][$i]);
-    if($file_info['mine'] == 'image/jpeg') {
-      $extention = 'jpg';
+    if($file_info['mine'] == 'image/png') {
+      $extention = 'png';
     }
     else {
-      $extention = 'png';
+      $extention = 'jpg';
     }
     $image_name = PRODUCT_IMAGE_UPLOAD_PATH . 'product_' . (string)$product_id . '_' . (string)($i + 1) . '.' . $extention;
     try {
