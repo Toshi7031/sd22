@@ -9,7 +9,7 @@ $_SESSION['login_id'] = 1;
 
 $title = 'まさる堂/マイページ';
 $css_file_name = 'mypage.css';
-$js_file_name = '';
+$js_file_name = 'a';
 $request = '';
 
 // 値受取
