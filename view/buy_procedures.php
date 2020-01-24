@@ -14,7 +14,7 @@
       <img src="../images/image_materials/arrow.png" width="111" height="110" alt="">
       <p>購入手続き</p>
     </section><!-- procedures_header -->
-    <form action="" method="get">
+    <form action="" method="post">
       <section id="about_of_product">
         <ul>
           <li class="image"><img src="../images/products/product_<?php echo $product_id ?>_1.jpg" width="200" height="200" alt="">
@@ -34,7 +34,7 @@
         <div class="use_point">
           <p>ポイントの使用</p>
           <p>所持ポイント：<?php echo $array_member[0]['point'] ?></p>
-          <input type="number" name="" class="input_point">
+          <input type="number" name="input_point" class="input_point" value="0">
         </div><!-- use_point -->
       </section>
       <section id="payment">
@@ -59,7 +59,7 @@
         <p>
             <select name="shipping_address">
               <?php for($count = 0 ; $array_address[$count] ;$count++): ?>
-                <option value="<?php echo $count ?>"><?php echo $array_address[$count] ?></option>
+                <option value="<?php echo $array_address[$count] ?>"><?php echo $array_address[$count] ?></option>
               <?php endfor; ?>
             </select>
         </p>

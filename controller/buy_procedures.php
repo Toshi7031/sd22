@@ -18,8 +18,8 @@
   test 値受取
   -------------------------------------*/
 
-  $_SESSION['login_id'] = 8;
-  $_GET['product_id'] = 1;
+  $_SESSION['login_id'] = 1;
+  $_GET['product_id'] = 2;
 
   /*-------------------------------------
   エラー関係
@@ -48,17 +48,26 @@
   submit 受取
   -------------------------------------*/
 
-  //入力 された場合　データベースに書き込み
   if(isset($_POST['submit'])){
     $input_point = $_POST['input_point'];
     $method_payment = $_POST['method_payment'];
     $shipping_address = $_POST['shipping_address'];
 
     //sql 作成 (member)
-    $member_sql = "UPDATE member SET point = point - {input_point} WHERE id = {$login_id}";
+    $member_sql = "UPDATE member SET point = point - {$input_point} WHERE id = {$login_id}";
     //product テーブル　書き換え
-    $product_sql = "UPDATE products SET shipping_address = '{$shipping_address}' ,buyer = '{$login_id}' WHERE id = {$product_id} ,progress = 1 ";
-
+    $product_sql = "UPDATE products SET shipping_address = '{$shipping_address}' ,buyer = '{$login_id}',progress = 1 WHERE id = {$product_id}";
+    //mysqli 接続
+    $mysqli = new mysqli(HOST,DB_USER,DB_PASS,DB_NAME);
+    $member_result = $mysqli -> query($member_sql);
+    $product_result = $mysqli -> query($product_sql);
+    $mysqli -> close();
+    if($member_result && $product_result){
+      echo '購入成功';
+    }
+    else{
+      echo '購入失敗';
+    }
   }
 
   /*-------------------------------------
@@ -76,7 +85,6 @@
   $array_member = $result -> fetch_all(MYSQLI_ASSOC);
 
   $mysql -> close();
-
 
   /*-------------------------------------
   値処理
