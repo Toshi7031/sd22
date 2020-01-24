@@ -266,7 +266,7 @@ nav .cancel_button span::after {
   width: 100vw;
   height: 100vh;
   padding: 20px;
-  background-color: rgba(159, 247, 129, 0.8);
+  background-color: rgba(36, 179, 86, 0.8);
   display: none;
   position: fixed;
   top: 0;
@@ -330,7 +330,7 @@ nav .cancel_button span::after {
   width: 100vw;
   height: 100vh;
   padding: 20px;
-  background-color: rgba(159, 247, 129, 0.8);
+  background-color: rgba(36, 179, 86, 0.8);
   display: none;
   position: fixed;
   top: 0;
@@ -414,29 +414,21 @@ footer .trade_mark {
 				body
 ----------------------------------------*/
 body {
-  padding-bottom: 50px;
   background-color: #E4E4E4;
+}
+
+nav {
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #3cb371;
 }
 
 li {
   list-style-position: outside;
-}
-
-.top {
-  display: flex;
-  height: 40px;
-  line-height: 40px;
-  background-color: #fff;
-  border-bottom: solid gray 1px;
-}
-
-.top p:nth-of-type(1) {
-  width: 70px;
-}
-
-.top p:nth-last-of-type(1) {
-  width: 95%;
-  color: gray;
 }
 
 .area {
@@ -457,12 +449,21 @@ li {
 #images li {
   width: 150px;
   height: 150px;
-  background-color: lightgray;
+  text-align: center;
+  background-color: #fff;
 }
 
 #images img {
   max-width: 150px;
   max-height: 150px;
+}
+
+.images {
+  width: 100%;
+  height: 200px;
+  padding: 15px;
+  align-items: center;
+  background-color: #D8D8D8;
 }
 
 .area p {
@@ -494,6 +495,24 @@ li {
 
 .area p:nth-last-of-type(1) {
   font-size: 30px;
+}
+
+.check > p {
+  font-size: 1.4em;
+  text-align: center;
+  color: #F68C8C;
+  margin-bottom: 10px;
+}
+
+.check form {
+  text-align: center;
+}
+
+.check button {
+  width: 250px;
+  height: 40px;
+  border: solid #000000 1px;
+  border-radius: 20px;
 }
 
 .sell p {

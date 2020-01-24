@@ -270,7 +270,7 @@ nav .cancel_button span::after {
   width: 100vw;
   height: 100vh;
   padding: 20px;
-  background-color: rgba(159, 247, 129, 0.8);
+  background-color: rgba(36, 179, 86, 0.8);
   display: none;
   position: fixed;
   top: 0;
@@ -334,7 +334,7 @@ nav .cancel_button span::after {
   width: 100vw;
   height: 100vh;
   padding: 20px;
-  background-color: rgba(159, 247, 129, 0.8);
+  background-color: rgba(36, 179, 86, 0.8);
   display: none;
   position: fixed;
   top: 0;
