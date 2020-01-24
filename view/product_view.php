@@ -21,9 +21,9 @@
                 <ul>
 <?php  foreach($product_array as $product): ?>
                    <li class="products">
-                        <a href="./product_deteals.html?id=<?php echo $product['id'] ?>">
+                        <a href="./product_deteals.php?id=<?php echo $product['id'] ?>">
                             <ul>
-                                <li class="product_image"><img src="../images/products/<? echo $product['id'] ?>_1.jpg" width="180px" height="180px" alt=""></li>
+                                <li class="product_image"><img src="../images/products/product_<? echo $product['id'] ?>_1.jpg" width="180px" height="180px" alt=""></li>
                                 <li class="product_name"><?php echo $product['product_name'] ?></li>
                                 <li class="product_price"><?php echo $product['price'] ?>円</li>
                                 <li class="favorite"><img src="../images/image_materials/hart.jpg" width="30" height="30" alt=""></li>

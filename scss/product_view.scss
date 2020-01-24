@@ -6,11 +6,24 @@ $headerColor : #3cb371;
 $productBgColor : #D8D8D8;
 $buttonColor : #FACC2E;
 
-// 関数
 @import './mixin';
+/*----------------------------------------
+				reset
+----------------------------------------*/
+
 @import './reset';
-@import './footer';
+
+/*----------------------------------------
+				header
+----------------------------------------*/
 @import './header';
+nav {
+	margin-bottom: 0px;
+}
+/*----------------------------------------
+				footer
+----------------------------------------*/
+@import './footer';
 
 /*----------------------------------------
 				body
@@ -54,13 +67,13 @@ li.product_name {
 	height: 60px;
 	min-width: 100px;
 	margin: 15px 0 30px;
-	border: solid #000000 1px;
+	padding: 20px;
 }
 li.product_price {
 	width: 40%;
 	height: 60px;
 	min-width: 80px;
-	border: solid #000000 1px;
+	padding: 20px;
 }
 li.favorite {
 	position: absolute;

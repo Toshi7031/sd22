@@ -5,13 +5,11 @@
   require '../config/config.php';
 
   //変数宣言
+  //session_start();
   $title = '商品一覧';
   $css_file_name = 'product_view.css';
   $product_limit = 1; //テスト用に2に宣言
   $_GET['search'] = '';//test
-  $page_contents = 1; //test 1ページに対する個数
-
-  session_start();
 
 /*----------------------------------------------------
 値受取
@@ -23,8 +21,9 @@
     //ページ数をリセット
     $page = 1;
     //検索情報をセッションで保持
+    unset($_SESSION['search']);
     $_SESSION = [
-      'name' => $search,
+      'search' => $search,
     ];
   }
   else{
@@ -32,10 +31,10 @@
     $search = '';
   }
 //ページング処理
-  if(isset($_GET['next'])) $page++;
-  if(isset($_GET['before'])) $page--;
-  if(isset($_GET['last']))
-  if(isset($_GET['first'])) $page = 1;
+//  if(isset($_GET['next'])) $page++;
+//  if(isset($_GET['before'])) $page--;
+//  if(isset($_GET['last']))
+//  if(isset($_GET['first'])) $page = 1;
 /*----------------------------------------------------
 $search配列処理
 ----------------------------------------------------*/
@@ -62,7 +61,6 @@ sql文作成
         $sql .= ' AND ';
       }
     }
-    var_dump($sql);
 /*----------------------------------------------------
 DB取り出し
 ----------------------------------------------------*/
