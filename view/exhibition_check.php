@@ -1,10 +1,7 @@
-﻿  <section class="top">
-    <p><a href="./exhibition_sell.php"><img src="../images/image_materials/arrow.png" width="40" alt="arrow"></a></p>
-    <p>確認画面</p>
-  </section>
-
-  <section class="area" id="images">
-    <ul>
+﻿  <section class="area" id="images">
+    <h2>確認画面</h2>
+    <p><strong>商品画像</strong></p>
+    <ul class="images">
 <?php for($i=0; $i<count($image_name); ++$i): ?>
       <li><img src="../images/tmp/<?php echo $image_name[$i];?>" width="" height="" alt=""></li>
 <?php endfor; ?>
@@ -23,6 +20,13 @@
     <p><strong>発送までの日数</strong><span><?php echo $fetch_datas['days_to_send'];?></span></p>
     <p><strong>販売価格</strong><span><?php echo $_SESSION['price'];?>円</span></p>
     <p><strong>販売利益</strong><span><?php echo $profit;?>円</span></p>
+  </section>
+  
+  <section class="check">
+    <p>入力情報に間違いはありませんか？</p>
+    <form action="./exhibition_sell.php" method="post">
+      <button name="back" value="b">入力画面に戻って修正する</button>
+    </form>
   </section>
 
   <section class="sell">
