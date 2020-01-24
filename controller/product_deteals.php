@@ -10,12 +10,15 @@
   /*---------------------------------------------
   値受取
   ---------------------------------------------*/
+  //ログイン
   if(isset($_SESSION['login_id']) || !empty($_SESSION['login_id'])){
     $login_id = $_SESSION['login_id'];
   }
+  //商品ID
   if(isset($_GET['id'])){
     $product_id = (int)$_GET['id'];
   }
+  //ID指定なし
   else{
    header( "Location: ./product_view.php" );
   }
@@ -35,8 +38,14 @@
   //配列変換
   $array_product = $result -> fetch_all(MYSQLI_ASSOC);
   var_dump($array_product);
-  if($array_product[0]['white_list'] == $login_id){
 
+  /*---------------------------------------------
+  商品のホワイトリストを照合
+  ---------------------------------------------*/
+  if($array_product[0]['white_list'] != 0){
+    if($array_product[0]['white_list'] != $login_id){
+      header('Location: ./product_view.php');
+    }
   }
 
   /*---------------------------------------------
