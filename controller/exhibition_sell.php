@@ -58,7 +58,7 @@ if(!empty($_POST['check'])) {
       $error_mes['image'] = '画像のアップロード中にエラーが発生しました。';
       break;
     }
-    chmod($image_path, 0644);
+    chmod($image_path, 0744);
     $tmp_names[] = $tmp_name;
   }
 
