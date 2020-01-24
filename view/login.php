@@ -24,7 +24,8 @@
         <p>メールアドレス<span><?php echo $error_mes['email']; ?></span></p>
         <p><input type="text" name="email" value="<?php echo h($input['email']);?>"></p>
         <p>パスワード<span><?php echo $error_mes['password']; ?></span></p>
-        <p><input type="password" name="password"></p>
+        <!-- <p><input type="password" name="password"></p> -->
+        <p><input type="password" name="password" value="asdfasdf"></p>
         <button type="submit" name="login" value="l">ログイン</button>
       </form>
 
