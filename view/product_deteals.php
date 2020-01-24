@@ -41,6 +41,10 @@
             <th>発送までの日数</th>
             <td>1~2日で発送</td>
           </tr>
+          <tr>
+            <th>出品日</th>
+            <td>test</td>
+          </tr>
         </table>
       </div>
       <div class="exhibitor">
