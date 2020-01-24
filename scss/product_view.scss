@@ -6,11 +6,24 @@ $headerColor : #3cb371;
 $productBgColor : #D8D8D8;
 $buttonColor : #FACC2E;
 
-// 関数
 @import './mixin';
+/*----------------------------------------
+				reset
+----------------------------------------*/
+
 @import './reset';
-@import './footer';
+
+/*----------------------------------------
+				header
+----------------------------------------*/
 @import './header';
+nav {
+	margin-bottom: 0px;
+}
+/*----------------------------------------
+				footer
+----------------------------------------*/
+@import './footer';
 
 /*----------------------------------------
 				body
@@ -27,7 +40,7 @@ $buttonColor : #FACC2E;
 	}
 	> ul {
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-start;
 		flex-wrap: wrap;
 	}
 }
@@ -37,6 +50,9 @@ $buttonColor : #FACC2E;
 	height: 180px;
 	margin-bottom: 20px;
 	background-color: $productBgColor;
+	&:nth-child(3n-1){
+		margin:0 2%;
+	}
 	ul {
 		overflow: hidden;
 		position: relative;
@@ -54,13 +70,13 @@ li.product_name {
 	height: 60px;
 	min-width: 100px;
 	margin: 15px 0 30px;
-	border: solid #000000 1px;
+	padding: 20px;
 }
 li.product_price {
 	width: 40%;
 	height: 60px;
 	min-width: 80px;
-	border: solid #000000 1px;
+	padding: 20px;
 }
 li.favorite {
 	position: absolute;

@@ -88,7 +88,7 @@ index.php
   - login.css
   - view/logout.php
   - logout.css
-- 退会 
+- 退会
   - controller/leave_reason.php
   - view/leave_reason.php
   - leave_reason.css
@@ -127,3 +127,12 @@ index.php
 
   - viewのhtmlファイルを複製してphpファイルを作成すること
     (cssの変更があった場合にhtmlで動作確認するため)
+
+    商品テーブルの進捗状況
+    0 : 出品
+    1 : 購入申請
+    2 : 代金受取
+    3 : 商品発送
+    4 : 商品到着確認
+    5 : (評価)
+    9 : 取引終了
