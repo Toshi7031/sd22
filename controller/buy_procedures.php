@@ -21,11 +21,6 @@
   $_SESSION['login_id'] = 8;
   $_GET['product_id'] = 1;
 
-  //入力
-  $_POST['input_point'];
-  $_POST['method_payment'];
-  $_POST['sipping_address'];
-
   /*-------------------------------------
   エラー関係
   -------------------------------------*/
@@ -49,6 +44,23 @@
   else{
     //不正アクセスエラー
   }
+  /*-------------------------------------
+  submit 受取
+  -------------------------------------*/
+
+  //入力 された場合　データベースに書き込み
+  if(isset($_POST['submit'])){
+    $input_point = $_POST['input_point'];
+    $method_payment = $_POST['method_payment'];
+    $shipping_address = $_POST['shipping_address'];
+
+    //sql 作成 (member)
+    $member_sql = "UPDATE member SET point = point - {input_point} WHERE id = {$login_id}";
+    //product テーブル　書き換え
+    $product_sql = "UPDATE products SET shipping_address = '{$shipping_address}' ,buyer = '{$login_id}' WHERE id = {$product_id} ,progress = 1 ";
+
+  }
+
   /*-------------------------------------
   db読み込み
   -------------------------------------*/
