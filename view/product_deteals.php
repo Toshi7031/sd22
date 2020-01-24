@@ -1,6 +1,8 @@
     <div id="main_area">
-      <p class="product_image"><img src="../images/products/61Yyhwxq32L._AC_SL1200_.jpg" width="400px" height="400px"
-          alt=""></p>
+      <ul class="product_image">
+        <li><img src="../images/products/61Yyhwxq32L._AC_SL1200_.jpg" width="400px" height="400px"
+          alt=""></li>
+        </ul>
       <h2>商品名</h2>
       <!-- お気に入りを削除
         <div class="reaction">
