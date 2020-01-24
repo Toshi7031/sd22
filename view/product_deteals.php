@@ -1,7 +1,9 @@
     <div id="main_area">
       <ul class="product_image">
-        <li><img src="../images/products/61Yyhwxq32L._AC_SL1200_.jpg" width="400px" height="400px"
+        <?php for($count = 1 ; $array_product[0]['images_count'] >= $count ; $count++): ?>
+        <li><img src="../images/products/product_<?php echo $product_id ?>_<?php echo $count ?>.jpg" width="400px" height="400px"
           alt=""></li>
+        <?php endfor; ?>
         </ul>
       <h2>商品名</h2>
       <!-- お気に入りを削除
@@ -14,7 +16,7 @@
      -->
       <div class="product_description">
         <h3>商品の説明</h3>
-        <p>説明文</p>
+        <p><?php echo $array_product[0]['description'] ?></p>
       </div>
       <div class="product_information">
         <h3>商品の情報</h3>
