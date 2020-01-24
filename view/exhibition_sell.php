@@ -23,7 +23,7 @@
 
       <!-- <a class="ten"><a href="">テンプレート</a></p> -->
 
-      <p class="green">商品名と説明<span>（必須）</span></p>
+      <p class="green">商品名と説明</p>
       <section id="description_area">
         <ul>
           <li>商品名<span class="error_mes"><?php echo $error_mes['product_name'];?></span></li>
@@ -44,7 +44,7 @@
       <p class="green">商品の詳細</p>
       <section class="area">
         <ul>
-          <li>カテゴリー</li>
+          <li>大カテゴリー</li>
           <li>（必須）</li>
           <li>
             <select name="large_product_category_id">
@@ -61,11 +61,11 @@
           </li>
         </ul>
         <ul>
-          <li></li>
+          <li>小カテゴリー</li>
           <li>（必須）</li>
           <li>
             <select name="small_product_category_id" disabled>
-              <option value="">１つめのカテゴリを選択選択してください</option>
+              <option value="">大カテゴリを選択してください</option>
             </select><br>
             <span class="error_mes"><?php echo $error_mes['small_product_category_id'];?></span>
           </li>

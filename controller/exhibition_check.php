@@ -7,7 +7,7 @@ require_once '../model/login_check.php';
 
 $title = 'まさる堂/出品ページ';
 $css_file_name = 'exhibition_check.css';
-$js_file_name = '';
+$js_file_name = 'a';
 
 
 //登録を押したとき
@@ -52,12 +52,12 @@ if(isset($_POST['exhibition']) && $_POST['exhibition'] == $_SESSION['check']){
 
   // 画像を本フォルダに移動
   for($i = 0; $i < $post_info['images_count']; ++$i) {
-    $file_info = getimagesize('../images/products/product_3_2');
-    if($file_info['mine'] == 'image/jpeg') {
-      $extention = 'jpg';
+    $file_info = getimagesize('../images/tmp/' . $_SESSION['tmp_name'][$i]);
+    if($file_info['mine'] == 'image/png') {
+      $extention = 'png';
     }
     else {
-      $extention = 'png';
+      $extention = 'jpg';
     }
     $image_name = PRODUCT_IMAGE_UPLOAD_PATH . 'product_' . (string)$product_id . '_' . (string)($i + 1) . '.' . $extention;
     try {
@@ -80,15 +80,6 @@ if(isset($_POST['exhibition']) && $_POST['exhibition'] == $_SESSION['check']){
     // require_once '../tpl/error.php';
   }
 
-  // セッション削除
-  if (ini_get('session.use_cookies')) {
-    $params = session_get_cookie_params();
-    setcookie(session_name(), '', time() - 42000,
-    $params['path'], $params['domain'], $params['secure'], $params['httponly']
-    );
-  }
-  session_destroy();
-
   // リダイレクト
   $url = './exhibition_confirm.php';
   redirect($url);
@@ -97,11 +88,11 @@ if(isset($_POST['exhibition']) && $_POST['exhibition'] == $_SESSION['check']){
 //postされたidをDBに照合
 $fetch_datas = array(
   'large_product_categories' => array(
-    'id' => (int)$_SESSION['large_product_categories'],
+    'id' => (int)$_SESSION['large_product_category_id'],
     'sql' => "SELECT large_product_categories.large_product_category FROM masarudoh.large_product_categories WHERE id = ?",
   ),
   'product_category' => array(
-    'id' => (int)$_SESSION['product_category_id'],
+    'id' => (int)$_SESSION['small_product_category_id'],
     'sql' => "SELECT small_product_categories.small_product_category FROM masarudoh.small_product_categories WHERE id = ?",
   ),
   'product_condition' => array(
@@ -148,7 +139,7 @@ if($_SESSION['postage_id']) {
 else {
   $postage = '着払い（購入者負担）';
 }
-$profit = intval($_SESSION['price'] * 0.9);   //販売利益計算
+$profit = ceil($_SESSION['price'] * 0.9);   //販売利益計算
 $check = random_string(8);  //DB書き込み処理に入るための割符
 $_SESSION['check'] = $check;  //割符を$_SESSIONに保存
 

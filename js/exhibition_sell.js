@@ -88,14 +88,13 @@ $(function() {
     else {
       select_small_product_category.prop('disabled', true);
       select_small_product_category.empty();
-      select_small_product_category.append('<option value="">１つめのカテゴリを選択選択してください</option>');
+      select_small_product_category.append('<option value="">大カテゴリを選択選択してください</option>');
     }
   }
   const pick_payment = () => {
     let value = input_price.val();
-    let commission_rate = Math.round(value / 10);
-    let profit = value - commission_rate;
-
+    let profit = Math.ceil(value * 0.9);
+    let commission_rate = value - profit;
     commission_rate = commission_rate.toLocaleString();
     profit = profit.toLocaleString();
     span_commission_rate.text('￥' + commission_rate);
