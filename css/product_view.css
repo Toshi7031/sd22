@@ -342,7 +342,7 @@ footer {
     margin-bottom: 20px; }
   #contents_area > ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap; }
 
 .products {
@@ -351,6 +351,8 @@ footer {
   height: 180px;
   margin-bottom: 20px;
   background-color: #D8D8D8; }
+  .products:nth-child(3n-1) {
+    margin: 0 2%; }
   .products ul {
     overflow: hidden;
     position: relative; }
