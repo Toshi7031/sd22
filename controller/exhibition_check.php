@@ -50,10 +50,6 @@ if(isset($_POST['exhibition']) && $_POST['exhibition'] == $_SESSION['check']){
   $product_id = $product_id[0];
   ++$product_id;
 
-  echo '<pre>';
-  var_dump($post_info, $_SESSION['tmp_name']);
-  echo '</pre>';
-
   // 画像を本フォルダに移動
   for($i = 0; $i < $post_info['images_count']; ++$i) {
     $file_info = getimagesize('../images/tmp/' . $_SESSION['tmp_name'][$i]);
