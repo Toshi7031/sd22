@@ -40,7 +40,7 @@ nav {
 	}
 	> ul {
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-start;
 		flex-wrap: wrap;
 	}
 }
@@ -50,6 +50,9 @@ nav {
 	height: 180px;
 	margin-bottom: 20px;
 	background-color: $productBgColor;
+	&:nth-child(3n-1){
+		margin:0 2%;
+	}
 	ul {
 		overflow: hidden;
 		position: relative;
