@@ -24,6 +24,7 @@
   //入力
   $_POST['input_point'];
   $_POST['method_payment'];
+  $_POST['sipping_address'];
 
   /*-------------------------------------
   エラー関係
@@ -69,15 +70,13 @@
   値処理
   -------------------------------------*/
   //住所の配列を別に作成する
-  $array_address[] = [
+  $array_address = [
     $array_member[0]['address1'],
     $array_member[0]['address2'],
     $array_member[0]['address3'],
   ];
-  var_dump($array_address[0]);
   //送料負担者を言語化 postage == 1 購入者　0 == 発送者負担
   $array_product['postage_id'] == 0 ? $postage = '発送者負担':$postage = '購入者負担';
-
   /*-------------------------------------
   view req
   -------------------------------------*/

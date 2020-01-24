@@ -59,7 +59,7 @@
       <p>
           <select name="shipping_address">
             <?php for($count = 0 ; $array_address[$count] ;$count++): ?>
-              <option value="<?php echo $count ?>"><?php echo $array_address[$count] ?></option>
+              <option value="<?php echo $count ?>"><?php echo $array_address[0] ?></option>
             <?php endfor; ?>
           </select>
       </p>
