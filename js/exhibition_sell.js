@@ -88,7 +88,7 @@ $(function() {
     else {
       select_small_product_category.prop('disabled', true);
       select_small_product_category.empty();
-      select_small_product_category.append('<option value="">１つめのカテゴリを選択選択してください</option>');
+      select_small_product_category.append('<option value="">大カテゴリを選択選択してください</option>');
     }
   }
   const pick_payment = () => {
