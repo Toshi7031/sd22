@@ -94,10 +94,10 @@ if(!empty($_POST['check'])) {
   }
 
   // 文字数チェック
-  if(strlen($input['product_name']) > 400) {
+  if(mb_strlen($input['product_name']) > 400) {
     $error_mes['product_name'] = '商品名は400文字以内で入力してください';
   }
-  if(strlen($description) > 1000) {
+  if(mb_strlen($description) > 1000) {
     $error_mes['description'] = '商品に説明は1000文字以内で入力してください';
   }
   
