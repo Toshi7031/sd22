@@ -24,26 +24,22 @@
   /*-------------------------------------
   エラー関係
   -------------------------------------*/
-
-  if(!isset($_POST['submit'])){
-    //不正アクセスエラー
+  //ログインセッション確認
+  if(!isset($_SESSION['login_id'])) {
+    redirect('./login.php');
   }
-  //getで値受取
+  if(empty($_SESSION['login_id'])) {
+    redirect('./login.php');
+  }
 
+  //getで値受取
   if(isset($_GET['product_id'])){
    $product_id = $_GET['product_id'];
   }
   else{
-    //不正アクセスエラー
+    redirect('./product_view.php');
   }
 
-  //ログインセッション確認
-  if(isset($_SESSION['login_id'])){
-    $login_id = $_SESSION['login_id'];
-  }
-  else{
-    //不正アクセスエラー
-  }
   /*-------------------------------------
   submit 受取
   -------------------------------------*/

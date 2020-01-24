@@ -16,6 +16,7 @@
   else{
    header( "Location: ./product_view.php" );
   }
+   /
 
   /*---------------------------------------------
   req html
