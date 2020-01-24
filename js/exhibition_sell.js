@@ -93,9 +93,8 @@ $(function() {
   }
   const pick_payment = () => {
     let value = input_price.val();
-    let commission_rate = Math.round(value / 10);
-    let profit = value - commission_rate;
-
+    let profit = Math.ceil(value * 0.9);
+    let commission_rate = value - profit;
     commission_rate = commission_rate.toLocaleString();
     profit = profit.toLocaleString();
     span_commission_rate.text('￥' + commission_rate);
