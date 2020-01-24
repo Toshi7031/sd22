@@ -12,13 +12,18 @@
   //ページ情報
   $title = '購入手続き';
   $css_file_name = 'buy_procedures.css';
+  //session_start();
 
   /*-------------------------------------
-  test
+  test 値受取
   -------------------------------------*/
 
   $_SESSION['login_id'] = 8;
   $_GET['product_id'] = 1;
+
+  //入力
+  $_POST['input_point'];
+  $_POST['method_payment'];
 
   /*-------------------------------------
   エラー関係
@@ -48,7 +53,7 @@
   -------------------------------------*/
   //sql作成
   $product_sql = "SELECT product_name,price,postage_id FROM products WHERE id = {$product_id}";
-  $member_sql = "SELECT point,proceeds FROM member WHERE id = {$login_id} ";
+  $member_sql = "SELECT point,proceeds,address1,address2,address3 FROM member WHERE id = {$login_id} ";
   //db接続
   $mysql = new mysqli(HOST,DB_USER,DB_PASS,DB_NAME);
   //実行
@@ -57,13 +62,21 @@
   $result = $mysql -> query($member_sql);
   $array_member = $result -> fetch_all(MYSQLI_ASSOC);
 
+  $mysql -> close();
+
+
   /*-------------------------------------
   値処理
   -------------------------------------*/
-
-  //送料負担者を言語化
-  if($array_product['postage_id'] == 0){ $postage = '発送者負担';}
-  else {$postage = '購入者負担';}
+  //住所の配列を別に作成する
+  $array_address[] = [
+    $array_member[0]['address1'],
+    $array_member[0]['address2'],
+    $array_member[0]['address3'],
+  ];
+  var_dump($array_address[0]);
+  //送料負担者を言語化 postage == 1 購入者　0 == 発送者負担
+  $array_product['postage_id'] == 0 ? $postage = '発送者負担':$postage = '購入者負担';
 
   /*-------------------------------------
   view req

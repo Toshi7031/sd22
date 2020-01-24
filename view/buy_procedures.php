@@ -41,10 +41,10 @@
       <div class="terms_of_payment">
             <p>支払い方法</p>
         <p>
-          <select name="">
-            <option value="1">代金引換&nbsp;決済手数料：100円</option>
-            <option value="2">銀行振込&nbsp;決済手数料：0円</option>
-            <option value="3">クレジットカード決済&nbsp;決済手数料：0円</option>
+          <select name="method_payment">
+            <option value="cash">代金引換&nbsp;決済手数料：100円</option>
+            <option value="bank">銀行振込&nbsp;決済手数料：0円</option>
+            <option value="card">クレジットカード決済&nbsp;決済手数料：0円</option>
           </select>
         </p>
       </div><!-- use_proceeds -->
@@ -57,10 +57,10 @@
     <section id="delivery_destination">
       <p>配送先</p>
       <p>
-          <select name="">
-            <option value="1">代金引換&nbsp;決済手数料：100円</option>
-            <option value="2">銀行振込&nbsp;決済手数料：0円</option>
-            <option value="3">クレジットカード決済&nbsp;決済手数料：0円</option>
+          <select name="shipping_address">
+            <?php for($count = 0 ; $array_address[$count] ;$count++): ?>
+              <option value="<?php echo $count ?>"><?php echo $array_address[$count] ?></option>
+            <?php endfor; ?>
           </select>
       </p>
     </section>
