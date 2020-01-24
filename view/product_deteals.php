@@ -2,12 +2,14 @@
       <p class="product_image"><img src="../images/products/61Yyhwxq32L._AC_SL1200_.jpg" width="400px" height="400px"
           alt=""></p>
       <h2>商品名</h2>
-      <div class="reaction">
+      <!-- お気に入りを削除
+        <div class="reaction">
         <ul>
           <li>☆お気に入り</li>
           <li>0</li>
         </ul>
-      </div><!-- reaction -->
+      </div>
+     -->
       <div class="product_description">
         <h3>商品の説明</h3>
         <p>説明文</p>
