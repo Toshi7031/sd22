@@ -23,7 +23,7 @@
         <table>
           <tr>
             <th>カテゴリー</th>
-            <td>家電&nbsp;&gt;&nbsp;PC・タブレット</td>
+            <td><?php echo $large_product_categories[$array_product[0]['large_product_category_id']] ?>&nbsp;&gt;&nbsp;<?php echo $small_product_categories[$array_product[0]['small_product_category_id']] ?></td>
           </tr>
           <tr>
             <th>商品の詳細</th>
