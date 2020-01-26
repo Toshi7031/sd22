@@ -2,6 +2,7 @@
   /*-------------------------------------
   購入手続きプロセス
   -------------------------------------*/
+  session_start();
   //req
   require '../config/config.php';
   require '../model/func/func.php';
