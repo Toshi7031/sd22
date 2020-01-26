@@ -3,9 +3,10 @@ session_start();
 
 require_once '../config/config.php';
 require_once '../model/func/func.php';
+require_once '../model/login_check.php';
 
 // テスト用
-$_SESSION['login_id'] = 1;
+// $_SESSION['login_id'] = 1;
 
 $title = 'まさる堂/マイページ';
 $css_file_name = 'mypage.css';
