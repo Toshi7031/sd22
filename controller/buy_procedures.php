@@ -24,6 +24,7 @@
   if(empty($_SESSION['login_id'])) {
     redirect('./login.php');
   }
+  $login_id = $_SESSION['login_id'];
 
   //getで値受取
   if(isset($_GET['product_id'])){
@@ -52,7 +53,7 @@
     $product_result = $mysqli -> query($product_sql);
     $mysqli -> close();
     if($member_result && $product_result){
-      echo '購入成功';
+      header('Location: ./buy_complete.php');
     }
     else{
       echo '購入失敗';
