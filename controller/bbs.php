@@ -32,10 +32,10 @@ $comments_sql = 'SELECT thred_id,comment_id,member_id,comment FROM comments';
 
 $mysqli = new mysqli(HOST, DB_USER, DB_PASS, DB_NAME);
 
-$result  = $mysql -> query($thred_sql);
+$result  = $mysqli -> query($thred_sql);
 $array_thred = $result -> fetch_all(MYSQLI_ASSOC);
 
-$result = $mysql -> query($comments_sql);
+$result = $mysqli -> query($comments_sql);
 $array_comments = $result -> fetch_all(MYSQLI_ASSOC);
 
 $mysqli -> close();
@@ -66,9 +66,6 @@ else{
 エラー処理
 ---------------------------------------------*/
 
-//white_listに乗っていない場合、５０３
-var_dump($array_comments);
-var_dump($array_thred);
 
 /*---------------------------------------------
 配列処理
@@ -79,6 +76,7 @@ for($i = 0;$comments[$i]['member_id'];$i++){
   $participant[] = "{$comments[$i]['member_id']}";
 }
 //配列に入っている重複している会員IDを統一化
+var_dump($participant);
 $participant = array_unique($participant);
 //where文に挿入するためxxxxx,xxxxx,xxxxxという形にする(for)
 $str_participant = "$participant[0]";
