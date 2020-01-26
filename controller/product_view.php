@@ -2,10 +2,10 @@
   /*----------------------------------------------------
   商品一覧
   ----------------------------------------------------*/
+    session_start();
     require '../config/config.php';
 
     //変数宣言
-    //session_start();
     $title = '商品一覧';
     $css_file_name = 'product_view.css';
     $js_file_name = 'a';
