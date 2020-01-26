@@ -6,7 +6,7 @@ $headerColor : #3cb371;
 $productBgColor : #D8D8D8;
 // 関数
 @import './mixin';
-//header and footer load
+@import './reset.scss';
 @import './header';
 @import './footer';
 
