@@ -27,35 +27,35 @@
           </tr>
           <tr>
             <th>商品の詳細</th>
-            <td>新品、未使用</td>
+            <td><?php echo $product_condition[$array_product[0]['product_condition_id']] ?></td>
           </tr>
           <tr>
             <th>配送料の負担</th>
-            <td>送料込（出品者負担）</td>
+            <td><?php $array_product[0]['postage_id'] == 0 ? print '送料込み(出品者負担)' : print '送料別(購入者負担)'?></td>
           </tr>
           <tr>
             <th>配送の方法</th>
-            <td>未定</td>
+            <td><?php echo $send_method[$array_product[0]['send_method']] ?></td>
           </tr>
           <tr>
             <th>発送元の地域</th>
-            <td>大阪府</td>
+            <td><?php echo $states[$array_product[0]['state_id']] ?></td>
           </tr>
           <tr>
             <th>発送までの日数</th>
-            <td>1~2日で発送</td>
+            <td><?php echo $days_to_send[$array_product[0]['days_to_send']] ?></td>
           </tr>
           <tr>
             <th>出品日</th>
-            <td>test</td>
+            <td><?php echo $array_product[0]['exhibition_date'] ?></td>
           </tr>
         </table>
       </div>
       <div class="exhibitor">
         <h3>出品者</h3>
         <ul>
-          <li><img src="../images/icons/yjimage.jpeg" width="220" height="220" alt=""></li>
-          <li>出品者名</li>
+          <li><img src="../images/icons/<?php echo $array_product[0]['exhibitor'] ?>.jpg" width="220" height="220" alt=""></li>
+          <li><?php echo $array_exhibitor[0]['nickname'] ?></li>
         </ul>
       </div>
       <div class="related_goods">
