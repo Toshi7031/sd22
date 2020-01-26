@@ -8,6 +8,7 @@
     //session_start();
     $title = '商品一覧';
     $css_file_name = 'product_view.css';
+    $js_file_name = 'a';
     $product_limit = 1; //テスト用に2に宣言
   /*----------------------------------------------------
   値受取
