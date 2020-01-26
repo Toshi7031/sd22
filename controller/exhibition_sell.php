@@ -20,6 +20,7 @@ $error_mes = array(
   'state_id' => '',
   'days_to_send' => '',
   'price' => '',  
+  'white_list' => '',  
 );
 $error_mes['description'] = '';
 foreach($error_mes as $key => $value) {
@@ -63,6 +64,7 @@ if(!empty($_POST['check'])) {
   }
 
   // 値受取
+  $input['white_list'] = 0;
   foreach($input as $key => $value) {
     $input[$key] = (string)filter_input(INPUT_POST, $key);
   }
@@ -271,6 +273,10 @@ elseif($input['large_product_category_id'] == 6) {
   );
 }
 
+// ホワイトリスト受取
+if(isset($_GET['white_list'])) {
+  $white_list = (string)filter_input(INPUT_GET, 'white_list');
+}
 
 require_once '../view/header.php';
 require_once '../view/exhibition_sell.php';
