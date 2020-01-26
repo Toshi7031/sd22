@@ -17,8 +17,10 @@
     <header>
       <h1><a href="#"><img src="./images/image_materials/logo.png" width="308" height="77" alt="まさる堂ロゴ"></a></h1>
       <div class="header_search_area">
+      <form action="./controller/product_view.php" method="get">
         <input type="text" name="search" placeholder="何かお探しですか？">
-        <button>検索</button>
+        <button type="submit">検索</button>
+      </form>
       </div>
       <div class="header_login_area">
         <?php if (isset($_SESSION['login_id']) && !empty($_SESSION['login_id'])) : ?>
