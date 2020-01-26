@@ -4,7 +4,7 @@
       <ul>
 <?php foreach($product_info as $value): ?>
         <li class="product">
-          <a href="./trading.php">
+          <a href="./trading.php?id=<?php echo $value['id']?>&request=<?php echo $request?>">
             <ul>
               <li class="img"><img src="../images/products/product_<?php echo $value['id']?>_1.jpg" alt=""></li>
               <li class="product_name"><?php echo $value['product_name']; ?></li>

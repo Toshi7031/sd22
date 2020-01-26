@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+
+// 変数宣言
+$bodyBgColor : #E4E4E4;
+$productBgColor : #D8D8D8;
+$headerColor : #3CB371;
+$buttonColor : #FACC2E;
+
+// 関数
+@import './mixin';
+/*----------------------------------------
+				reset
+----------------------------------------*/
+@import './reset';
+
+/*----------------------------------------
+				header
+----------------------------------------*/
+@import './header';
+
+/*----------------------------------------
+				footer
+----------------------------------------*/
+@import './footer';
+
+/*----------------------------------------
+				body
+----------------------------------------*/
+body{
+  background-color: $bodyBgColor;
+}
+
+.area{
+  width: 60%;
+  min-width: 700px;
+  height: 450px;
+  margin: 0 auto 50px;
+  text-align: center;
+  font-size: 50px;
+  background-color: white;
+  border: solid gray 1px;
+}
+.area p:first-child{
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+}
+.area p:nth-of-type(2){
+  width: 100%;
+  height: 250px;
+  position: relative;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+.area button{
+  width: 400px;
+  height: 50px;
+  background-color: $headerColor;
+  border: none;
+  border-radius: 25px;
+  a {
+    color: #fff;
+    font-size: 1.4em;
+    display: block;
+  }
+}
+

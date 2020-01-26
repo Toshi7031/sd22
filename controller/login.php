@@ -12,15 +12,15 @@ if(isset($_SESSION['login_id']) && !empty($_SESSION['login_id'])) {
   redirect($url);
 }
 
-// $input = array(
-//   'email' => '',
-//   'password' => '',
-// );
-// テストデータ
 $input = array(
-  'email' => 'satoshi18879@sdfasdfa.com',
-  'password' => 'asdfasdf',
+  'email' => '',
+  'password' => '',
 );
+// テストデータ
+// $input = array(
+//   'email' => 'satoshi18879@sdfasdfa.com',
+//   'password' => 'asdfasdf',
+// );
 $error_mes = array(
   'email' => '',
   'password' => '',
