@@ -1,10 +1,9 @@
     <div id="main_area">
-      <ul class="product_image">
-        <?php for($count = 1 ; $array_product[0]['images_count'] >= $count ; $count++): ?>
-        <li><img src="../images/products/product_<?php echo $product_id ?>_<?php echo $count ?>.jpg" width="400px" height="400px"
-          alt=""></li>
-        <?php endfor; ?>
-        </ul>
+      <ul class="product_image slider">
+<?php for($count = 1 ; $array_product[0]['images_count'] >= $count ; $count++): ?>
+        <li><img src="../images/products/product_<?php echo $product_id ?>_<?php echo $count ?>.jpg" alt=""></li>
+<?php endfor; ?>
+      </ul>
       <h2>商品名</h2>
       <!-- お気に入りを削除
         <div class="reaction">

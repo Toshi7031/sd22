@@ -16,6 +16,8 @@ $footerHeight : 80px;
 @import './reset';
 @import './header';
 @import './footer';
+@import './slick-theme';
+@import './slick';
 
 /*----------------------------------------
 				body
@@ -46,9 +48,31 @@ table {
 	margin: $divMargin;
 }
 .product_image {
-	width: 100%;
-	margin-bottom: 5px;
-	text-align: center;
+	width: 60%;
+	height: 400px;
+	margin: 0 auto 20px;
+	img {
+		width: 400px;
+		height: 400px;
+		display: block;
+		margin: 0 auto;
+	}
+}
+.prev, .next {
+	font-size: 3em;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+.prev {
+	left: -10px;
+}
+.next {
+	right: -10px;
 }
 .reaction {
 	display: flex;

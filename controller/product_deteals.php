@@ -6,6 +6,7 @@
   ---------------------------------------------*/
   $title = '商品詳細';//test
   $css_file_name = 'product_deteals.css';
+  $js_file_name = 'product_deteals.js';
   $_GET['id'] = 10;
 
   /*---------------------------------------------
