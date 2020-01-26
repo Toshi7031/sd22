@@ -14,7 +14,6 @@
   $title = '購入手続き';
   $css_file_name = 'buy_procedures.css';
   $js_file_name = 'a';
-  session_start();
 
   /*-------------------------------------
   test 値受取

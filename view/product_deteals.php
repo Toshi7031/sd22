@@ -103,6 +103,6 @@
       </div> -->
       <div class="fixed_area">
         <p>￥<?php echo $array_product[0]['price'];?></p>
-        <p><a href="./buy_procedures.php?product_id='<?php echo $product_id ?>">購入する</a></p>
+        <p><a href="./buy_procedures.php?product_id=<?php echo $product_id ?>">購入する</a></p>
       </div>
     </div>

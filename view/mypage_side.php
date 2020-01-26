@@ -1,7 +1,7 @@
   <h2><?php echo $nick_name[0];?>&nbsp;&nbsp;さんのマイページ</h2>
   <div id="content_area">
     <section id="side_list">
-      <p><a href="./mypage.php?request=information">お知らせ</a></p>
+      <p><a href="./mypage_notification.php?request=information">お知らせ</a></p>
       <p>商品関係</p>
       <ul>
         <li><a href="./mypage_product.php?request=exhibition">出品中の商品</a></li>
