@@ -86,7 +86,7 @@
     $array_member[0]['address3'],
   ];
   //送料負担者を言語化 postage == 1 購入者　0 == 発送者負担
-  $array_product['postage_id'] == 0 ? $postage = '発送者負担':$postage = '購入者負担';
+  $array_product[0]['postage_id'] == 0 ? $postage = '発送者負担':$postage = '購入者負担';
   /*-------------------------------------
   view req
   -------------------------------------*/
