@@ -32,11 +32,11 @@
         <ul>
           <li>商品の説明<span class="error_mes"><?php echo $error_mes['description'];?></span></li>
           <li>
-            <textarea rows="6" cols="185" name="description" value="<?php echo $description;?>" placeholder="（任意、1000文字まで）
+            <textarea rows="6" cols="185" name="description" placeholder="（任意、1000文字まで）
   （色、素材、重さ、定価、注意点など）
 
   例：2010年頃に1万円で購入したジャケットです。
-  ライトグレーで傷はありません。合わせやすいのでおすすめです。"></textarea>
+  ライトグレーで傷はありません。合わせやすいのでおすすめです。"><?php echo $description;?></textarea>
           </li>
         </ul>
       </section>
