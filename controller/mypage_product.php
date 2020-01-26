@@ -35,11 +35,11 @@ if(!empty($_GET['request'])) {
 
 // 判別
 if($request == 'exhibition') {  //出品中
-  $sql = "SELECT products.id, products.product_name, products.price, member.nickname FROM products INNER JOIN member ON products.exhibitor = member.id WHERE products.exhibitor = " . $_SESSION['login_id'] . " AND products.progress = 1";
+  $sql = "SELECT products.id, products.product_name, products.price, member.nickname FROM products INNER JOIN member ON products.exhibitor = member.id WHERE products.exhibitor = " . $_SESSION['login_id'] . " AND products.progress = 0";
   $h2 = '出品中';
 }
 elseif($request == 'trading') {   //取引中
-  $sql = "SELECT products.id, products.product_name, products.price, member.nickname FROM products INNER JOIN member ON products.exhibitor = member.id WHERE products.exhibitor = " . $_SESSION['login_id'] . " AND products.progress BETWEEN 2 AND 8";
+  $sql = "SELECT products.id, products.product_name, products.price, member.nickname FROM products INNER JOIN member ON products.exhibitor = member.id WHERE products.exhibitor = " . $_SESSION['login_id'] . " AND products.progress BETWEEN 1 AND 8";
   $h2 = '取引中';
 }
 elseif($request == 'sold') {  //売却済 取引完了でprogressを9にする
