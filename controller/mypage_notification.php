@@ -28,7 +28,7 @@ $mysqli -> close();
 
 // 通知
 $notification = array();
-$sql = "SELECT notification.notification FROM masarudoh.notification WHERE member_id = " . $_SESSION['login_id'] . " ORDER BY id DESC";
+$sql = "SELECT notification.notification,notification.date FROM masarudoh.notification WHERE member_id = " . $_SESSION['login_id'] . " ORDER BY id DESC";
 try {
   $mysqli = new mysqli(HOST, DB_USER, DB_PASS, DB_NAME);
   $mysqli->set_charset('utf8');
@@ -44,9 +44,9 @@ try {
 }
 $mysqli -> close();
 
-if(count($notification) === 0) {
-  $notification[0]['notification'] = 'お知らせはまだ届いていません。'; 
-}
+// if(count($notification) === 0) {
+//   $notification[0]['notification'] = 'お知らせはまだ届いていません。'; 
+// }
 
 require_once '../view/header.php';
 require_once '../view/mypage_side.php';

@@ -13,19 +13,42 @@ $id = 0;
 
 // 通知を送信したとき
 if(isset($_GET['send'])) {
-  $id = (string)filter_input(INPUT_GET, 'product_id');
+  $date = new DateTimeImmutable();
+  $id = (string)filter_input(INPUT_GET, 'product_id');  //商品id
+  $partner_id = (string)filter_input(INPUT_GET, 'partner_id');  //取引相手id
   $progress = (string)filter_input(INPUT_GET, 'progress');
+  // ニックネーム取得
+  $sql = "SELECT member.nickname FROM masarudoh.member WHERE member.id = " . $_SESSION['login_id'];
+  try {
+    $mysqli = new mysqli(HOST, DB_USER, DB_PASS, DB_NAME);
+    $mysqli->set_charset('utf8');
+    $result = $mysqli->query($sql);
+    $user_name = $result->fetch_row();
+  } catch (Exception $e) {
+    if (mysqli_connect_errno()) {
+      printf("Connect failed: %s\n", mysqli_connect_error());
+      exit;
+    }
+  }
+
+  //通知文作成 
+  if($progress == 1) {
+    $notification = $user_name[0] . "さんから、商品代金の入金が通知されました。";
+  }
+  elseif($progress == 2) {
+    $notification = $user_name[0] . "さんから、商品の発送が通知されました。";
+  }
+  elseif($progress == 3) {
+    $notification = $user_name[0] . "さんから、商品の受取が通知されました。";
+  }
+  
+  // 進捗をすすめる
   $progress++;
   if($progress >= 4) {
     $progress = 9;
   }
-  // sql
   $sql = "UPDATE products SET progress = " . $progress . " WHERE id = " . $id;
-  // 通知を書き込み
-  // 進捗をすすめる
   try {
-    $mysqli = new mysqli(HOST, DB_USER, DB_PASS, DB_NAME);
-    $mysqli->set_charset('utf8');
     $mysqli->query($sql);
   } catch (Exception $e) {
     if (mysqli_connect_errno()) {
@@ -33,6 +56,19 @@ if(isset($_GET['send'])) {
       exit;
     }
   }
+
+  // 通知を書き込み
+  $sql = "INSERT INTO notification(member_id, notification, date) VALUES(" . $partner_id . ",'" . $notification . "','" . $date -> format('Y/m/d H:i:s') . "')";
+  try {
+    $mysqli->query($sql);
+  }
+  catch (Exception $e) {
+    if (mysqli_connect_errno()) {
+      printf("Connect failed: %s\n", mysqli_connect_error());
+      exit;
+    }
+  }
+
   $mysqli -> close();
   redirect('./trading_notification_sended.php');
 }
@@ -49,11 +85,11 @@ else {
 // 取引状態判定
 if($request == 'exhibition') {  //出品中
   $h2 = '出品中';
-  $product_sql = "SELECT products.id,products.product_name,products.price,products.progress,member.nickname FROM masarudoh.products INNER JOIN masarudoh.member ON products.exhibitor = member.id WHERE products.id = " . $id;
+  $product_sql = "SELECT products.id,products.product_name,products.price,products.progress,member.nickname,member.id AS 'partner_id' FROM masarudoh.products INNER JOIN masarudoh.member ON products.exhibitor = member.id WHERE products.id = " . $id;
 }
 elseif($request == 'trading') {   //取引中
   $h2 = '取引中';
-  $product_sql = "SELECT products.id,products.product_name,products.price,products.progress,member.nickname FROM masarudoh.products INNER JOIN masarudoh.member ON products.buyer = member.id WHERE products.id = " . $id;
+  $product_sql = "SELECT products.id,products.product_name,products.price,products.progress,member.nickname,member.id AS 'partner_id' FROM masarudoh.products INNER JOIN masarudoh.member ON products.buyer = member.id WHERE products.id = " . $id;
 }
 elseif($request == 'sold') {  //売却済 取引完了でprogressを9にする
   $h2 = '売却済';
@@ -61,7 +97,7 @@ elseif($request == 'sold') {  //売却済 取引完了でprogressを9にする
 }
 elseif($request == 'buying') {  //購入中
   $h2 = '購入中';
-  $product_sql = "SELECT products.id,products.product_name,products.price,products.progress,member.nickname FROM masarudoh.products INNER JOIN masarudoh.member ON products.exhibitor = member.id WHERE products.id = " . $id;
+  $product_sql = "SELECT products.id,products.product_name,products.price,products.progress,member.nickname,member.id AS 'partner_id' FROM masarudoh.products INNER JOIN masarudoh.member ON products.exhibitor = member.id WHERE products.id = " . $id;
   // $partner = '出品者：' .;
 }
 elseif($request == 'bought') {  //購入済
@@ -116,8 +152,7 @@ elseif($request == 'trading') {   //取引中
 }
 elseif($request == 'sold') {  //売却済 取引完了でprogressを9にする
   $partner = '購入者：' . $product_info[0]['nickname'] . '&nbsp;さん';
-  $message = '';
-  $button = '';
+  $message = 'この商品は、既に取引を完了しています。';
 }
 elseif($request == 'buying') {  //購入中
   $partner = '出品者：' . $product_info[0]['nickname'] . '&nbsp;さん';
@@ -143,8 +178,7 @@ elseif($request == 'buying') {  //購入中
 }
 elseif($request == 'bought') {  //購入済
   $partner = '出品者：' . $product_info[0]['nickname'] . '&nbsp;さん';
-  $message = '';
-  $button = '';
+  $message = 'この商品は、既に取引を完了しています。';
 }
 
 require_once '../view/header.php';

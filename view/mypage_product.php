@@ -15,7 +15,8 @@
 <?php endforeach; ?>
       </ul>
 <?php else: ?>
-      <h2 id="none_message">現在<?php echo $h2;?>の商品はありません</h2>
+      <h2 id="none_message"><?php echo $h2;?>の商品</h2>
+      <p>現在<?php echo $h2;?>の商品はありません</p>
 <?php endif; ?>
     </section>
   </div>

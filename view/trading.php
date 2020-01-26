@@ -17,6 +17,7 @@
       <p><?php echo $message;?></p>
       <form action="" method="get">
         <input type="hidden" name="product_id" value="<?php echo $product_info[0]['id'];?>">
+        <input type="hidden" name="partner_id" value="<?php echo $product_info[0]['partner_id'];?>">
         <input type="hidden" name="progress" value="<?php echo $product_info[0]['progress'];?>">
 <?php if(isset($button)):?>
         <button class="button" type="submit" name="send" value="s"><?php echo $button;?></button>
