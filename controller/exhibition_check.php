@@ -27,6 +27,7 @@ if(isset($_POST['exhibition']) && $_POST['exhibition'] == $_SESSION['check']){
     'exhibition_date',
     'exhibitor',
     'images_count',
+    'progress'
   );
   $post_info = array(
     'product_name' => $_SESSION['product_name'],
@@ -43,6 +44,7 @@ if(isset($_POST['exhibition']) && $_POST['exhibition'] == $_SESSION['check']){
     // 'exhibitor' => 2, //テストとして格納
     'exhibitor' => $_SESSION['login_id'], //本番はログインIDを格納
     'images_count' => (int)count($_SESSION['tmp_name']),
+    'progress' => 1
   );
 
   // 商品の通し番号を取得
