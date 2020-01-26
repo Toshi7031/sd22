@@ -43,7 +43,7 @@
           <p>
             <select name="method_payment">
               <option value="cash">代金引換&nbsp;決済手数料：100円</option>
-              <option value="bank">銀行振込&nbsp;決済手数料：0円</option>
+              <option value="bank" selected>銀行振込&nbsp;決済手数料：0円</option>
               <option value="card">クレジットカード決済&nbsp;決済手数料：0円</option>
             </select>
           </p>

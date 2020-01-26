@@ -181,6 +181,97 @@ if(isset($_POST['back'])){
   $description = $_SESSION['description'];
 }
 
+
+// テストデータ
+$input['product_name'] = 'iPad Air 2 Wi-Fiモデル 64GB silver';
+$input['large_product_category_id'] = '5';
+$input['product_condition_id'] = '1';
+$input['postage_id'] = '1';
+$input['send_method'] = '3';
+$input['state_id'] = '27';
+$input['days_to_send'] = '2';
+$input['price'] = '21800';
+$description = '購入してからほとんど使っていない為バッテリーの劣化はほぼないです。
+
+ケースと保護フィルムをつけたままお渡しします。
+
+付属品はLightningと箱のみです。';
+
+// option追加
+if($input['large_product_category_id'] == 1 || $input['large_product_category_id'] == 2) {
+  $option = array(
+    '<option value="0">選択してください</option>',
+    '<option value="1">服</option>',
+    '<option value="2">帽子</option>',
+    '<option value="3">アクセサリー</option>',
+    '<option value="38">その他</option>',
+  );
+}
+elseif($input['large_product_category_id'] == 3) {
+  $option = array(
+    '<option value="0">選択してください</option>',
+    '<option value="4">ベビー服</option>',
+    '<option value="5">キッズ服</option>',
+    '<option value="6">キッズ靴</option>',
+    '<option value="7">子供用ファッション小物</option>',
+    '<option value="8">外出・移動用品</option>',
+    '<option value="9">ベビー家具・寝具・室内用品</option>',
+    '<option value="10">おもちゃ</option>',
+    '<option value="38">その他</option>',
+  );
+}
+elseif($input['large_product_category_id'] == 4) {
+  $option = array(
+    '<option value="0">選択してください</option>',
+    '<option value="11">キッチン・食器</option>',
+    '<option value="12">ベッド・マットレス・寝具</option>',
+    '<option value="13">机・イス</option>',
+    '<option value="14">収納家具</option>',
+    '<option value="15">カーペット・ラグ・マット</option>',
+    '<option value="16">照明</option>',
+    '<option value="17">時計</option>',
+    '<option value="18">インテリア小物</option>',
+    '<option value="19">季節・年中行事</option>',
+    '<option value="38">その他</option>',
+  );
+}
+elseif($input['large_product_category_id'] == 5) {
+  $option = array(
+    '<option value="20">スマホ</option>',
+    '<option value="21">スマホアクセサリー</option>',
+    '<option value="22" selected>PC・タブレット</option>',
+    '<option value="23">カメラ</option>',
+    '<option value="24">テレビ・映像機器</option>',
+    '<option value="25">オーディオ機器</option>',
+    '<option value="26">美容・健康</option>',
+    '<option value="27">冷暖房・空調</option>',
+    '<option value="28">生活家電</option>',
+    '<option value="38">その他</option>',
+  );
+}
+elseif($input['large_product_category_id'] == 6) {
+  $option = array(
+    '<option value="0">選択してください</option>',
+    '<option value="29">本・DVD・音楽</option>',
+    '<option value="30">ゲーム</option>',
+    '<option value="31">スポーツ・レジャー</option>',
+    '<option value="38">その他</option>',    
+  );
+}
+elseif($input['large_product_category_id'] == 6) {
+  $option = array(
+    '<option value="0">選択してください</option>',
+    '<option value="32">アクセサリー（女性用）</option>',
+    '<option value="33">ファッション・小物</option>',
+    '<option value="34">アクセサリー・時計</option>',
+    '<option value="35">日用品・インテリア</option>',
+    '<option value="36">趣味・おもちゃ</option>',
+    '<option value="37">素材・材料</option>',
+    '<option value="38">その他</option>',
+  );
+}
+
+
 require_once '../view/header.php';
 require_once '../view/exhibition_sell.php';
 require_once '../view/footer.php';

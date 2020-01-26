@@ -27,7 +27,8 @@ if(isset($_POST['exhibition']) && $_POST['exhibition'] == $_SESSION['check']){
     'exhibition_date',
     'exhibitor',
     'images_count',
-    'progress'
+    'progress',
+    'white_list',
   );
   $post_info = array(
     'product_name' => $_SESSION['product_name'],
@@ -44,8 +45,10 @@ if(isset($_POST['exhibition']) && $_POST['exhibition'] == $_SESSION['check']){
     // 'exhibitor' => 2, //テストとして格納
     'exhibitor' => $_SESSION['login_id'], //本番はログインIDを格納
     'images_count' => (int)count($_SESSION['tmp_name']),
-    'progress' => 0
+    'progress' => 0,
+    'white_list' => 0,
   );
+
 
   // 商品の通し番号を取得
   $product_id = get_product_id();
@@ -55,7 +58,7 @@ if(isset($_POST['exhibition']) && $_POST['exhibition'] == $_SESSION['check']){
   // 画像を本フォルダに移動
   for($i = 0; $i < $post_info['images_count']; ++$i) {
     $file_info = getimagesize('../images/tmp/' . $_SESSION['tmp_name'][$i]);
-    if($file_info['mine'] == 'image/png') {
+    if($file_info['mime'] == 'image/png') {
       $extention = 'png';
     }
     else {
@@ -76,11 +79,11 @@ if(isset($_POST['exhibition']) && $_POST['exhibition'] == $_SESSION['check']){
 
   // DBに書き込み
   $sql_result = write_db('products', $colmun, $post_info);
-  if($sql_result !== NULL) {
-    $error_msg = $db_result;
-    exit;
-    // require_once '../tpl/error.php';
-  }
+  // if($sql_result !== NULL) {
+  //   $error_msg = $db_result;
+  //   exit;
+  //   // require_once '../tpl/error.php';
+  // }
 
   // リダイレクト
   $url = './exhibition_confirm.php';

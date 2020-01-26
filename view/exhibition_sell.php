@@ -1,9 +1,9 @@
 <script>
-<?php if($input['small_product_category_id']==''):?>
+<?php if($input['small_product_category_id']===''):?>
   var small_product_category_id = '';
 <?php else:?>
   var large_product_category_id = <?php echo $input['large_product_category_id']?>;
-  var small_product_category_id = <?php echo $input['small_product_category_id']?>;
+  // var small_product_category_id = <?php echo $input['small_product_category_id']?>;
 <?php endif;?>
 </script>
     <form method="post" enctype="multipart/form-data">
@@ -64,8 +64,13 @@
           <li>小カテゴリー</li>
           <li>（必須）</li>
           <li>
-            <select name="small_product_category_id" disabled>
-              <option value="">大カテゴリを選択してください</option>
+            <select name="small_product_category_id"<?php !isset($option)?print' disabled':print'';?>>
+              <option value="0" selected>選択してください</option>
+<?php if(isset($option)):?>
+<?php foreach($option as $value):?>
+              <?php echo $value;?>
+<?php endforeach;?>
+<?php endif;?>
             </select><br>
             <span class="error_mes"><?php echo $error_mes['small_product_category_id'];?></span>
           </li>
