@@ -1,7 +1,7 @@
 
   <section id="back">
     <p><a href="../controller/mypage_notification.php"><img src="../images/image_materials/arrow.png" width="100" alt="arrow"></a></p>
-    <p>取引中</p>
+    <h2><?php echo $h2;?></h2>
   </section>
 
   <section id="list">
