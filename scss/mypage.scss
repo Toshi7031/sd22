@@ -125,12 +125,18 @@ article {
       left: 190px;
       top: 50px;
     }
-    // #none_message {
-    //   position: absolute;
-    //   top: 50%;
-    //   left: 50%;
-    //   transform: translateY(-50%) translateX(-50%);
-    //   -webkit-transform: translateY(-50%) translateX(-50%);
-    // }
+  }
+  .notification {
+    width: 90%;
+    height: 80px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: solid #000000 1px;
+    font-size: 1.2em;
+    p {
+      &:first-child {
+        margin-bottom: 10px;
+      }
+    }
   }
 }
