@@ -47,7 +47,7 @@ elseif($request == 'sold') {  //売却済 取引完了でprogressを9にする
   $h2 = '売却済';
 }
 elseif($request == 'buying') {  //購入中
-  $sql = "SELECT products.id, products.product_name, products.price, member.nickname FROM products INNER JOIN member ON products.buyer = member.id WHERE products.buyer = " . $_SESSION['login_id'] . " AND products.progress BETWEEN 2 AND 8";
+  $sql = "SELECT products.id, products.product_name, products.price, member.nickname FROM products INNER JOIN member ON products.buyer = member.id WHERE products.buyer = " . $_SESSION['login_id'] . " AND products.progress BETWEEN 1 AND 8";
   $h2 = '購入中';
 }
 elseif($request == 'bought') {  //購入済
