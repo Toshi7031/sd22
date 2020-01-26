@@ -210,6 +210,8 @@
         <p id="commission_rate">販売手数料<span>￥0</span></p>
         <p id="profit">販売利益<span>￥0</span></p>
       </section>
-
+<?php if(isset($white_list)):?>
+      <input type="hidden" name="white_list" value="<?php echo $white_list;?>">
+<?php endif;?>
       <p class="out"><button type="submit" name="check" value="c">出品する</button></p>
     </form>
