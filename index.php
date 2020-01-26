@@ -18,7 +18,7 @@ try {
   $end_id = $result->fetch_row();
   $end_id < 15 ? $start_id = 0 : $start_id = (int) $end_id[0] - $view_count;
   $result->free();
-  $sql = "SELECT id,product_name,price FROM products WHERE id BETWEEN " . (string) $start_id . " AND " . $end_id[0] . " ORDER BY id DESC";
+  $sql = "SELECT id,product_name,price FROM products WHERE progress = 0 AND id BETWEEN " . (string) $start_id . " AND " . $end_id[0] . " ORDER BY id DESC";
   $result = $mysqli->query($sql);
   while ($row = $result->fetch_assoc()) {
     $products[] = $row;
