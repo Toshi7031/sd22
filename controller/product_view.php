@@ -2,10 +2,10 @@
   /*----------------------------------------------------
   商品一覧
   ----------------------------------------------------*/
+    session_start();
     require '../config/config.php';
 
     //変数宣言
-    //session_start();
     $title = '商品一覧';
     $css_file_name = 'product_view.css';
     $js_file_name = 'a';
@@ -55,6 +55,10 @@
       $sql .= ' AND ';
     }
   }
+  //カテゴリ
+    if(isset($_GET['large_product_category'])){
+      $sql .= " AND large_product_category_id = {$_GET['large_product_category']} AND small_product_category_id = {$_GET['small_product_category']}";
+    }
   /*----------------------------------------------------
   DB取り出し
   ----------------------------------------------------*/

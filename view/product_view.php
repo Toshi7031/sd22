@@ -1,23 +1,6 @@
         <div id="main_area">
             <div id="contents_area">
             <h2><?php if($word != ""){ ?>「<?php echo $word ?>」の商品一覧 <?php } ?></h2>
-                <div class="pager">
-                    <ul class="move_page">
-                        <li class='before_page'>&lt;</li>
-                        <li class='first_page'>&lt;&lt;</li>
-                    </ul>
-                    <ul class="page_number">
-                        <li><?php if($page > 2)echo $page -2 ?></li>
-                        <li><?php if($page > 1)echo $page -1 ?></li>
-                        <li><?php echo $page ?></li>
-                        <li><?php echo $page +1 ?></li>
-                        <li><?php echo $page +2 ?></li>
-                    </ul>
-                    <ul class="move_page">
-                        <li class='next_page'>&gt;</li>
-                        <li class='last_page'>&gt;&gt;</li>
-                    </ul>
-                </div><!-- pager -->
                 <ul>
 <?php  foreach($product_array as $product): ?>
                    <li class="products">
@@ -33,21 +16,4 @@
 <?php  endforeach; ?>
                 </ul>
             </div><!-- contents_area -->
-            <div class="pager">
-                <ul class="move_page">
-                    <li class='before_page'>&lt;</li>
-                    <li class='first_page'>&lt;&lt;</li>
-                </ul>
-                <ul class="page_number">
-                        <li><?php if($page > 2)echo $page -2 ?></li>
-                        <li><?php if($page > 1)echo $page -1 ?></li>
-                        <li><?php echo $page ?></li>
-                        <li><?php echo $page +1 ?></li>
-                        <li><?php echo $page +2 ?></li>
-                </ul>
-                <ul class="move_page">
-                    <li class='next_page'>&gt;</li>
-                    <li class='last_page'>&gt;&gt;</li>
-                </ul>
-            </div><!-- pager -->
         </div>
