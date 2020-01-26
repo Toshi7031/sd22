@@ -149,7 +149,7 @@
       <!-- <h2><img src="./images/image_materials/back.png" width="" height="" alt=""></h2> -->
     </div><!-- branding -->
     <div id="contents_area">
-      <h2>新着商品（最新15件）</h2>
+      <h2>新着商品（最新9件）</h2>
       <?php if (count($products) !== 0) : ?>
         <ul>
           <?php foreach ($products as $value) : ?>
