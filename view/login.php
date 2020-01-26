@@ -22,7 +22,8 @@
     <div id="input_area">
       <form action="" method="post">
         <p>メールアドレス<span><?php echo $error_mes['email']; ?></span></p>
-        <p><input type="text" name="email" value="<?php echo h($input['email']);?>"></p>
+        <!-- <p><input type="text" name="email" value="<?php echo h($input['email']);?>"></p> -->
+        <p><input type="text" name="email" value="satoshi18879@sdfasdfa.com"></p>
         <p>パスワード<span><?php echo $error_mes['password']; ?></span></p>
         <!-- <p><input type="password" name="password"></p> -->
         <p><input type="password" name="password" value="asdfasdf"></p>
