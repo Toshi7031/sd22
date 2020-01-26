@@ -6,7 +6,7 @@ $(function() {
   const span_profit = $('#profit span');
   const pictures_input = $('.pictures input[type=file]');
 
-  const category_chage = () => {
+  const category_chage = function() {
     // 大カテゴリの値を取得
     var large_product_category_id = select_large_product_category.val();
     console.log(large_product_category_id);
@@ -15,7 +15,8 @@ $(function() {
     if(large_product_category_id == 1 || large_product_category_id == 2) {
       select_small_product_category.prop('disabled', false);
       select_small_product_category.empty();
-      select_small_product_category.append('<option value="0">選択してください</option>')
+      select_small_product_category
+      .append('<option value="0">選択してください</option>')
       .append('<option value="1">服</option>')
       .append('<option value="2">帽子</option>')
       .append('<option value="3">アクセサリー</option>')
@@ -24,7 +25,8 @@ $(function() {
     else if(large_product_category_id == 3) {
       select_small_product_category.prop('disabled', false);
       select_small_product_category.empty();
-      select_small_product_category.append('<option value="0">選択してください</option>')
+      select_small_product_category
+      .append('<option value="0">選択してください</option>')
       .append('<option value="4">ベビー服</option>')
       .append('<option value="5">キッズ服</option>')
       .append('<option value="6">キッズ靴</option>')
@@ -37,7 +39,8 @@ $(function() {
     else if(large_product_category_id == 4) {
       select_small_product_category.prop('disabled', false);
       select_small_product_category.empty();
-      select_small_product_category.append('<option value="0">選択してください</option>')
+      select_small_product_category
+      .append('<option value="0">選択してください</option>')
       .append('<option value="11">キッチン・食器</option>')
       .append('<option value="12">ベッド・マットレス・寝具</option>')
       .append('<option value="13">机・イス</option>')
@@ -52,7 +55,8 @@ $(function() {
     else if(large_product_category_id == 5) {
       select_small_product_category.prop('disabled', false);
       select_small_product_category.empty();
-      select_small_product_category.append('<option value="0">選択してください</option>')
+      select_small_product_category
+      .append('<option value="0">選択してください</option>')
       .append('<option value="20">スマホ</option>')
       .append('<option value="21">スマホアクセサリー</option>')
       .append('<option value="22">PC・タブレット</option>')
@@ -67,7 +71,8 @@ $(function() {
     else if(large_product_category_id == 6) {
       select_small_product_category.prop('disabled', false);
       select_small_product_category.empty();
-      select_small_product_category.append('<option value="0">選択してください</option>')
+      select_small_product_category
+      .append('<option value="0">選択してください</option>')
       .append('<option value="29">本・DVD・音楽</option>')
       .append('<option value="30">ゲーム</option>')
       .append('<option value="31">スポーツ・レジャー</option>')
@@ -76,7 +81,8 @@ $(function() {
     else if(large_product_category_id == 7) {
       select_small_product_category.prop('disabled', false);
       select_small_product_category.empty();
-      select_small_product_category.append('<option value="0">選択してください</option>')
+      select_small_product_category
+      .append('<option value="0">選択してください</option>')
       .append('<option value="32">アクセサリー（女性用）</option>')
       .append('<option value="33">ファッション・小物</option>')
       .append('<option value="34">アクセサリー・時計</option>')
@@ -91,7 +97,7 @@ $(function() {
       select_small_product_category.append('<option value="">大カテゴリを選択選択してください</option>');
     }
   }
-  const pick_payment = () => {
+  const pick_payment = function() {
     let value = input_price.val();
     let profit = Math.ceil(value * 0.9);
     let commission_rate = value - profit;
@@ -102,9 +108,8 @@ $(function() {
   }
 
   // ロード時の処理
-  category_chage();
   pick_payment();
-  select_small_product_category.val(small_product_category_id);   //カテゴリの選択状態
+  // select_small_product_category.val(small_product_category_id);   //カテゴリの選択状態
   pictures_input.after('<span class="thumbnail"></span>');
 
   // アップロードするファイルを選択
