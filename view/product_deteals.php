@@ -57,7 +57,7 @@
           <li><?php echo $array_exhibitor[0]['nickname'] ?></li>
         </ul>
       </div>
-      <div class="related_goods">
+      <!-- <div class="related_goods">
         <h3>関連商品</h3>
         <ul>
           <li class="goods">
@@ -97,7 +97,7 @@
             </ul>
           </li>
         </ul>
-      </div>
+      </div> -->
       <div class="fixed_area">
         <p>1300円</p>
         <p><a href="./buy_procedures.html">購入する</a></p>
