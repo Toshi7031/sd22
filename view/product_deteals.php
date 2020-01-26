@@ -7,7 +7,7 @@
       <div class="product_name">
         <h2>商品名</h2>
         <p><?php echo $array_product[0]['product_name']?></p>
-      </div>      
+      </div>
       <!-- お気に入りを削除
         <div class="reaction">
         <ul>
@@ -103,6 +103,6 @@
       </div> -->
       <div class="fixed_area">
         <p>￥<?php echo $array_product[0]['price'];?></p>
-        <p><a href="./buy_procedures.html">購入する</a></p>
+        <p><a href="./buy_procedures.php?id='<?php echo $product_id ?>">購入する</a></p>
       </div>
     </div>
