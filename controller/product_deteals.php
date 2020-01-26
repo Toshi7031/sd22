@@ -7,7 +7,7 @@
   $title = '商品詳細';//test
   $css_file_name = 'product_deteals.css';
   $js_file_name = 'product_deteals.js';
-  $_GET['id'] = 10;
+  // $_GET['id'] = 10;
 
   /*---------------------------------------------
   値受取
@@ -22,7 +22,7 @@
   }
   //ID指定なし
   else{
-   header( "Location: ./product_view.php" );
+    header( "Location: ./product_view.php" );
   }
 
   /*---------------------------------------------
@@ -39,6 +39,9 @@
   //配列変換
   $array_product = $product_result -> fetch_all(MYSQLI_ASSOC);
 
+  //金額にカンマを追加
+  $array_product[0]['price'] = number_format((int)$array_product[0]['price']);
+
   //出品者名を取り出し
   $exhibitor_sql = "SELECT nickname FROM member WHERE id = {$array_product[0]['exhibitor']}";
   $mysqli = new mysqli(HOST,DB_USER,DB_PASS,DB_NAME);
@@ -46,7 +49,7 @@
   $mysqli -> close();
   //配列変換
   $array_exhibitor = $exhibitor_result -> fetch_all(MYSQLI_ASSOC);
-  var_dump($array_exhibitor);
+  // var_dump($array_exhibitor);
 
   /*---------------------------------------------
   商品のホワイトリストを照合
