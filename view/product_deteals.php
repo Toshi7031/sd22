@@ -1,11 +1,13 @@
     <div id="main_area">
-      <ul class="product_image">
-        <?php for($count = 1 ; $array_product[0]['images_count'] >= $count ; $count++): ?>
-        <li><img src="../images/products/product_<?php echo $product_id ?>_<?php echo $count ?>.jpg" width="400px" height="400px"
-          alt=""></li>
-        <?php endfor; ?>
-        </ul>
-      <h2>商品名</h2>
+      <ul class="product_image slider">
+<?php for($count = 1 ; $array_product[0]['images_count'] >= $count ; $count++): ?>
+        <li><img src="../images/products/product_<?php echo $product_id ?>_<?php echo $count ?>.jpg" alt=""></li>
+<?php endfor; ?>
+      </ul>
+      <div class="product_name">
+        <h2>商品名</h2>
+        <p><?php echo $array_product[0]['product_name']?></p>
+      </div>      
       <!-- お気に入りを削除
         <div class="reaction">
         <ul>
@@ -13,7 +15,7 @@
           <li>0</li>
         </ul>
       </div>
-     -->
+      -->
       <div class="product_description">
         <h3>商品の説明</h3>
         <p><?php echo $array_product[0]['description'] ?></p>
@@ -58,7 +60,7 @@
           <li><?php echo $array_exhibitor[0]['nickname'] ?></li>
         </ul>
       </div>
-      <div class="related_goods">
+      <!-- <div class="related_goods">
         <h3>関連商品</h3>
         <ul>
           <li class="goods">
@@ -98,9 +100,9 @@
             </ul>
           </li>
         </ul>
-      </div>
+      </div> -->
       <div class="fixed_area">
-        <p>1300円</p>
+        <p>￥<?php echo $array_product[0]['price'];?></p>
         <p><a href="./buy_procedures.html">購入する</a></p>
       </div>
     </div>

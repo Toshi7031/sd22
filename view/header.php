@@ -9,6 +9,7 @@
   <title><?php echo $title; ?></title>
   <link href="../css/<?php echo $css_file_name; ?>" rel="stylesheet" type="text/css">
   <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/slick.min.js"></script>
   <script src="../js/header.js"></script>
 </head>
 

@@ -16,6 +16,8 @@ $footerHeight : 80px;
 @import './reset';
 @import './header';
 @import './footer';
+@import './slick-theme';
+@import './slick';
 
 /*----------------------------------------
 				body
@@ -24,13 +26,13 @@ $footerHeight : 80px;
 // 	width: 100vw;
 // }
 h2 {
-	width: 60%;
-	height: $h2Height;
-	line-height: $h2Height;
-	margin: 0 auto 30px;
-	text-align: center;
-	font-size: 1.5em;
-	font-weight: 300;
+	// width: 60%;
+	// height: $h2Height;
+	// line-height: $h2Height;
+	// margin: 0 auto 30px;
+	// text-align: center;
+	// font-size: 1.5em;
+	// font-weight: 300;
 }
 h3 {
 	font-size: 1.3em;
@@ -46,9 +48,47 @@ table {
 	margin: $divMargin;
 }
 .product_image {
-	width: 100%;
-	margin-bottom: 5px;
-	text-align: center;
+	width: 60%;
+	height: 400px;
+	margin: 0 auto 20px;
+	img {
+		width: 400px;
+		height: 400px;
+		display: block;
+		margin: 0 auto;
+	}
+}
+.prev, .next {
+	font-size: 3em;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+.prev {
+	left: -10px;
+}
+.next {
+	right: -10px;
+}
+.product_name {
+	h2 {
+		font-size: 1.3em;
+		font-weight: 900;
+		color: $headerColor;
+		margin-bottom: 10px;
+		}
+	p {
+		padding: 10px;
+		font-size: 1.2em;
+		text-align: center;
+		border-bottom: solid $productBgColor 2px;
+	}
+	width: 60%;
+	margin: 0 auto 40px;
 }
 .reaction {
 	display: flex;
@@ -74,6 +114,7 @@ table {
 	p {
 		height: 400px;
 		border: solid #000000 1px;
+		padding: 20px;
 	}
 }
 .product_information {
