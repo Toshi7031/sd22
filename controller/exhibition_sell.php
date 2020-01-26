@@ -27,22 +27,6 @@ foreach($error_mes as $key => $value) {
 }
 $description = '';
 
-// テストデータ
-$input['product_name'] = 'iPad Air 2 Wi-Fiモデル 64GB silver';
-$input['large_product_category_id'] = '5';
-$input['product_condition_id'] = '1';
-$input['postage_id'] = '1';
-$input['send_method'] = '3';
-$input['state_id'] = '27';
-$input['days_to_send'] = '2';
-$input['price'] = '21800';
-$description = '購入してからほとんど使っていない為バッテリーの劣化はほぼないです。
-
-ケースと保護フィルムをつけたままお渡しします。
-
-付属品はLightningと箱のみです。';
-
-
 // 送信ボタンを押したとき
 if(!empty($_POST['check'])) {
   // 画像処理
@@ -197,6 +181,22 @@ if(isset($_POST['back'])){
   $description = $_SESSION['description'];
 }
 
+
+// テストデータ
+$input['product_name'] = 'iPad Air 2 Wi-Fiモデル 64GB silver';
+$input['large_product_category_id'] = '5';
+$input['product_condition_id'] = '1';
+$input['postage_id'] = '1';
+$input['send_method'] = '3';
+$input['state_id'] = '27';
+$input['days_to_send'] = '2';
+$input['price'] = '21800';
+$description = '購入してからほとんど使っていない為バッテリーの劣化はほぼないです。
+
+ケースと保護フィルムをつけたままお渡しします。
+
+付属品はLightningと箱のみです。';
+
 // option追加
 if($input['large_product_category_id'] == 1 || $input['large_product_category_id'] == 2) {
   $option = array(
@@ -270,6 +270,7 @@ elseif($input['large_product_category_id'] == 6) {
     '<option value="38">その他</option>',
   );
 }
+
 
 require_once '../view/header.php';
 require_once '../view/exhibition_sell.php';
