@@ -55,6 +55,10 @@
       $sql .= ' AND ';
     }
   }
+  //カテゴリ
+    if(isset($_GET['large_product_category'])){
+      $sql .= " AND large_product_category_id = {$_GET['large_product_category']} AND small_product_category_id = {$_GET['small_product_category']}";
+    }
   /*----------------------------------------------------
   DB取り出し
   ----------------------------------------------------*/
