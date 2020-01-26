@@ -20,12 +20,14 @@
         <ul>
         <?php for($i = 0;$talk[$i];$i++): ?>
         <li class="<?php echo $talk[$i]['class']; ?>"><?php if($talk[$i]['class'] == 'you'): ?><img class="talk_image" src="../images/icons/<?php echo $talk[$i]['member_id'] ?>.jpeg" alt=""><?php endif; ?> <span><?php echo $talk[$i]['name']; ?></span><p class="talk"><?php echo $talk[$i]['comment']; ?></p></li>
+            <li class=''><a href="./exhibition_sell.php?id=<?php echo $talk[$i]['member_id'] ?>">指定出品</a></li>
         <?php endfor; ?>
         </ul>
         <div class="talk_send">
             <form action="" method="get" class='flex'>
-                    <textarea class="send_text" name="comment" cols="30"></textarea>
-                    <button type="submit"><img src="../images/image_materials/plane.png" alt=""></button>
+                    <textarea class="send_text" name="input_comment" cols="30"></textarea>
+                    <input type="hidden" name="id" value="<?php echo $thred_id ?>">
+                    <button type="submit" name='submit'><img src="../images/image_materials/plane.png" alt=""></button>
             </form>
         </div>
    </div>

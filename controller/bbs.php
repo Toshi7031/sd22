@@ -30,6 +30,22 @@ else{
 }
 
 /*---------------------------------------------
+書き込み処理
+---------------------------------------------*/
+if(isset($_GET['submit'])){
+  $input_comment = $_GET['input_comment'];
+  //commentの最大数を取得
+  $max_sql = "SELECT max(comment_id) FROM comments WHERE thred_id = {$thred_id}";
+  $mysqli = new mysqli(HOST,DB_USER,DB_PASS,DB_NAME);
+  $result = $mysqli -> query($max_sql);
+  $max = $result -> fetch_all(MYSQLI_ASSOC);
+  //sql作成
+  $sql = "INSERT INTO comments (thred_id,comment_id,member_id,comment) VALUE ({$thred_id},{$max[0]['max(comment_id)']} + 1,{$login_id},'{$input_comment}')";
+  $mysqli = new mysqli(HOST,DB_USER,DB_PASS,DB_NAME);
+  $result = $mysqli -> query($sql);
+}
+
+/*---------------------------------------------
 sql作成
 ---------------------------------------------*/
 
