@@ -39,7 +39,15 @@ mix
   .submit{
     width: 70%;
     height: 70px;
-    margin: 0 auto;
+    margin: 0 auto 60px;
+    text-align: center;
+    p {
+      &:first-child{
+        margin-bottom: 30px;
+        font-size: 1.3em;
+        color: #FE2E64;
+      }
+    }
   }
 
   button {
