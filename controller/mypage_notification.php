@@ -10,7 +10,21 @@ require_once '../model/login_check.php';
 
 $title = 'まさる堂/マイページ';
 $css_file_name = 'mypage.css';
-$js_file_name = '';
+$js_file_name = 'a';
+$sql = "SELECT nickname FROM member WHERE id = " . $_SESSION['login_id'];
+// ニックネーム取得
+try {
+  $mysqli = new mysqli(HOST, DB_USER, DB_PASS, DB_NAME);
+  $mysqli->set_charset('utf8');
+  $result = $mysqli->query($sql);
+  $nick_name = $result->fetch_row();
+} catch (Exception $e) {
+  if (mysqli_connect_errno()) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit;
+  }
+}
+$mysqli -> close();
 
 // 通知
 $notification = array();
