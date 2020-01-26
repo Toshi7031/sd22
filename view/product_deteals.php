@@ -4,7 +4,10 @@
         <li><img src="../images/products/product_<?php echo $product_id ?>_<?php echo $count ?>.jpg" alt=""></li>
 <?php endfor; ?>
       </ul>
-      <h2>商品名</h2>
+      <div class="product_name">
+        <h2>商品名</h2>
+        <p><?php echo $array_product[0]['product_name']?></p>
+      </div>      
       <!-- お気に入りを削除
         <div class="reaction">
         <ul>
@@ -12,7 +15,7 @@
           <li>0</li>
         </ul>
       </div>
-     -->
+      -->
       <div class="product_description">
         <h3>商品の説明</h3>
         <p><?php echo $array_product[0]['description'] ?></p>
@@ -99,7 +102,7 @@
         </ul>
       </div> -->
       <div class="fixed_area">
-        <p>1300円</p>
+        <p>￥<?php echo $array_product[0]['price'];?></p>
         <p><a href="./buy_procedures.html">購入する</a></p>
       </div>
     </div>
