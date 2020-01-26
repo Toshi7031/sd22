@@ -4,7 +4,7 @@
 ---------------------------*/
   require '../../config/config.php';
   $mysqli = new mysqli(HOST,DB_USER,DB_PASS,DB_NAME);
-  $sql = "select state from states";
+  $sql = "select day_to_send from day_to_send";
   $result = $mysqli -> query($sql);
   $array = $result -> fetch_all(MYSQLI_NUM);
   $mysqli -> close();
@@ -19,12 +19,13 @@
 </head>
 <body>
   $array = [ <br>
+  1 => <br>
 <?php
   foreach($array as $data):
 ?>
 '<?php echo $data[0]?>',<br>
 
 <?php endforeach; ?>
-]
+];
 </body>
 </html>
