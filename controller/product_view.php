@@ -9,7 +9,6 @@
     $title = '商品一覧';
     $css_file_name = 'product_view.css';
     $js_file_name = 'a';
-    $product_limit = 1; //テスト用に2に宣言
   /*----------------------------------------------------
   値受取
   ----------------------------------------------------*/
@@ -47,7 +46,7 @@
   sql文作成
   ----------------------------------------------------*/
   //sqlベース作成
-  $sql = 'SELECT id,product_name,price FROM products WHERE ';
+  $sql = 'SELECT id,product_name,price FROM products WHERE progress = 0 AND ';
   //検索条件部分作成
   foreach($search as $word){
     //$sqlに追記
