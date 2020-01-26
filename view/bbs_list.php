@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>掲示板一覧</title>
-</head>
 <body>
 <div class="wrapp">
   <div class="contents">
-  <h2>title</h2>
     <ul class='bbs_list'>
-      <li class='title'><a href="../controller/bbs.php?<?php // echo $thred_id ?>"></a></li>
+      <?php foreach($array_thred as $thred): ?>
+      <li><a href="./bbs.php?id=<?php echo $thred['id'] ?>"><h2><?php echo $thred['name'] ?></h2><p><?php echo $thred_genre[$thred['genre']] ?></p></a></li>
+      <?php endforeach; ?>
     </ul>
   </div>
 </div>
