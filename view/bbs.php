@@ -19,8 +19,7 @@
    <div class="bbs_contents">
         <ul>
         <?php for($i = 0;$talk[$i];$i++): ?>
-        <li class="<?php echo $talk[$i]['class']; ?>"><?php if($talk[$i]['class'] == 'you'): ?><img class="talk_image" src="../images/icons/<?php echo $talk[$i]['member_id'] ?>.jpg" alt=""><?php endif; ?> <span><?php echo $talk[$i]['name']; ?></span><p class="talk"><?php echo $talk[$i]['comment']; ?></p></li>
-            <li class=''><a href="./exhibition_sell.php?id=<?php echo $talk[$i]['member_id'] ?>">指定出品</a></li>
+        <li class="<?php echo $talk[$i]['class']; ?>"><?php if($talk[$i]['class'] == 'you'): ?><img class="talk_image" src="../images/icons/<?php echo $talk[$i]['member_id'] ?>.jpg" alt=""><?php endif; ?> <a href="./exhibition_sell.php?id=<?php echo $talk[$i]['member_id'] ?><span></a><?php echo $talk[$i]['name']; ?></span><p class="talk"><?php echo $talk[$i]['comment']; ?></p></li>
         <?php endfor; ?>
         </ul>
         <div class="talk_send">
