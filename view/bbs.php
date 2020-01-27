@@ -11,7 +11,7 @@
 <div class="wrapp">
    <div class="bbs_top">
        <ul>
-           <li><button class="history_back" type="button" onclick="history.back()"><img src="../images/image_materials/arrow.png" alt=""></button><span>掲示板</span></li>
+           <li><button class="history_back" type="button" onclick="history.back()"><img src="../images/image_materials/arrow.png" alt=""></button><span></span></li>
            <li><h2 class="bbs_name"><?php echo $array_thred[0]['name']; ?></h2></li>
            <li><img class="title" src="../images/image_materials/logo.png" alt="まさる堂"></li>
        </ul>
