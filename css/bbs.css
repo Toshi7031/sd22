@@ -99,8 +99,10 @@ body {
 
 .wrapp {
   width: 80%;
+  height: 80%;
   position: absolute;
   left: 10%;
+  top: 20%;
   background-color: white; }
 
 .bbs_top {
