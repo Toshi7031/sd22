@@ -120,7 +120,7 @@
             <p class="list_title">掲示板一覧</p>
             <p class="cancel_button"><span></span></p>
             <ul>
-              <li><a href="">雑談</a></li>
+              <li><a href="./bbs.php?id=1">雑談</a></li>
               <li><a href="">ニュース・経済</a></li>
               <li><a href="">国内・海外旅行</a></li>
               <li><a href="">家庭菜園</a></li>
